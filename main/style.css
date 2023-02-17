@@ -107,10 +107,7 @@ body {
     font-size: 16px;
     line-height: 144%;
 
-    background-color: var(--lt-color-black);
-}
-div { 
-    display: block;
+background-color: var(--wp--preset--color--black);
 }
 img {
     max-width: 100%; 
@@ -119,25 +116,24 @@ ol, ul {
     padding: 0;
     font-weight: 300px;
 }
-ul {
-    display: block;
-    list-style-type: disc;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    padding-inline-start: 40px;
-}
 a {
     text-decoration: none;
-    color:  var(--lt-color-black);
+    color: var(--lt-color-black);
 }
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}
+
 .container {
     max-width: 1280px;
     padding: 0 16px 0 16px ;
     margin: 0 auto 0 auto;
 }
-/* Header */
+
+/* Header - Nav Bar */
 .header {
     display: block;
     position: fixed;
@@ -158,6 +154,9 @@ a {
     align-items: center;
     width: 60px;
 }
+.icon-logo{
+    animation:spin 12s linear 10s infinite;
+}
 .menu ul {
     display: flex;
     justify-content: space-between;
@@ -169,10 +168,17 @@ a {
     font-size: large;
     text-transform: uppercase;
 }
+.menu-item:hover {
+    transform: scale(1.4);
+}
+.a-menu-item:hover {
+    color: var(--wp--preset--color--luminous-vivid-amber);
+}
 .header-right-section {
     display: flex;
     align-items: center;
     column-gap: 30px;
-
 }
-
+.header-right-icons:hover {
+    transform: scale(1.3);
+}
