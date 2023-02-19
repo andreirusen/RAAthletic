@@ -100,14 +100,14 @@ html, h1, h2, h3, h4, h5, h6, p {
     box-sizing: border-box;
 }
 body {
-    margin: 80px 30px 30px 60px;
+    margin: 80px 60px 60px 60px;
     display: block;
 
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 144%;
 
-background-color: var(--wp--preset--color--black);
+    background-color: var(--wp--preset--color--black);
 }
 img {
     max-width: 100%; 
@@ -120,14 +120,9 @@ a {
     text-decoration: none;
     color: var(--lt-color-black);
 }
-@keyframes spin { 
-    100% { 
-        -webkit-transform: rotate(360deg); 
-        transform:rotate(360deg); 
-    } 
-}
 
-.container {
+
+.container { 
     max-width: 1280px;
     padding: 0 16px 0 16px ;
     margin: 0 auto 0 auto;
@@ -154,8 +149,8 @@ a {
     align-items: center;
     width: 60px;
 }
-.icon-logo{
-    animation:spin 12s linear 10s infinite;
+.icon-logo:hover {
+    animation:spin 12s linear infinite;
 }
 .menu ul {
     display: flex;
@@ -181,4 +176,24 @@ a {
 }
 .header-right-icons:hover {
     transform: scale(1.3);
+}
+.body-container {
+    border: 2px solid white;
+    background-color: var(--wp--preset--color--luminous-vivid-amber);
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 200px 200px 200px;
+    gap: 25px;
+}
+.body-kid {
+    border: 2px solid white;
+}
+
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
 }
