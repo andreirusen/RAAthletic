@@ -179,7 +179,6 @@ a {
 }
 .body-container {
     border: 2px solid white;
-    background-color: var(--wp--preset--color--luminous-vivid-amber);
 
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -188,6 +187,8 @@ a {
 }
 .body-kid {
     border: 2px solid white;
+    background-color: var(--wp--preset--color--luminous-vivid-amber);
+
 }
 
 
