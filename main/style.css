@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 :root {
-    --wp--preset--font-size--normal: 16px;
-    --wp--preset--font-size--huge: 42px;
-}
-:root {
     --lt-color-gray-100:  #f8f9fc;
     --lt-color-gray-200:  #f1f3f9;
     --lt-color-gray-300:  #dee3ed;
@@ -32,7 +28,6 @@
     --wc-content-bg: #fff;
     --wc-subtext: #767676;
 }
-
 :root {
     --wp--preset--color--black: #000000;
     --wp--preset--color--cyan-bluish-gray: #abb8c3;
@@ -82,11 +77,12 @@ html {
 
 
 /* Header - Nav Bar */
-.header {
+header {
     z-index: 999999;
     top: 0;
     left: 0;
     width: 100%;
+
 }
 
 /* Logo */
@@ -103,11 +99,11 @@ html {
     } 
 }
 
+/* .nav-item-effect:hover {transform: scale(1);}
+.nav-item-effect:hover {color: var(--wp--preset--color--luminous-vivid-amber);} */
+
 /* Navigation */
 @media all and (min-width: 992px) {
-    .navbar-nav:hover {transform: scale(1);}
-    .nav-link:hover {color: var(--wp--preset--color--luminous-vivid-amber);}
-
 	.navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .nav-link{   }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
@@ -134,3 +130,4 @@ html {
 }
 
 
+x

@@ -10,34 +10,41 @@
 </head>
 <body class="bg-dark">
 
-    <header class="header navbar-expand-lg bg-white">
-        <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
+    <header class="bg-white header">
+        <div class="navbar navbar-expand-lg navbar-light">
+        <nav class="container-fluid" >
 
             <!-- Brand/logo -->
-            <a href="#" class="navbar-brand">
-                <img class="icon-logo" src="/main/Assets/Logo-4.png" alt="brad">
-            </a>
+            <div>
+                <a href="#" class="navbar-brand">
+                    <img class="icon-logo" src="/main/Assets/Logo-4.png" alt="brad">
+                </a>
+            </div>
+
             <!-- Search Bar -->
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
+            <div>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </form>
+            </div>
+
             <!-- Phone Hamburger -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
 
             <!-- Nav Bar -->
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <!-- Options -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        <a href="#" class="nav-link text-dark hover-item" aria-current="page">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">ABOUT</a>
+                        <a href="#" class="nav-link text-dark hover-item" aria-current="page">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#" class="nav-link active" data-bs-toggle="dropdown">
+                        <a  href="#" class="nav-link text-dark hover-item" data-bs-toggle="dropdown">
                             PROGRAMS
                         </a>
                         <ul class="dropdown-menu">
@@ -80,11 +87,14 @@
                 </ul>
             </div>
                 
-        </div>
         </nav>
+        </div>
     </header>
 
 
+
+
+    
     <div class="body-container">
         <div class="body-kid">1</div>
         <div class="body-kid">2</div>
