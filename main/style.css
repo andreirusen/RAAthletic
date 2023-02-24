@@ -117,17 +117,48 @@ header {
 
 
 /* Body */
-.body-container {
-    margin: 50px 30px 50px 30px;
-    border: 2px solid white;
+/* .body-container {
+    height: 100vh;
+
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 200px 200px 200px;
     gap: 25px;
+    grid-template-areas: 
+    " kid-1 kid-1"
+    " kid-2 kid-2"
+    " kid-3 kid-4" 
+    " kid-5 kid-6";
+    
 }
 .body-kid {
     background-color: var(--wp--preset--color--luminous-vivid-amber);
 }
+.kid-img  {
+}
+.z-text {
+    z-index: 1;
 
+}
 
-x
+.kid-1 {
+    grid-area: kid-1;
+}
+.kid-2 {
+    grid-area: kid-2;
+
+}
+.kid-3 {
+    grid-area: kid-3;
+    background-image: url(/main/Assets/Body-kid-1.jpg);
+}
+.kid-4 {
+    grid-area: kid-4;
+
+}
+.kid-5 {
+    grid-area: kid-5;
+    background-image: url(/main/Assets/Body-kid-1.jpg);
+}
+.kid-6 {
+    grid-area: kid-6;
+
+} */
