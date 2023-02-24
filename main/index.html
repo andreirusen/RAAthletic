@@ -8,11 +8,10 @@
     <link rel="stylesheet" href="/main/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-<body class="bg-light">
-
-    <header class="bg-white header">
-        <div class="navbar navbar-expand-lg navbar-light">
-        <nav class="container-fluid" >
+<body class="mx-0 my-0">
+<!-- Header -->
+    <header class="bg-light ">
+        <nav class="container-fluid navbar navbar-expand-md navbar-light" >
 
             <!-- Brand/logo -->
             <div>
@@ -44,9 +43,7 @@
                         <a href="#" class="nav-link text-dark hover-item" aria-current="page">ABOUT</a>
                     </li>
                     <li class="nav-item">
-                        <a  href="#" class="nav-link text-dark hover-item" data-bs-toggle="dropdown">
-                            PROGRAMS
-                        </a>
+                        <a  href="#" class="nav-link text-dark " data-bs-toggle="dropdown">PROGRAMS</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Fitness</a></li>
                             <li><a class="dropdown-item" href="#">Swimming</a></li>
@@ -85,32 +82,61 @@
                         </ul>
                     </li>  
                 </ul>
-            </div>
-                
+            </div>              
         </nav>
-        </div>
+
     </header>
 
+<!-- Main Content -->
+    <div class="container-fluid px-0 py-0">
 
-
-    <div class="body-container d-grid ">
-        <div class="row">
-            <div class="col">
-                <img class="img-fluid kid-img kid-1" alt="Responsive image" src="/main/Assets/kid-img-2.jpg" alt="">
-            <H1 class="z-text">WELCOME</H1>
-            <H5>TO</H3>
-            <H2>BODY MIRACLE</H2>        
+<!-- Carousel IMG -->
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/main/Assets/Logo-white.jpg" class="" alt="...">
+            </div>
+            <div class="carousel-item">
+            <img src="/main/Assets/bg-img.jpg" class="" alt="...">
+                <div class="carousel-caption d-none d-md-block">    
+                    <h1>Train your body</h1>
+                    <H2>Like I train your mother</H2>
+                </div>
+            </div>
+            <div class="carousel-item">
+            <img src="/main/Assets/Body-kid-1.jpg" class="" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">2</div>
-            <div class="col">3</div>
+        <!-- Buttons Left+Right -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
         </div>
+<!-- First section -->
         <div class="row">
-            <div class="col">4</div>
+            <div class="col">
+                <img class="img-fluid " alt="#" src="/main/Assets/Logo-white.jpg" alt="">
+            </div>
+            <div class="col">Are you ready for your miracle?</div>
+        </div>
+<!-- Second Section -->
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid " alt="#" src="/main/Assets/Logo-white.jpg" alt="">
+            </div>
             <div class="col">5</div>
         </div>
-            <div class="row">
+<!-- Third Section -->
+        <div class="row">
             <div class="col">6</div>
         </div>
     </div>
