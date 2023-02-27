@@ -97,10 +97,11 @@ header {
 }
 
 .carousel-inner {
-
+    height: 800px;
 }
-img {
-    background-position: center;
+.carousel-img {
+    width: 100%;
+    background-size: contain;
     background-size: cover;
 }
 /* Navigation */
@@ -109,6 +110,7 @@ img {
 	.navbar .nav-item:hover .nav-link{   }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
 	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+    
     .hover-item:hover {transform: scale(1);}
     .hover-item:hover {color: var(--wp--preset--color--luminous-vivid-amber);}
 
