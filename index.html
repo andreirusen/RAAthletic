@@ -11,37 +11,41 @@
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Murecho&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/index.css">
 </head>
-<body class="px-0 py-0">
+<!-- Body -->
+<body class="px-0">
+
 <!-- Header -->
-<header class="bg-light ">
-    <nav class="container navbar navbar-expand-lg" >
+<header class="container-fluid bg-white">
+    <nav class="navbar navbar-expand-lg" >
+        <div class="container">
         <!-- Brand/logo -->
-        <div class="col-1">
+        <div class="col-2 col">
             <a href="#" class="navbar-brand">
                 <img class="icon-logo" src="/Assets/Logo/BM-Logo/BM-Spartan-Logo - Dark.png" alt="brad">
             </a>
         </div>
+
         <!-- Search Bar -->
-        <div class="col-5">
+        <div class="col-lg-5 col-md-4 col">
             <form class="d-flex">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             </form>
         </div>
-        <!-- Phone Hamburger -->
-        <button class="navbar-toggler border-light-subtle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
 
-        
+        <!-- Phone Hamburger -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
         <!-- Nav Bar -->
-        <div class="collapse navbar-collapse col-5" id="navbarNavDropdown">
+        <div class="collapse navbar-collapse col" id="main_nav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <a href="#" class="nav-link text-dark" aria-current="page">HOME</a>
@@ -50,7 +54,7 @@
                     <a href="#" class="nav-link text-dark" aria-current="page">ABOUT</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a  href="#" class="nav-link text-dark" data-bs-toggle="dropdown" aria-expanded="false">PROGRAMS</a>
+                    <a  href="#" class="nav-link text-dark dropdown" data-bs-toggle="dropdown" aria-expanded="false">PROGRAMS</a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Fitness</a></li>
                         <li><a class="dropdown-item" href="#">Swimming</a></li>
@@ -82,14 +86,52 @@
                 </li>  
             </ul>
         </div>  
-        </nav>
-
+        </div>
+    </nav>
 </header>
 
+
 <!-- Main Content -->
-    <div class="container-fluid px-0 py-0">
+    <main class="container-fluid bg-black">
+    <div class="col">
+        <h1 class="text-center text-white welcome-text text-uppercase">
+            <span>Welcome to BODY Miracle</span>      
+            <span>Start exercising today</span>       
+        </h1>
+    </div>  
+<!-- First section -->
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid " alt="#" src="/Assets/bg-img.jpg" alt="">
+        </div>
+        <div class="col bg-dark">Are you ready for your miracle?</div>
+    </div>
+<!-- Second Section -->
+    <div class="row">
+        <div class="col">
+            <img class="img-fluid " alt="#" src="/Assets/bg-img.jpg" alt="">
+        </div>
+        <div class="col bg-dark">5</div>
+    </div>
+    </main>
+
+
+
+
+
+
+
+<!-- Footer Section -->
+<footer class="bg-dark footer">
+    <div class="col">
+        <div class="col">Body Miracle România © 2023. Toate drepturile rezervate.</div>
+    </div>
+</footer>
+    
+
+
 <!-- Carousel IMG -->
-        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <!-- <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img src="/Assets/Logo/BM-Background/Spartan-BM/BM-Spartan-Dark.png" class="carousel-img" alt="Body Miracle">
@@ -105,7 +147,7 @@
                 </div>
             </div>
         </div>
-        <!-- Buttons Left+Right -->
+
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
@@ -114,29 +156,9 @@
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
         </button>
-        </div>
-<!-- First section -->
-        <div class="row">
-            <div class="col">
-                <img class="img-fluid " alt="#" src="/Assets/bg-img.jpg" alt="">
-            </div>
-            <div class="col">Are you ready for your miracle?</div>
-        </div>
-<!-- Second Section -->
-        <div class="row">
-            <div class="col">
-                <img class="img-fluid " alt="#" src="/Assets/bg-img.jpg" alt="">
-            </div>
-            <div class="col">5</div>
-        </div>
-    </div>
-<!-- Footer Section -->
-<footer class="container">
-    <div class="row">
-        <div class="col">Body Miracle România © 2023. Toate drepturile rezervate.</div>
-    </div>
-</footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>    
+        </div> -->
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>    
 </body>
 </html>

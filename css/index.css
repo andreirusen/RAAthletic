@@ -1,8 +1,7 @@
 .carousel-inner {
-    height: 800px;
+    height: 500px;
 }
 .carousel-img {
-    width: 100%;
-    background-size: contain;
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0, center;
 }

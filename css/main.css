@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Murecho&display=swap');
 :root {
     --lt-color-gray-100:  #f8f9fc;
     --lt-color-gray-200:  #f1f3f9;
@@ -71,17 +71,12 @@ svg {
 }
 html {
     font-size: var(--wp--preset--font-size--medium);
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    font-family: 'Murecho', sans-serif;}
 
 /* Header - Nav Bar */
 header {
     z-index: 999999;
-
 }
-
 /* Logo */
 .icon-logo {
     width: 50px;
@@ -89,11 +84,32 @@ header {
 .icon-logo:hover {
     animation:spin 12s linear infinite;
 }
+
+.welcome-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+}
+
+footer {
+    font-family: 'Murecho', sans-serif;
+    color: var(--wp--preset--color--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 @keyframes spin { 
     100% { 
         -webkit-transform: rotate(360deg); 
         transform:rotate(360deg); 
     } 
 }
-
-
+@media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .nav-link{   }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+}
