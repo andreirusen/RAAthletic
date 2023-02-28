@@ -96,11 +96,4 @@ header {
     } 
 }
 
-.carousel-inner {
-    height: 800px;
-}
-.carousel-img {
-    width: 100%;
-    background-size: contain;
-    background-size: cover;
-}
+

@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --text-primary: #101d42;
+    --text-secondary: #fbb44c;
+    --text-dark: #2b2922;
+    --text-light: #eaeaea;
+    --text-white: #ffffff;
+    --bg-primary: #141e4c;
+    --bg-secondary: #dfedf5;
+    --bg-dark: #101d42;
+    --bg-light: #ffffff;
+    --button-color: #2bb686;
+    --fs-large: 1rem;
+    --fs-medium: 0.875rem;
+    --fs-small: 0.75rem;
+    --spacing-xl: 2.625rem;
+    --spacing-large: 1.75rem;
+    --spacing-medium: 1rem;
+    --spacing-small: 0.5rem;
+    --spacing-tiny: 0.25rem;
+    --mobile-logo-height: 45px;
+    --ff
+}
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-white);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    background-color: var(--bg-dark);
+}
+footer p {
+    font-size: var(--fs-small);
+    text-align: center;
+    color: var(--text-light);
+    padding: var(--spacing-medium) 0;
+}
+.logo-it-school {
+    height: 60px;
+}
+nav {
+    color: var(--text-white);
+}
+.navbar {
+    color: var(--text-white);
+}
+
+.dimension {
+    display: flex;
+    justify-content: end;
+}
