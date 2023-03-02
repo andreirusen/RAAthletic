@@ -94,12 +94,22 @@ footer {
 }
 
 /* Custom Section */
+
+.lonly {
+    position: absolute;
+    z-index: -1;
+    bottom: 47.6%;
+    left: 25.5%;
+}
+
+
+
+
 .btn-let-begin {
     position: fixed;
     bottom: 9%;
     right: 3%;
-    z-index: 99999;
-
+    z-index: 9;
 }
 .icon-logo {
     width: 50px;
@@ -109,6 +119,13 @@ footer {
     flex-direction: column;
     justify-content: center;
     height: 400px;
+}
+.grow-and-shrink-img {
+    z-index: -1;
+    animation: grow-and-shrink 3000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 .grow-and-shrink {
     animation: grow-and-shrink 1000ms;
@@ -125,13 +142,16 @@ footer {
 
 
 /* Hover Section */
-.icon-logo:hover {animation:spin 12s linear infinite;}
+
 .bg-dropdown-1:hover {background-color: var(--color-program-bronze); color: white;}
 .bg-dropdown-2:hover {background-color: var(--color-program-silver);color: white;}
 .bg-dropdown-3:hover {background-color: var(--color-program-gold);color: white;}
 .bg-dropdown-4:hover {background-color: var(--color-program-performance);color: white;}
+
+.icon-spin:hover {animation:spin 12s linear infinite;}
 .translate-hover:hover{transform: translateY(-5px);}
-.btn-shake:hover {
+
+.shake:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
@@ -174,7 +194,7 @@ footer {
 }
 @keyframes grow-and-shrink {
 0% {
-    transform: scale(0.95);
+    transform: scale(1);
 }
 100% {
     transform: scale(1.1);
