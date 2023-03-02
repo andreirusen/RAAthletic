@@ -93,12 +93,13 @@ footer {
     text-align: center;
 }
 
-
 /* Custom Section */
 .btn-let-begin {
     position: fixed;
-    bottom: 10%;
-    right: 5%;
+    bottom: 9%;
+    right: 3%;
+    z-index: 99999;
+
 }
 .icon-logo {
     width: 50px;
@@ -115,7 +116,9 @@ footer {
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
-
+.text-justify {
+    text-align: justify;
+}
 
 
 
