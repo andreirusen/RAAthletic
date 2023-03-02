@@ -95,6 +95,11 @@ footer {
 
 
 /* Custom Section */
+.btn-let-begin {
+    position: fixed;
+    bottom: 10%;
+    right: 5%;
+}
 .icon-logo {
     width: 50px;
 }
@@ -104,6 +109,16 @@ footer {
     justify-content: center;
     height: 400px;
 }
+.grow-and-shrink {
+    animation: grow-and-shrink 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+
 
 
 /* Hover Section */
@@ -112,6 +127,23 @@ footer {
 .bg-dropdown-2:hover {background-color: var(--color-program-silver);color: white;}
 .bg-dropdown-3:hover {background-color: var(--color-program-gold);color: white;}
 .bg-dropdown-4:hover {background-color: var(--color-program-performance);color: white;}
+.translate-hover:hover{transform: translateY(-5px);}
+.btn-shake:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+.grow-and-shrink-hover:hover{
+    animation: grow-and-shrink 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+
+
 
 /* Media Section */
 @keyframes spin { 
@@ -119,6 +151,31 @@ footer {
         -webkit-transform: rotate(360deg); 
         transform:rotate(360deg); 
     } 
+}
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+}
+@keyframes grow-and-shrink {
+0% {
+    transform: scale(0.95);
+}
+100% {
+    transform: scale(1.1);
+}
 }
 @media all and (min-width: 992px) {
 	.navbar .nav-item .dropdown-menu{ display: none; }
