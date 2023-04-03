@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+.first-letter::first-letter{
+    font-size: 250%;
+    color: #ffc107;
+    font-family: 'Fasthand', cursive;
+    letter-spacing: .3rem;
+}
+.img-signature {
+    width: 200px;
+    transform: translateX(-100px) translateY(-70px)
+}
