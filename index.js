@@ -1,8 +1,5 @@
 //Saving Data anouncement
-window.addEventListener(
-    'beforeunload', event => {
-      event.preventDefault();
-      event.returnValue = '';
-    }
-  );
-  
+window.addEventListener("beforeunload", (event) => {
+  event.preventDefault();
+  event.returnValue = "";
+});
