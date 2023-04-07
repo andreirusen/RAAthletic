@@ -154,7 +154,9 @@ footer {
 .icon-logo-big {
     width: 250px;
 }
-
+.text-right-nav{
+    text-align: right;
+}
 .welcome-text {
     display: flex;
     flex-direction: column;
