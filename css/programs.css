@@ -1,0 +1,61 @@
+@font-face {
+    font-family: neon;
+    src: url(hellodenverdisplayregular_v1.6.ttf);
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+
+}
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+}
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+section img#gym-room{
+    z-index: -1;
+}
+section img#icon-RAA{
+    mix-blend-mode: screen;
+}
+.front-neon-wrapper {
+    
+}
+.front-neon-text {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: neon;
+    font-size: 4rem;
+    color: #a22e2e;
+    letter-spacing: .3rem;
+}
+.front-neon-text{
+    text-shadow: 
+    .1vw 0vw .25vw #fff, .2vw 0vw .25vw #fff, .4vw 0vw .25vw #fff, 
+
+  
+    .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b, 
+    .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b,
+    .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
+}
+.front-img-1 {
+    width: 100px;
+}
+.front-img-2{
+    width: 100px;
+}
+.front-img-3{
+    width: 100px;
+}
+.front-img-4{
+    width: 100px;
+}
