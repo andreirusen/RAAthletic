@@ -110,6 +110,8 @@
 body {
   font-family: "Poppins", sans-serif;
   font-size: var(--wp--preset--font-size--medium);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 nav {

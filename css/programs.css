@@ -1,61 +1,110 @@
-@font-face {
-    font-family: neon;
-    src: url(hellodenverdisplayregular_v1.6.ttf);
+:root {
+  --lt-color-gray-100: #f8f9fc;
+  --lt-color-gray-200: #f1f3f9;
+  --lt-color-gray-300: #dee3ed;
+  --lt-color-gray-400: #c2c9d6;
+  --lt-color-gray-500: #8f96a3;
+  --lt-color-gray-600: #5e636e;
+  --lt-color-gray-700: #2f3237;
+  --lt-color-gray-800: #1d1e20;
+  --lt-color-gray-900: #111213;
+  --lt-color-black: #000;
+  --lt-color-white: #fff;
+  --lt-shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
+    0 1px 4px -1px rgba(0, 0, 0, 0.04);
+  --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
+    0 6px 20px -3px rgba(0, 0, 0, 0.2);
 }
 
-body{
-    font-family: "Poppins", sans-serif;
+:root {
+  --color-program-bronze: #ed6d14;
+  --color-program-silver: #848589;
+  --color-program-gold: #ffb435;
+  --color-program-performance: #cf2e2e;
+}
 
+body {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
 }
-section {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
-}
-section img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-section img#gym-room{
-    z-index: -1;
-}
-section img#icon-RAA{
-    mix-blend-mode: screen;
-}
-.front-neon-wrapper {
-    
-}
-.front-neon-text {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: neon;
-    font-size: 4rem;
-    color: #a22e2e;
-    letter-spacing: .3rem;
-}
-.front-neon-text{
-    text-shadow: 
-    .1vw 0vw .25vw #fff, .2vw 0vw .25vw #fff, .4vw 0vw .25vw #fff, 
 
-  
-    .1vw 0vw   1vw #e50b0b, .2vw 0vw   1vw #e50b0b, .4vw 0vw   5vw #e50b0b, 
-    .1vw 0vw   5vw #e50b0b, .2vw 0vw  20vw #e50b0b, .4vw 0vw  10vw #e50b0b,
-    .1vw 0vw  10vw #e50b0b, .2vw 0vw  30vw #e50b0b, .4vw 0vw  10vw #e50b0b;
+.wrapper {
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  perspective: 10px;
 }
-.front-img-1 {
-    width: 100px;
+
+.interactive-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
 }
-.front-img-2{
-    width: 100px;
+
+.bg-programs-img,
+.fg-programs-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
-.front-img-3{
-    width: 100px;
+
+.bg-programs-img {
+  transform: translateZ(-10) scale(2);
 }
-.front-img-4{
-    width: 100px;
+
+.fg-programs-img {
+  transform: translateZ(-5) scale(1.5);
+}
+
+.interactive-section::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 1000;
+}
+
+.interactive-section .bg-programs-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.text {
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: 4vw;
+  z-index: 9;
+  color: var(--lt-color-gray-100);
+  text-shadow: -4px 0px 3px var(--color-program-performance),
+    -5px 0px 12px rgba(78, 74, 16, 1);
+}
+
+.btn-programs {
+  border: 2px solid var(--color-program-performance);
+  border-radius: 40px;
+
+  text-decoration: none;
+  letter-spacing: 0.2rem;
+  padding: 10px 30px;
+  color: var(--lt-color-white);
+  font-size: 3vw;
+  z-index: 9;
+}
+
+.btn-programs:hover {
+  background-color: var(--color-program-performance);
 }
