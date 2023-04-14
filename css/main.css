@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap');
+
 /*
 font-family: 'Itim', cursive;
 font-family: 'Kalam', cursive;
@@ -11,8 +12,8 @@ font-family: 'Poppins', sans-serif;
   --color-program-silver: #848589;
   --color-program-gold: #ffb435;
   --color-program-performance: #cf2e2e;
-  --color-white:#fff;
-  --color-black:#000;
+  --color-white: #fff;
+  --color-black: #000;
   --color-gray-100: #f8f9fc;
   --color-gray-200: #f1f3f9;
   --color-gray-300: #dee3ed;
@@ -46,7 +47,7 @@ font-family: 'Poppins', sans-serif;
 
 /* Body Section */
 body {
-  font-family: 'Poppins', sans-serif; 
+  font-family: 'Poppins', sans-serif;
   font-size: var(--font-size-medium);
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -57,7 +58,9 @@ nav {
   font-family: "Poppins", sans-serif;
 
 }
-
+.text-right-nav {
+  text-align: center;
+}
 svg {
   width: 25px;
   height: 25px;
@@ -124,13 +127,13 @@ a {
 }
 
 .interactive-section-one::before {
-content: "";
-position: absolute;
-bottom: 0;
-width: 100%;
-height: 100px;
-background: linear-gradient(to top, #000, transparent);
-z-index: 3;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 3;
 }
 
 
@@ -251,4 +254,3 @@ z-index: 3;
     margin-top: 0;
   }
 }
-
