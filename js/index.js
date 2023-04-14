@@ -10,8 +10,8 @@ let showcaseImg = document.querySelector('.showcase-img');
 
 window.addEventListener('scroll', function() {
     let value = window.scrollY;
-    leftSection.style.marginRight = value * 1 + 'px'; 
-    showcaseImg.style.marginLeft = value * 1 + 'px'; 
+    leftSection.style.marginRight = value * 0.4 + 'px'; 
+    showcaseImg.style.marginLeft = value * 0.4 + 'px'; 
 });
 
 

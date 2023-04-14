@@ -43,5 +43,9 @@ font-family: 'Poppins', sans-serif;
     --spacing-80: 5.06rem;
   }
   body {
-    font-family: "Poppins", sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-size: var(--font-size-medium);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
   }
