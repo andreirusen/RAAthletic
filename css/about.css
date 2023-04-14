@@ -1,28 +1,95 @@
-@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap');
+/*
+font-family: 'Itim', cursive;
+font-family: 'Kalam', cursive;
+font-family: 'Patrick Hand', cursive;
+font-family: 'Permanent Marker', cursive;
+font-family: 'Poppins', sans-serif; 
+*/
 :root {
-    --lt-color-gray-100: #f8f9fc;
-    --lt-color-gray-200: #f1f3f9;
-    --lt-color-gray-300: #dee3ed;
-    --lt-color-gray-400: #c2c9d6;
-    --lt-color-gray-500: #8f96a3;
-    --lt-color-gray-600: #5e636e;
-    --lt-color-gray-700: #2f3237;
-    --lt-color-gray-800: #1d1e20;
-    --lt-color-gray-900: #111213;
-    --lt-color-black: #000;
-    --lt-color-white: #fff;
-    --lt-shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
-      0 1px 4px -1px rgba(0, 0, 0, 0.04);
+    --color-program-bronze: #ed6d14;
+    --color-program-silver: #848589;
+    --color-program-gold: #ffb435;
+    --color-program-performance: #cf2e2e;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-gray-100: #f8f9fc;
+    --color-gray-200: #f1f3f9;
+    --color-gray-300: #dee3ed;
+    --color-gray-400: #c2c9d6;
+    --color-gray-500: #8f96a3;
+    --color-gray-600: #5e636e;
+    --color-gray-700: #2f3237;
+    --color-gray-800: #1d1e20;
+    --color-gray-900: #111213;
+    --shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
+        0 1px 4px -1px rgba(0, 0, 0, 0.04);
     --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
-      0 6px 20px -3px rgba(0, 0, 0, 0.2);
-  }
-  body {
+        0 6px 20px -3px rgba(0, 0, 0, 0.2);
+}
+
+:root {
+
+    --font-size-small: 13px;
+    --font-size-medium: 20px;
+    --font-size-large: 36px;
+    --font-size-x-large: 42px;
+    --spacing-20: 0.44rem;
+    --spacing-30: 0.67rem;
+    --spacing-40: 1rem;
+    --spacing-50: 1.5rem;
+    --spacing-60: 2.25rem;
+    --spacing-70: 3.38rem;
+    --spacing-80: 5.06rem;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; 
+    font-size: var(--font-size-medium);
     overflow-x: hidden;
-  }
+    scroll-behavior: smooth;
+}
+
+.header-about {
+    font-family: 'Permanent Marker', cursive;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-size: 4vw;
+    color: var(--color-white);
+    text-shadow:
+        -4px 0px 3px var(--color-black),
+        -5px 0px 12px rgb(0, 0, 0);
+    z-index: 3;
+
+}
+/* Shadow 1 */
+.interactive-section-one::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 3;
+}
+
+.btn-let {
+    z-index: 4;
+}
+/* Shadow 2*/
+.interactive-section-two::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 5;
+}
+
 .first-letter::first-letter {
     font-size: 250%;
-    /* color: #ffc107; */
-    color: #dc3545;
+    color: var(--color-program-performance);
     font-family: 'Fasthand', cursive;
     letter-spacing: .3rem;
 }
@@ -30,20 +97,6 @@
 .img-signature {
     width: 200px;
     transform: translateY(-30px)
-}
-
-.header-about {
-    /* position: absolute; */
-
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-    font-size: 4vw;
-    color: var(--lt-color-white);
-    text-shadow: 
-        -4px 0px 3px var(--lt-color-black),
-        -5px 0px 12px rgb(0, 0, 0);
-    z-index: 3;
-
 }
 
 .wrapper {
@@ -65,11 +118,10 @@
     z-index: -1;
 }
 
-
 .bg-programs-img,
 .fg1-programs-img,
 .fg2-programs-img,
-.fg3-programs-img, 
+.fg3-programs-img,
 .circle-left-img,
 .circle-right-img {
     position: absolute;
@@ -80,6 +132,7 @@
     pointer-events: none;
     z-index: -1;
 }
+
 .fg-athlet-programs-img,
 .eclipse-left-img {
     position: absolute;
@@ -95,39 +148,16 @@
 .bg-programs-img {
     transform: translateZ(-10) scale(2);
 }
+
 .fg-athlet-programs-img,
 .fg1-programs-img,
 .fg2-programs-img,
 .fg3-programs-img,
 .circle-left-img,
 .circle-right-img,
-.eclipse-left-img  {
+.eclipse-left-img {
     transform: translateZ(-5) scale(1.5);
 }
 
-.interactive-section-one::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 500px;
-    background: linear-gradient(to top, #000, transparent);
-    z-index: 2;
-}
-.interactive-section-two::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 300px;
-    background: linear-gradient(to top, #000, transparent);
-    z-index: 4;
-}
 
 
-.btn-let {
-    position: fixed;
-    bottom: 25%;
-    right: 45%;
-    z-index: 9;
-  }
