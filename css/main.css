@@ -8,10 +8,10 @@ font-family: 'Permanent Marker', cursive;
 font-family: 'Poppins', sans-serif; 
 */
 :root {
-  --color-program-bronze: #ed6d14;
-  --color-program-silver: #848589;
-  --color-program-gold: #ffb435;
-  --color-program-performance: #cf2e2e;
+  --color-bronze: #ed6d14;
+  --color-silver: #848589;
+  --color-gold: #ffb435;
+  --color-performance: #cf2e2e;
   --color-white: #fff;
   --color-black: #000;
   --color-gray-100: #f8f9fc;
@@ -27,10 +27,6 @@ font-family: 'Poppins', sans-serif;
     0 1px 4px -1px rgba(0, 0, 0, 0.04);
   --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
     0 6px 20px -3px rgba(0, 0, 0, 0.2);
-}
-
-:root {
-
   --font-size-small: 13px;
   --font-size-medium: 20px;
   --font-size-large: 36px;
@@ -148,22 +144,22 @@ a {
 /* Hover Section */
 
 .bg-dropdown-1:hover {
-  background-color: var(--color-program-bronze);
+  background-color: var(--color-bronze);
   color: var(--color-white);
 }
 
 .bg-dropdown-2:hover {
-  background-color: var(--color-program-silver);
+  background-color: var(--color-silver);
   color: var(--color-white);
 }
 
 .bg-dropdown-3:hover {
-  background-color: var(--color-program-gold);
+  background-color: var(--color-gold);
   color: var(--color-white);
 }
 
 .bg-dropdown-4:hover {
-  background-color: var(--color-program-performance);
+  background-color: var(--color-performance);
   color: var(--color-white);
 }
 

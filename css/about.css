@@ -8,10 +8,10 @@ font-family: 'Permanent Marker', cursive;
 font-family: 'Poppins', sans-serif; 
 */
 :root {
-    --color-program-bronze: #ed6d14;
-    --color-program-silver: #848589;
-    --color-program-gold: #ffb435;
-    --color-program-performance: #cf2e2e;
+    --color-bronze: #ed6d14;
+    --color-silver: #848589;
+    --color-gold: #ffb435;
+    --color-performance: #cf2e2e;
     --color-white: #fff;
     --color-black: #000;
     --color-gray-100: #f8f9fc;
@@ -24,13 +24,9 @@ font-family: 'Poppins', sans-serif;
     --color-gray-800: #1d1e20;
     --color-gray-900: #111213;
     --shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
-        0 1px 4px -1px rgba(0, 0, 0, 0.04);
+      0 1px 4px -1px rgba(0, 0, 0, 0.04);
     --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
-        0 6px 20px -3px rgba(0, 0, 0, 0.2);
-}
-
-:root {
-
+      0 6px 20px -3px rgba(0, 0, 0, 0.2);
     --font-size-small: 13px;
     --font-size-medium: 20px;
     --font-size-large: 36px;
@@ -42,7 +38,7 @@ font-family: 'Poppins', sans-serif;
     --spacing-60: 2.25rem;
     --spacing-70: 3.38rem;
     --spacing-80: 5.06rem;
-}
+  }
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -74,7 +70,7 @@ body {
 
 .first-letter::first-letter {
     font-size: 250%;
-    color: var(--color-program-performance);
+    color: var(--color-performance);
     font-family: 'Fasthand', cursive;
     letter-spacing: .3rem;
 }
