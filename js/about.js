@@ -6,7 +6,8 @@ let fgImg2 = document.querySelector('.fg2-programs-img');
 let fgImg3 = document.querySelector('.fg3-programs-img');
 let circleLeft = document.querySelector('.circle-left-img');
 let circleRight = document.querySelector('.circle-right-img');
-
+let scrollToTopButton = document.querySelector('.btn-let')
+let btnLetBegin = document.querySelector('.btn-let-begin')
 
 window.addEventListener('scroll', function() {
     let value = window.scrollY;
@@ -20,7 +21,6 @@ window.addEventListener('scroll', function() {
 
 });
 
-let scrollToTopButton = document.querySelector('.btn-let')
 scrollToTopButton.addEventListener("click", function () {
     // Functia scrollTo este o functie predefinita.
     window.scrollTo({
@@ -31,12 +31,12 @@ scrollToTopButton.addEventListener("click", function () {
 
 
 
-  let btnLetBegin = document.querySelector('.btn-let-begin')
+
   document.addEventListener("scroll", function () {
     // Proprietatea scrollY reprezinta numarul de pizeli scrollati pe axa OY (cand nu am scrollat deloc este 0).
-    if (window.scrollY > 700) {
-        btnLetBegin.style.visibility = "visible";
+    if (window.scrollY > 500) {
+      btnLetBegin.style.visibility = "visible";
     } else {
-        btnLetBegin.style.visibility = "hidden";
+      btnLetBegin.style.visibility = "hidden";
     }
   });

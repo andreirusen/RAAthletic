@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap');
+
 /*
 font-family: 'Itim', cursive;
 font-family: 'Kalam', cursive;
@@ -55,7 +56,7 @@ body {
     font-family: 'Permanent Marker', cursive;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-    font-size: 4vw;
+    font-size: 8vw;
     color: var(--color-white);
     text-shadow:
         -4px 0px 3px var(--color-black),
@@ -63,30 +64,13 @@ body {
     z-index: 3;
 
 }
-/* Shadow 1 */
-.interactive-section-one::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 500px;
-    background: linear-gradient(to top, #000, transparent);
-    z-index: 3;
-}
 
 .btn-let {
+    font-family: 'Poppins', sans-serif;
     z-index: 4;
 }
-/* Shadow 2*/
-.interactive-section-two::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(to top, #000, transparent);
-    z-index: 5;
-}
+
+
 
 .first-letter::first-letter {
     font-size: 250%;
@@ -101,6 +85,7 @@ body {
 }
 
 .wrapper {
+    font-family: 'Permanent Marker', cursive;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -117,6 +102,28 @@ body {
     height: 100%;
     transform-style: preserve-3d;
     z-index: -1;
+}
+
+/* Shadow 1 */
+.interactive-section-one::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 3;
+}
+
+/* Shadow 2*/
+.interactive-section-two::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, #000, transparent);
+    z-index: 5;
 }
 
 .bg-programs-img,
@@ -159,6 +166,3 @@ body {
 .eclipse-left-img {
     transform: translateZ(-5) scale(1.5);
 }
-
-
-
