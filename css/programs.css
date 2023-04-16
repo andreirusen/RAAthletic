@@ -42,6 +42,10 @@ font-family: 'Poppins', sans-serif;
     0 6px 20px -3px rgba(0, 0, 0, 0.2);
 }
 
+* {
+  overflow-x: hidden;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   overflow-y: auto;
@@ -194,8 +198,21 @@ body {
 
 /* Card Section */
 
+.programs-title {
+  margin: 5% 0;
+  font-family: 'Permanent Marker', cursive;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-size: 3vw;
+}
+
 .programs-card-section {
-  padding: 50px;
+  background-image: url(/Assets/Programs/room3d-5.2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -205,19 +222,10 @@ body {
 
 .programs-card-container {
   position: relative;
-  width: 1100px;
-
-  display: flex;
-  flex-wrap: wrap;
-  transform-style: preserve-3d;
-  perspective: 500px;
-}
-
-.programs-card-container {
-  position: relative;
   width: 100%;
-
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   transform-style: preserve-3d;
   perspective: 500px;
@@ -227,15 +235,18 @@ body {
   width: 300px;
   height: 400px;
   background-color: #000;
-  transition: 0.5s;
+  transition: 0.2s;
   transform-style: preserve-3d;
   overflow: hidden;
+  margin: 10px 0;
 }
 
 .box:hover {
   transform: rotateY(0deg) scale(1.05);
   z-index: 1;
-  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+  box-shadow:
+    0 25px 40px rgba(0, 1, 1, 2);
+
 }
 
 .imgBx {
@@ -304,12 +315,6 @@ body {
   transition-delay: 0.3s;
 }
 
-@media (max-width: 767px) {
-  .content h2 {
-    transform: translateY(0);
-  }
-}
-
 .content p {
   text-align: justify;
   color: var(--color-white);
@@ -323,15 +328,35 @@ body {
   transition-delay: 0.4s;
 }
 
+
+/* Mobile Screen */
+
+@media (max-width: 767px) {
+  .content h2 {
+    transform: translateY(0);
+  }
+}
+
+
 @media (max-width: 767px) {
   .content p {
     transform: translateY(0);
   }
 }
 
-
 @media only screen and (max-width: 768px) {
   .header-programs {
     font-size: 16vw;
+  }
+
+  .programs-title {
+    font-size: 8vw;
+  }
+
+  .programs-card-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

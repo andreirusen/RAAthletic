@@ -3,7 +3,7 @@ let btnPrograms = document.querySelector(".btn-programs");
 let btnLetBegin = document.querySelector(".btn-let-begin");
 let fgImg1 = document.querySelector(".fg1-programs-img");
 let fgImg3 = document.querySelector(".fg3-programs-img");
-let programSection = document.querySelector(".programs-card-section");
+let programSection = document.querySelector(".programs-scrollTo");
 
 // Scroll To Section
 function scrollToPrograms() {
