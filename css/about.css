@@ -162,3 +162,11 @@ body {
 .eclipse-left-img {
     transform: translateZ(-5) scale(1.5);
 }
+
+
+@media only screen and (max-width: 768px) {
+    .header-about {
+      font-size: 10vw;
+    }
+  }
+  
