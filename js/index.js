@@ -15,8 +15,7 @@ let contentSection = document.querySelector('.content-section')
 window.addEventListener("scroll", function () {
   let value = window.scrollY;
 
-  headerWelcome.style.marginBottom = value * 1 + "px";
-  headerTyped.style.marginBottom = value * 1 + "px";
+  headerWelcome.style.marginTop = value * 2 + "px";
   btnHome.style.marginTop = value * 1 + "px";
   
   fgImg1.style.marginTop = value * 0.3 + "px";

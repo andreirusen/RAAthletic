@@ -352,9 +352,9 @@ a {
 }
 
 
-
 @media only screen and (max-width: 768px) {
   .mobile-container {
+    width: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -371,28 +371,33 @@ a {
 
   .left-section .fg4-showcase-img,
   .left-section .fg5-showcase-img {
-    height: 250px;
+    height: 28%;
     width: 100%;
+    background-size: cover;
+    top: 10%;
+
   }
 
   .right-section {
-    margin-top: 32px;
+    margin-bottom: 60px;
   }
 
   .left-section {
-    order: 2;
+    order: 1;
   }
 
   .right-section {
-    order: 1;
+    order: 2;
   }
 }
+
 
 
 @media only screen and (max-width: 768px) {
   .header-welcome {
     font-size: 14vw;
   }
+
   .header-typed {
     font-size: 6vw;
   }
