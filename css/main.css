@@ -44,10 +44,10 @@ font-family: 'Poppins', sans-serif;
 /* Body Section */
 body {
   font-family: 'Poppins', sans-serif;
-  font-size: var(--font-size-medium);
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  font-size: var(--font-size-medium);
 }
 
 nav {
@@ -55,9 +55,7 @@ nav {
   font-family: "Poppins", sans-serif;
 
 }
-.text-right-nav {
-  text-align: center;
-}
+
 svg {
   width: 25px;
   height: 25px;
@@ -77,7 +75,21 @@ a {
   text-decoration: none;
 }
 
+
+
 /* Custom Section */
+
+.text-right-nav {
+  text-align: center;
+}
+
+.text-center-nav {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
 
 .btn-let-begin {
   position: fixed;
@@ -89,15 +101,6 @@ a {
 .icon-logo {
   width: 80px;
 }
-
-.text-center-nav {
-  text-align: center;
-}
-
-.text-justify {
-  text-align: justify;
-}
-
 
 .grow-and-shrink-img {
   z-index: -1;
@@ -115,34 +118,130 @@ a {
   animation-direction: alternate;
 }
 
+
+
+
+
+
+
+
 .wrapper {
-  height: 49vh;
+  font-family: 'Permanent Marker', cursive;
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
   perspective: 10px;
-
+  display: flex;
+  flex-direction: column;
 }
 
+.header-welcome {
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: 6vw;
+  color: var(--color-white);
+  text-shadow:
+    -4px 0px 3px var(--color-black),
+    -5px 0px 12px rgb(0, 0, 0);
+  z-index: 3;
+}
+
+.header-typed {
+  letter-spacing: 0.2rem;
+  font-size: 3vw;
+  color: var(--color-white);
+  text-shadow:
+    -4px 0px 3px var(--color-black),
+    -5px 0px 12px rgb(0, 0, 0);
+  z-index: 3;
+}
+
+.btn-home {
+  font-family: 'Poppins', sans-serif;
+  z-index: 4;
+}
+
+.right-section {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-section {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-section .fg4-showcase-img,
+.left-section .fg5-showcase-img {
+  position: absolute;
+  height: 40vh;
+  width: 65vh;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-showcase-img,
+.fg1-showcase-img,
+.fg3-showcase-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.bg-showcase-img {
+  transform: translateZ(-10) scale(2);
+}
+
+.fg1-showcase-img,
+.fg3-showcase-img {
+  transform: translateZ(-5) scale(1.5);
+}
+
+.interactive-section-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+/* Shadow 1 */
 .interactive-section-one::before {
   content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 100px;
+  height: 300px;
   background: linear-gradient(to top, #000, transparent);
   z-index: 3;
 }
 
-
-
-
-
-
-
+.interactive-section-two::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 5;
+}
 
 
 /* Hover Section */
 
+/* Programs Nav Bar Colors */
 .bg-dropdown-1:hover {
   background-color: var(--color-bronze);
   color: var(--color-white);
@@ -249,5 +348,69 @@ a {
 
   .navbar .nav-item .dropdown-menu {
     margin-top: 0;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .mobile-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .left-section,
+  .right-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .left-section .fg4-showcase-img,
+  .left-section .fg5-showcase-img {
+    height: 250px;
+    width: 100%;
+  }
+
+  .right-section {
+    margin-top: 32px;
+  }
+
+  .left-section {
+    order: 2;
+  }
+
+  .right-section {
+    order: 1;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .header-welcome {
+    font-size: 14vw;
+  }
+  .header-typed {
+    font-size: 6vw;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .grow-and-shrink-mobile {
+    animation: grow-and-shrink 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  .grow-and-shrink-img-mobile {
+    animation: grow-and-shrink 4000ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    height: 500px;
   }
 }

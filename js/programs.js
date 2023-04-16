@@ -1,4 +1,3 @@
-let bgImg = document.querySelector(".bg-programs-img");
 let headerPrograms = document.querySelector(".header-programs");
 let btnPrograms = document.querySelector(".btn-programs");
 let btnLetBegin = document.querySelector(".btn-let-begin");
@@ -14,8 +13,8 @@ function scrollToPrograms() {
 // Parallax Effect
 window.addEventListener("scroll", function () {
   let value = window.scrollY;
-  headerPrograms.style.marginBottom = value * 1.1 + "px";
-  btnPrograms.style.marginTop = value * 1.1 + "px";
+  headerPrograms.style.marginBottom = value * 1 + "px";
+  btnPrograms.style.marginTop = value * 1 + "px";
   fgImg1.style.marginTop = value * 0.3 + "px";
   fgImg3.style.marginLeft = value * 0.3 + "px";
 });
