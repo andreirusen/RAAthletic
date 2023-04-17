@@ -42,10 +42,6 @@ font-family: 'Poppins', sans-serif;
     0 6px 20px -3px rgba(0, 0, 0, 0.2);
 }
 
-* {
-  overflow-x: hidden;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   overflow-y: auto;
@@ -120,6 +116,7 @@ body {
   height: 100%;
   transform-style: preserve-3d;
   z-index: -1;
+
 }
 
 .interactive-section-tree::before {
@@ -205,6 +202,9 @@ body {
   text-transform: uppercase;
   color: var(--color-white);
   font-size: 3vw;
+  text-shadow:
+    -4px 0px 3px var(--color-black),
+    -5px 0px 12px rgb(0, 0, 0);
 }
 
 .programs-card-section {
@@ -229,6 +229,7 @@ body {
   flex-wrap: wrap;
   transform-style: preserve-3d;
   perspective: 500px;
+
 }
 
 .box {
@@ -239,6 +240,8 @@ body {
   transform-style: preserve-3d;
   overflow: hidden;
   margin: 10px 0;
+  border-radius: 10px;
+  filter: brightness(50%)
 }
 
 .box:hover {
@@ -246,7 +249,7 @@ body {
   z-index: 1;
   box-shadow:
     0 25px 40px rgba(0, 1, 1, 2);
-
+  filter: brightness(100%);
 }
 
 .imgBx {
@@ -256,6 +259,7 @@ body {
   width: 100%;
   height: 100%;
 }
+
 
 .imgBx::before {
   content: '';
@@ -281,6 +285,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(0.5px);
 }
 
 .content {
@@ -308,6 +313,7 @@ body {
     -5px 0px 12px rgb(0, 0, 0);
   transition: 0.5s;
   transform: translateY(200px);
+
 }
 
 .box:hover .content h2 {
@@ -321,30 +327,29 @@ body {
   transition: 0.3s;
   font-size: 18px;
   transform: translateY(250px);
+  text-shadow:
+    -4px 0px 3px var(--color-black),
+    -5px 0px 12px rgb(0, 0, 0);
 }
 
 .box:hover .content p {
   transform: translateY(0px);
   transition-delay: 0.4s;
+
 }
 
 
 /* Mobile Screen */
 
-@media (max-width: 767px) {
-  .content h2 {
-    transform: translateY(0);
+
+@media (max-width: 1290px) {
+
+  .programs-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-}
 
-
-@media (max-width: 767px) {
-  .content p {
-    transform: translateY(0);
-  }
-}
-
-@media only screen and (max-width: 768px) {
   .header-programs {
     font-size: 16vw;
   }
@@ -353,10 +358,25 @@ body {
     font-size: 8vw;
   }
 
-  .programs-card-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .box {
+    filter: brightness(100%);
   }
+
+  .imgBx img {
+    filter: blur(1px);
+  }
+
+  .content h2 {
+    transform: translateY(0);
+  }
+
+  .content p {
+    transform: translateY(0);
+  }
+
+  .content h2 {
+    font-size: 120%;
+
+  }
+
 }
