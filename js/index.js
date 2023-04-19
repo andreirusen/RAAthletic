@@ -1,3 +1,4 @@
+
 let headerWelcome = document.querySelector(".header-welcome");
 let headerTyped = document.querySelector(".header-typed");
 let btnHome = document.querySelector(".btn-home");
@@ -6,7 +7,6 @@ let fgImg1 = document.querySelector(".fg1-showcase-img");
 let fgImg3 = document.querySelector(".fg3-showcase-img");
 let fgImg4 = document.querySelector(".fg4-showcase-img");
 let fgImg5 = document.querySelector(".fg5-showcase-img");
-
 
 let contentSection = document.querySelector('.content-section') 
 
@@ -21,7 +21,7 @@ window.addEventListener("scroll", function () {
   fgImg1.style.marginTop = value * 0.3 + "px";
   fgImg3.style.marginLeft = value * 0.3 + "px";
   
-  fgImg4.style.marginRight = value * 1 + "px";
+  fgImg4.style.marginRight = value * 2 + "px";
   fgImg5.style.marginLeft = value * 3 + "px";
 });
 
