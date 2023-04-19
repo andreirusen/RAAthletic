@@ -27,9 +27,6 @@ scrollToTopButton.addEventListener("click", function () {
     });
   });
 
-
-
-
   document.addEventListener("scroll", function () {
     // Proprietatea scrollY reprezinta numarul de pizeli scrollati pe axa OY (cand nu am scrollat deloc este 0).
     if (window.scrollY > 500) {
@@ -38,3 +35,13 @@ scrollToTopButton.addEventListener("click", function () {
       btnLetBegin.style.visibility = "hidden";
     }
   });
+
+
+  function Map1234() {  
+    var mapOpt1 = {  
+      center: new google.maps.LatLng(51.508742,-0.120850),  
+      zoom:9,  
+      mapTypeId: google.maps.MapTypeId.ROADMAP  
+    };   
+    var x = new google.maps.Map(document.getElementById("Map1"),mapOpt1);  
+  }  

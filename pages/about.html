@@ -29,7 +29,7 @@
 </head>
 <!-- Body -->
 
-<body class="container-fluid px-0 py-0 smooth-scroll-wrapper">
+<body class="container-fluid px-0 py-0 smooth-scroll-wrapper scrollable-element">
     <!-- Navbar  -->
     <nav class="container-fluid navbar navbar-expand-lg py-2">
         <div class="container">
@@ -138,7 +138,11 @@
             <img src="/Assets/About/circle-right.png" class="circle-right-img" id=""> -->
 
             <h1 class="header-about text-center">Why me ? <br> You might ask!</h1>
-
+            <button onclick="scrollToPrograms()"
+                class="btn-about btn btn-danger btn-lg rounded-pill transform-scale-md grow-and-shrink"
+                type="button">
+                BEGIN
+            </button>
 
         </section>
     </div>
@@ -244,15 +248,16 @@
         </div>
     </section>
 
+    <!-- Location Map -->
+
+    <div id="Map1" style="width:100%;height:400px;"></div> 
+
     <!-- Footer Section -->
     <footer class="bg-black footer  px-3">
-        <div class="container d-flex flex-column flex-sm-row ">
+        <div class="container d-flex flex-column flex-md-row ">
 
             <!-- left Div -->
-            <div class="col d-flex flex-column p-3 ">
-                <!-- <a href="#">
-                    <img class="icon-logo-footer" src="/Assets/Logo/RAA/RAA-B-NoBG-Sml.png" alt="brand">
-                </a> -->
+            <div class="footer-left col d-flex flex-column py-5 p-md-2 p-lg-5 order-last order-md-first">
                 <p class="text-uppercase fwb">
                     <a href="#" class="color-hover fw-bold">RAATHLETIC
                         <span>
@@ -262,12 +267,7 @@
                     </a>
                 </p>
                 <hr class="solid">
-                <p class="d-none d-md-block text-justify ">
-                    Take your health and body to the next level with our
-                    comprehensive program designed to help you reach your fitness
-                    goals.
-                </p>
-                <p class="text-justify ">
+                <p class="">
                     All rights reserved.
                 </p>
 
@@ -275,7 +275,7 @@
             </div>
 
             <!-- Middle Div -->
-            <div class="col d-flex flex-column p-3 ">
+            <div class="footer-middle col d-flex flex-column py-5 p-md-2 p-lg-5 ">
                 <p><a href="#" class="color-hover text-uppercase fw-bold">Our Programs</a></p>
                 <hr class="solid">
                 <p><a href="#" class="color-hover">Beginner</a></p>
@@ -285,7 +285,7 @@
             </div>
 
             <!-- Right Div -->
-            <div class="col d-flex flex-column justify-content- p-3 ">
+            <div class="footer-right col d-flex flex-column py-5 p-md-2 p-lg-5">
                 <p href="#" class="text-uppercase fw-bold">Working Hours</p>
                 <hr class="solid">
                 <p>Mondy - Friday:</p>
@@ -295,7 +295,6 @@
             </div>
         </div>
     </footer>
-
 
     <!-- Button Let's Begin -->
     <div class="btn-let-begin btn-let d-none d-md-block grow-and-shrink">
@@ -313,6 +312,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/af8da007ac.js" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=Map1234"></script>]
     <script src="/js/about.js"></script>
 </body>
 

@@ -76,8 +76,6 @@ a {
   text-decoration: none;
 }
 
-
-
 /* Custom Section */
 
 .text-right-nav {
@@ -102,14 +100,19 @@ a {
 .icon-logo {
   width: 80px;
 }
+
+/* Footer */
 .icon-logo-footer {
   width: 40px;
 }
+
 hr.solid {
-  border: 3px solid var(--color-danger);
+  border: 5px solid var(--color-danger);
+  border-radius: 5px;
   opacity: 1;
   width: 100%;
 }
+
 .grow-and-shrink-img {
   z-index: -1;
   animation: grow-and-shrink 4000ms;
@@ -135,6 +138,7 @@ hr.solid {
 .font-Marker {
   font-family: 'Permanent Marker', cursive;
 }
+
 .wrapper {
   font-family: 'Permanent Marker', cursive;
   height: 100vh;
@@ -233,7 +237,7 @@ hr.solid {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 300px;
+  height: 400px;
   background: linear-gradient(to top, #000, transparent);
   z-index: 3;
 }
@@ -243,7 +247,7 @@ hr.solid {
   position: absolute;
   bottom: 0;
   width: 100%;
-  height: 200px;
+  height: 100px;
   background: linear-gradient(to top, #000, transparent);
   z-index: 5;
 }
@@ -366,7 +370,8 @@ hr.solid {
 }
 
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
+
   .mobile-container {
     width: 100%;
     width: 100%;
@@ -389,7 +394,6 @@ hr.solid {
     width: 100%;
     background-size: cover;
     top: 10%;
-
   }
 
   .right-section {
@@ -403,11 +407,7 @@ hr.solid {
   .right-section {
     order: 2;
   }
-}
 
-
-
-@media only screen and (max-width: 768px) {
   .header-welcome {
     font-size: 14vw;
   }
@@ -415,9 +415,10 @@ hr.solid {
   .header-typed {
     font-size: 6vw;
   }
-}
 
-@media only screen and (min-width: 769px) {
+};
+
+@media only screen and (max-width: 769px) {
   .grow-and-shrink-mobile {
     animation: grow-and-shrink 1000ms;
     animation-timing-function: ease-in-out;
@@ -432,4 +433,4 @@ hr.solid {
     animation-direction: alternate;
     height: 500px;
   }
-}
+};
