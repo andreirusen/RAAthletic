@@ -163,6 +163,9 @@ body {
     transform: translateZ(-5) scale(1.5);
 }
 
+#map {
+    z-index: 99;
+}
 
 @media only screen and (max-width: 768px) {
     .header-about {

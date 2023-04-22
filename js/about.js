@@ -54,12 +54,29 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-// Map
-function Map1234() {
-  var mapOpt1 = {
-    center: new google.maps.LatLng(51.508742, -0.12085),
-    zoom: 9,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-  };
-  var x = new google.maps.Map(document.getElementById("Map1"), mapOpt1);
+
+// Map - Initialize and add the map
+let map;
+async function initMap() {
+  // The location of Uluru
+  const position = { lat: -25.344, lng: 131.031 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+
+  // The map, centered at Uluru
+  map = new Map(document.getElementById("map"), {
+    zoom: 4,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
+
+  // The marker, positioned at Uluru
+  const marker = new AdvancedMarkerView({
+    map: map,
+    position: position,
+    title: "Uluru",
+  });
 }
+initMap();
