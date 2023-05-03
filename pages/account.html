@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>RAATHLETIC</title>
+    <meta name="description" content="RAATHLETIC" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/af8da007ac.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/account.css" />
+
+    <!-- Script -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+  </head>
+  <!-- Body -->
+
+  <body
+    class="container-fluid px-0 py-0 smooth-scroll-wrapper scrollable-element"
+  >
+    <!-- Navbar  -->
+    <nav class="container-fluid navbar navbar-expand-lg py-2">
+      <div class="container">
+        <!-- Brand/logo -->
+        <div class="col-lg-1d">
+          <a href="/index.html" class="navbar-brand">
+            <img
+              class="icon-logo transform-scale-sml"
+              src="/Assets/Logo/RAA/RAA-W-NoBG2.png"
+              alt="brand"
+            />
+          </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="col col-lg-5">
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+
+        <!-- Phone Hamburger -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main_nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Bar -->
+        <div class="col collapse navbar-collapse" id="main_nav">
+          <ul
+            class="text-right-nav navbar-nav fw-bold container justify-content-between"
+          >
+            <!-- Home -->
+            <li class="nav-item hover-underline-animation">
+              <a
+                href="/index.html"
+                class="nav-link text-dark"
+                aria-current="page"
+                >HOME</a
+              >
+            </li>
+            <!-- About -->
+            <li class="nav-item hover-underline-animation">
+              <a
+                href="/pages/about.html"
+                class="nav-link text-dark"
+                aria-current="page"
+                >ABOUT</a
+              >
+            </li>
+            <!-- Programs -->
+            <li class="nav-item dropdown hover-underline-animation">
+              <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
+              <a
+                href="/pages/programs.html"
+                class="nav-link text-dark dropdown"
+                aria-expanded="false"
+                >PROGRAMS</a
+              >
+              <ul class="dropdown-menu text-center-nav container-dropdown">
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-1"
+                    href="/pages/p-bronze.html"
+                    >Beginner</a
+                  >
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-2"
+                    href="/pages/p-silver.html"
+                    >Intermediate</a
+                  >
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-3"
+                    href="/pages/p-gold.html"
+                    >Advanced</a
+                  >
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-4"
+                    href="/pages/p-performance.html"
+                    >Performance</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- Account -->
+            <li class="nav-item dropdown hover-underline-animation">
+              <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
+              <a href="/pages/account.html" class="nav-link dropdown">
+                <span class="myaccount-icon">
+                  <svg
+                    class="header-right-icons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <ul class="dropdown-menu text-center-nav">
+                <li>
+                  <a class="dropdown-item" href="/pages/account.html">Log In</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pages/account.html"
+                    >Sign Up</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- Cart -->
+            <li class="nav-item dropdown hover-underline-animation">
+              <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
+              <a href="/pages/cart.html" class="nav-link dropdown">
+                <span class="cart-icon">
+                  <svg
+                    class="header-right-icons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 576 512"
+                  >
+                    <path
+                      d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <ul class="dropdown-menu text-center-nav">
+                <li>
+                  <a class="dropdown-item" href="/pages/cart.html"
+                    >Products - 0</a
+                  >
+                </li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/pages/cart.html"
+                    >Shop Details</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Interactive Program Section -->
+    <div class="wrapper interactive-section-two">
+      <section class="interactive-section-one">
+        <img src="/Assets/About/about-bg.jpg" class="bg-programs-img" id="" />
+        <img
+          src="/Assets/About/FN-Athlet.png"
+          class="fg-athlet-programs-img grow-and-shrink-img"
+          id=""
+        />
+        <img src="/Assets/About/FG-1.png" class="fg1-programs-img" id="" />
+        <img src="/Assets/About/FG-3.png" class="fg3-programs-img" id="" />
+        <!-- <img src="/Assets/About/circle-left.png" class="circle-left-img" id="">
+            <img src="/Assets/About/circle-right.png" class="circle-right-img" id=""> -->
+
+        <h1 class="header-about text-center">
+          Why me ? <br />
+          You might ask!
+        </h1>
+        <button
+          onclick="scrollToAbout()"
+          class="btn-about btn btn-danger btn-lg rounded-pill transform-scale-md grow-and-shrink"
+          type="button"
+        >
+          FIND OUT
+        </button>
+      </section>
+    </div>
+
+    <!-- Letter Section -->
+    <div class="bg-black p-1 p-sm-2 p-md-4 p-lg-5">
+      <div class="container bg-white p-2 p-sm-2 p-sm-2 p-md-4 p-lg-5">
+        <!-- Container -->
+        <div class="text-justify text-write">
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter -->
+    <section class="bg-black text-light p-md-5">
+      <div
+        class="container d-flex flex-column flex-md-row justify-content-between align-item-center"
+      >
+        <div class="col">
+          <h3 class="my-3">
+            Sign up for our <span class="text-danger">newsletter</span>
+          </h3>
+        </div>
+
+        <div class="col input-group my-3">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Enter your email"
+            aria-label="Enter your email"
+            aria-describedby="button-addon2"
+          />
+
+          <button class="btn btn-danger button-addon2" type="button">
+            SUBSCRIBE
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-black footer px-3">
+      <div class="container d-flex flex-column flex-md-row">
+        <!-- left Div -->
+        <div
+          class="footer-left col d-flex flex-column py-5 p-md-2 p-lg-5 order-last order-md-first"
+        >
+          <p class="text-uppercase fwb">
+            <a href="#" class="color-hover fw-bold"
+              >RAATHLETIC
+              <span>
+                &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+              </span>
+            </a>
+          </p>
+          <hr class="solid" />
+          <p class="">All rights reserved.</p>
+        </div>
+
+        <!-- Middle Div -->
+        <div class="footer-middle col d-flex flex-column py-5 p-md-2 p-lg-5">
+          <p>
+            <a href="#" class="color-hover text-uppercase fw-bold"
+              >Our Programs</a
+            >
+          </p>
+          <hr class="solid" />
+          <p><a href="#" class="color-hover">Beginner</a></p>
+          <p><a href="#" class="color-hover">Intermediate</a></p>
+          <p><a href="#" class="color-hover">Advanced</a></p>
+          <p><a href="#" class="color-hover">Performance</a></p>
+        </div>
+
+        <!-- Right Div -->
+        <div class="footer-right col d-flex flex-column py-5 p-md-2 p-lg-5">
+          <p href="#" class="text-uppercase fw-bold">Working Hours</p>
+          <hr class="solid" />
+          <p>Mondy - Friday:</p>
+          <p>9:00AM - 20:00PM</p>
+          <p>Saturday - Sunday:</p>
+          <p>9:00AM - 18:00PM</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Button Go to TOP -->
+    <div class="btn-to-top grow-and-shrink">
+      <button
+        onclick="topFunction()"
+        class="btn btn-danger btn-lg rounded-pill transform-scale-md"
+        type="button"
+        title="Go to top"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+
+
+    <!-- Script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/af8da007ac.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="#"></script>
+    
+  </body>
+</html>
