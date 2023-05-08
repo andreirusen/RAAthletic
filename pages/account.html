@@ -38,7 +38,6 @@
 
     <!-- Script -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
   </head>
   <!-- Body -->
 
@@ -150,7 +149,12 @@
             <!-- Account -->
             <li class="nav-item dropdown hover-underline-animation">
               <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
-              <a href="/pages/account.html" class="nav-link dropdown">
+
+              <a
+                href="/pages/account.html"
+                id="login"
+                class="nav-link dropdown"
+              >
                 <span class="myaccount-icon">
                   <svg
                     class="header-right-icons"
@@ -163,7 +167,7 @@
                   </svg>
                 </span>
               </a>
-              <ul class="dropdown-menu text-center-nav">
+              <!-- <ul class="dropdown-menu text-center-nav">
                 <li>
                   <a class="dropdown-item" href="/pages/account.html">Log In</a>
                 </li>
@@ -175,11 +179,10 @@
                     >Sign Up</a
                   >
                 </li>
-              </ul>
+              </ul> -->
             </li>
             <!-- Cart -->
-            <li class="nav-item dropdown hover-underline-animation">
-              <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
+            <!-- <li class="nav-item dropdown hover-underline-animation">
               <a href="/pages/cart.html" class="nav-link dropdown">
                 <span class="cart-icon">
                   <svg
@@ -208,37 +211,55 @@
                   >
                 </li>
               </ul>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
     </nav>
 
-    <!-- Interactive Program Section -->
+    <!-- Showcase -->
     <div class="wrapper interactive-section-two">
-      <section class="interactive-section-one">
-        <img src="/Assets/About/about-bg.jpg" class="bg-programs-img" id="" />
+      <!-- Interactive Program Section -->
+      <section class="interactive-section-one mobile-container">
         <img
-          src="/Assets/About/FN-Athlet.png"
-          class="fg-athlet-programs-img grow-and-shrink-img"
-          id=""
+          src="/Assets/backgrounds/BG.jpg"
+          class="bg-showcase-img"
+          id="bg-img"
         />
-        <img src="/Assets/About/FG-1.png" class="fg1-programs-img" id="" />
-        <img src="/Assets/About/FG-3.png" class="fg3-programs-img" id="" />
-        <!-- <img src="/Assets/About/circle-left.png" class="circle-left-img" id="">
-            <img src="/Assets/About/circle-right.png" class="circle-right-img" id=""> -->
+        <img
+          src="/Assets/backgrounds/FG-1.png"
+          class="fg1-showcase-img"
+          id="fg1-img"
+        />
+        <img
+          src="/Assets/backgrounds/FG-2.png"
+          class="fg2-showcase-img"
+          id="fg2-img"
+        />
+        <img
+          src="/Assets/backgrounds/FG-3.png"
+          class="fg3-showcase-img"
+          id="fg3-img"
+        />
 
-        <h1 class="header-about text-center">
-          Why me ? <br />
-          You might ask!
-        </h1>
-        <button
-          onclick="scrollToAbout()"
-          class="btn-about btn btn-danger btn-lg rounded-pill transform-scale-md grow-and-shrink"
-          type="button"
-        >
-          FIND OUT
-        </button>
+        <!-- Section -->
+        <div class="showcase-section m-5">
+          <!-- Java Typed -->
+          <h2 class="header-typed d-none d-md-block">
+            <span id="typed-strings"></span>
+          </h2>
+
+          <!-- Title -->
+          <h1 class="header-welcome" id="header-showcase">Welcome</h1>
+
+          <!-- Button -->
+          <button
+            class="btn-showcase btn btn-danger btn-lg rounded-pill transform-scale-md grow-and-shrink"
+            type="button"
+          >
+            <a href="/pages/account.html" class="text-white"> START NOW </a>
+          </button>
+        </div>
       </section>
     </div>
 
@@ -247,7 +268,81 @@
       <div class="container bg-white p-2 p-sm-2 p-sm-2 p-md-4 p-lg-5">
         <!-- Container -->
         <div class="text-justify text-write">
+          <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
+          <div class="container" id="container">
+            <div class="form-container sign-up-container">
+              <form action="#">
+                <h1>Create Account</h1>
+                <div class="social-container">
+                  <a href="#" class="social"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social"
+                    ><i class="fab fa-google-plus-g"></i
+                  ></a>
+                  <a href="#" class="social"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+                <span>or use your email for registration</span>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button>Sign Up</button>
+              </form>
+            </div>
+            <div class="form-container sign-in-container">
+              <form action="#">
+                <h1>Sign in</h1>
+                <div class="social-container">
+                  <a href="#" class="social"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social"
+                    ><i class="fab fa-google-plus-g"></i
+                  ></a>
+                  <a href="#" class="social"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+                <span>or use your account</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">Forgot your password?</a>
+                <button>Sign In</button>
+              </form>
+            </div>
+            <div class="overlay-container">
+              <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                  <h1>Welcome Back!</h1>
+                  <p>
+                    To keep connected with us please login with your personal
+                    info
+                  </p>
+                  <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                  <h1>Hello, Friend!</h1>
+                  <p>Enter your personal details and start journey with us</p>
+                  <button class="ghost" id="signUp">Sign Up</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
+          <footer>
+            <p>
+              Created with <i class="fa fa-heart"></i> by
+              <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
+              - Read how I created this and how you can join the challenge
+              <a
+                target="_blank"
+                href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/"
+                >here</a
+              >.
+            </p>
+          </footer>
         </div>
       </div>
     </div>
@@ -339,7 +434,6 @@
       </button>
     </div>
 
-
     <!-- Script -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -350,7 +444,7 @@
       src="https://kit.fontawesome.com/af8da007ac.js"
       crossorigin="anonymous"
     ></script>
-    <script src="#"></script>
-    
+    <script src="/js/background-img.js"></script>
+    <script src="/js/account.js"></script>
   </body>
 </html>

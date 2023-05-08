@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap");
 
 /*
 font-family: 'Itim', cursive;
@@ -41,10 +41,9 @@ font-family: 'Poppins', sans-serif;
   --spacing-80: 5.06rem;
 }
 
-
 /* Body Section */
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-y: auto;
   overflow-x: hidden;
   scroll-behavior: smooth;
@@ -54,7 +53,6 @@ body {
 nav {
   z-index: 999999;
   font-family: "Poppins", sans-serif;
-
 }
 
 svg {
@@ -93,17 +91,16 @@ a {
 .btn-to-top {
   position: fixed;
   bottom: 5%;
-  right: 1%;
+  right: 3%;
   z-index: 9;
 }
 
 .btn-let-begin {
   position: fixed;
   bottom: 5%;
-  right: 6%;
+  right: 7%;
   z-index: 9;
 }
-
 
 .icon-logo {
   width: 80px;
@@ -137,18 +134,12 @@ hr.solid {
   animation-direction: alternate;
 }
 
-
-
-
-
-
-
 .font-Marker {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
 .wrapper {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -160,30 +151,35 @@ hr.solid {
 .header-welcome {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
-  font-size: 6vw;
+  font-size: 8rem;
   color: var(--color-white);
-  text-shadow:
-    -4px 0px 3px var(--color-black),
-    -5px 0px 12px rgb(0, 0, 0);
+  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
   z-index: 3;
 }
 
 .header-typed {
   letter-spacing: 0.2rem;
-  font-size: 3vw;
+  font-size: 3rem;
   color: var(--color-white);
-  text-shadow:
-    -4px 0px 3px var(--color-black),
-    -5px 0px 12px rgb(0, 0, 0);
+  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
   z-index: 3;
 }
 
-.btn-home {
-  font-family: 'Poppins', sans-serif;
+@media (max-width: 769px) {
+  .header-welcome {
+    font-size: 4rem;
+  }
+  .header-typed {
+    font-size: 2rem;
+  }
+}
+
+.btn-showcase {
+  font-family: "Poppins", sans-serif;
   z-index: 4;
 }
 
-.right-section {
+.showcase-section {
   width: 50vw;
   display: flex;
   flex-direction: column;
@@ -191,26 +187,9 @@ hr.solid {
   align-items: center;
 }
 
-.left-section {
-  width: 50vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.left-section .fg4-showcase-img,
-.left-section .fg5-showcase-img {
-  position: absolute;
-  height: 40vh;
-  width: 65vh;
-  object-fit: cover;
-  object-position: center;
-  pointer-events: none;
-  z-index: -1;
-}
-
 .bg-showcase-img,
 .fg1-showcase-img,
+.fg2-showcase-img,
 .fg3-showcase-img {
   position: absolute;
   height: 100%;
@@ -226,12 +205,33 @@ hr.solid {
 }
 
 .fg1-showcase-img,
+.fg2-showcase-img,
 .fg3-showcase-img {
+  transform: translateZ(-5) scale(2);
+}
+
+.fg-athlet-img {
+  position: absolute;
+  height: 100%;
+  width: 120%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+.fg-athlet-img {
   transform: translateZ(-5) scale(1.5);
 }
 
+.fg1-showcase-img {z-index: 0;}
+.fg2-showcase-img {z-index: 1;}
+.fg3-showcase-img {z-index: 2;}
+.fg-athlet-img {z-index: 3;}
+
 .interactive-section-one {
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -259,7 +259,6 @@ hr.solid {
   background: linear-gradient(to top, #000, transparent);
   z-index: 5;
 }
-
 
 /* Hover Section */
 
@@ -292,7 +291,7 @@ hr.solid {
 }
 
 .hover-underline-animation::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -313,7 +312,6 @@ hr.solid {
 .color-hover:hover {
   color: var(--color-danger);
 }
-
 
 .translate-hover:hover {
   transform: translateY(-5px);
@@ -354,7 +352,6 @@ hr.solid {
 }
 
 @keyframes shake {
-
   10%,
   90% {
     transform: translate3d(-1px, 0, 0);
@@ -385,14 +382,15 @@ hr.solid {
   100% {
     transform: scale(1.07);
   }
-};
+}
 
 @media all and (min-width: 992px) {
   .navbar .nav-item .dropdown-menu {
     display: none;
   }
 
-  .navbar .nav-item:hover .nav-link {}
+  .navbar .nav-item:hover .nav-link {
+  }
 
   .navbar .nav-item:hover .dropdown-menu {
     display: block;
@@ -401,11 +399,9 @@ hr.solid {
   .navbar .nav-item .dropdown-menu {
     margin-top: 0;
   }
-};
-
+}
 
 @media only screen and (max-width: 769px) {
-
   .btn-to-top {
     position: fixed;
     bottom: 5%;
@@ -422,33 +418,6 @@ hr.solid {
     align-items: center;
   }
 
-  .left-section,
-  .right-section {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .left-section .fg4-showcase-img,
-  .left-section .fg5-showcase-img {
-    height: 28%;
-    width: 100%;
-    background-size: cover;
-    top: 10%;
-  }
-
-  .right-section {
-    margin-bottom: 60px;
-  }
-
-  .left-section {
-    order: 1;
-  }
-
-  .right-section {
-    order: 2;
-  }
-
   .header-welcome {
     font-size: 14vw;
   }
@@ -458,9 +427,9 @@ hr.solid {
   }
 
   hr.solid {
-    width: 100%
+    width: 100%;
   }
-};
+}
 
 @media only screen and (max-width: 769px) {
   .grow-and-shrink-mobile {
@@ -477,5 +446,4 @@ hr.solid {
     animation-direction: alternate;
     height: 500px;
   }
-};
-
+}

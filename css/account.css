@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap");
 /*
 font-family: 'Itim', cursive;
 font-family: 'Kalam', cursive;
@@ -38,10 +38,12 @@ font-family: 'Poppins', sans-serif;
   --spacing-70: 3.38rem;
   --spacing-80: 5.06rem;
 }
-  body {
-    font-family: 'Poppins', sans-serif;
-    font-size: var(--font-size-medium);
-    overflow-y: auto;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-  }
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-medium);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+

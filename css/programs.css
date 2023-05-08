@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap");
 /*
 font-family: 'Itim', cursive;
 font-family: 'Kalam', cursive;
@@ -42,70 +42,6 @@ font-family: 'Poppins', sans-serif;
     0 6px 20px -3px rgba(0, 0, 0, 0.2);
 }
 
-body {
-  font-family: 'Poppins', sans-serif;
-  overflow-y: auto;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-.header-programs {
-  font-family: 'Permanent Marker', cursive;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  font-size: 8vw;
-  color: var(--color-white);
-  text-shadow:
-    -4px 0px 3px var(--color-black),
-    -5px 0px 12px rgb(0, 0, 0);
-  z-index: 3;
-}
-
-.btn-programs {
-  font-family: 'Poppins', sans-serif;
-  z-index: 4;
-}
-
-.wrapper {
-  font-family: 'Permanent Marker', cursive;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  perspective: 10px;
-}
-
-.interactive-section-one {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-
-/* Shadow 1 */
-.interactive-section-one::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 500px;
-  background: linear-gradient(to top, #000, transparent);
-  z-index: 3;
-}
-
-.interactive-section-two::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 100px;
-  background: linear-gradient(to top, #000, transparent);
-  z-index: 5;
-}
-
 /* Shadow 3 */
 .interactive-section-tree {
   position: relative;
@@ -116,7 +52,6 @@ body {
   height: 100%;
   transform-style: preserve-3d;
   z-index: -1;
-
 }
 
 .interactive-section-tree::before {
@@ -129,50 +64,18 @@ body {
   z-index: 5;
 }
 
-.fg-athlet-left-img {
-  position: absolute;
-  height: 100%;
-  width: 120%;
-  object-fit: cover;
-  object-position: center;
-  pointer-events: none;
-  z-index: -1;
+.header-programs {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: 8vw;
+  color: var(--color-white);
+  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
+  z-index: 3;
 }
 
-.fg-athlet-right-img {
-  position: absolute;
-  right: -15px;
-  height: 100%;
-  width: 80%;
-  object-fit: cover;
-  object-position: center;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.bg-programs-img,
-.fg1-programs-img,
-.fg3-programs-img {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.bg-programs-img {
-  transform: translateZ(-10) scale(2);
-}
-
-.fg-programs-img,
-.fg-athlet-left-img {
-  transform: translateZ(-5) scale(1.5);
-}
 
 .program-img-atlas {
-
   position: relative;
   height: 100%;
   width: 100%;
@@ -190,21 +93,16 @@ body {
   background-color: var(--color-black);
 }
 
-
-
-
 /* Card Section */
 
 .programs-title {
   margin: 5% 0;
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   text-align: center;
   text-transform: uppercase;
   color: var(--color-white);
   font-size: 3vw;
-  text-shadow:
-    -4px 0px 3px var(--color-black),
-    -5px 0px 12px rgb(0, 0, 0);
+  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
 }
 
 .programs-card-section {
@@ -229,7 +127,6 @@ body {
   flex-wrap: wrap;
   transform-style: preserve-3d;
   perspective: 500px;
-
 }
 
 .box {
@@ -241,14 +138,13 @@ body {
   overflow: hidden;
   margin: 10px 0;
   border-radius: 10px;
-  filter: brightness(50%)
+  filter: brightness(50%);
 }
 
 .box:hover {
   transform: rotateY(0deg) scale(1.05);
   z-index: 1;
-  box-shadow:
-    0 25px 40px rgba(0, 1, 1, 2);
+  box-shadow: 0 25px 40px rgba(0, 1, 1, 2);
   filter: brightness(100%);
 }
 
@@ -260,9 +156,8 @@ body {
   height: 100%;
 }
 
-
 .imgBx::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -304,16 +199,13 @@ body {
 .content h2 {
   text-align: center;
   color: var(--color-white);
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   font-size: 140%;
-  text-shadow:
-    -4px 0px 3px var(--color-black),
-    -5px 0px 12px rgb(0, 0, 0);
+  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
   transition: 0.5s;
   transform: translateY(200px);
-
 }
 
 .box:hover .content h2 {
@@ -327,23 +219,17 @@ body {
   transition: 0.3s;
   font-size: 18px;
   transform: translateY(250px);
-  text-shadow:
-    -4px 0px 3px var(--color-black),
-    -5px 0px 12px rgb(0, 0, 0);
+  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
 }
 
 .box:hover .content p {
   transform: translateY(0px);
   transition-delay: 0.4s;
-
 }
-
 
 /* Mobile Screen */
 
-
 @media (max-width: 1290px) {
-
   .programs-card-container {
     display: flex;
     justify-content: center;
@@ -376,7 +262,5 @@ body {
 
   .content h2 {
     font-size: 120%;
-
   }
-
 }

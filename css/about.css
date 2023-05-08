@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Kalam:wght@300&family=Patrick+Hand&family=Permanent+Marker&family=Poppins:wght@400;600;700;800;900&display=swap");
 
 /*
 font-family: 'Itim', cursive;
@@ -8,168 +8,124 @@ font-family: 'Permanent Marker', cursive;
 font-family: 'Poppins', sans-serif; 
 */
 :root {
-    --color-bronze: #ed6d14;
-    --color-silver: #848589;
-    --color-gold: #ffb435;
-    --color-performance: #cf2e2e;
-    --color-white: #fff;
-    --color-black: #000;
-    --color-gray-100: #f8f9fc;
-    --color-gray-200: #f1f3f9;
-    --color-gray-300: #dee3ed;
-    --color-gray-400: #c2c9d6;
-    --color-gray-500: #8f96a3;
-    --color-gray-600: #5e636e;
-    --color-gray-700: #2f3237;
-    --color-gray-800: #1d1e20;
-    --color-gray-900: #111213;
-    --shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
-      0 1px 4px -1px rgba(0, 0, 0, 0.04);
-    --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
-      0 6px 20px -3px rgba(0, 0, 0, 0.2);
-    --font-size-small: 13px;
-    --font-size-medium: 20px;
-    --font-size-large: 36px;
-    --font-size-x-large: 42px;
-    --spacing-20: 0.44rem;
-    --spacing-30: 0.67rem;
-    --spacing-40: 1rem;
-    --spacing-50: 1.5rem;
-    --spacing-60: 2.25rem;
-    --spacing-70: 3.38rem;
-    --spacing-80: 5.06rem;
-  }
+  --color-bronze: #ed6d14;
+  --color-silver: #848589;
+  --color-gold: #ffb435;
+  --color-performance: #cf2e2e;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-100: #f8f9fc;
+  --color-gray-200: #f1f3f9;
+  --color-gray-300: #dee3ed;
+  --color-gray-400: #c2c9d6;
+  --color-gray-500: #8f96a3;
+  --color-gray-600: #5e636e;
+  --color-gray-700: #2f3237;
+  --color-gray-800: #1d1e20;
+  --color-gray-900: #111213;
+  --shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
+    0 1px 4px -1px rgba(0, 0, 0, 0.04);
+  --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
+    0 6px 20px -3px rgba(0, 0, 0, 0.2);
+  --font-size-small: 13px;
+  --font-size-medium: 20px;
+  --font-size-large: 36px;
+  --font-size-x-large: 42px;
+  --spacing-20: 0.44rem;
+  --spacing-30: 0.67rem;
+  --spacing-40: 1rem;
+  --spacing-50: 1.5rem;
+  --spacing-60: 2.25rem;
+  --spacing-70: 3.38rem;
+  --spacing-80: 5.06rem;
+}
 
 body {
-    font-family: 'Poppins', sans-serif;
-    font-size: var(--font-size-medium);
-    overflow-y: auto;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-medium);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .header-about {
-    font-family: 'Permanent Marker', cursive;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-    font-size: 8vw;
-    color: var(--color-white);
-    text-shadow:
-        -4px 0px 3px var(--color-black),
-        -5px 0px 12px rgb(0, 0, 0);
-    z-index: 3;
-
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-size: 8vw;
+  color: var(--color-white);
+  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
+  z-index: 3;
 }
-
-.btn-about {
-    font-family: 'Poppins', sans-serif;
-    z-index: 4;
-}
-
-
 
 .first-letter::first-letter {
-    font-size: 250%;
-    color: var(--color-performance);
-    font-family: 'Fasthand', cursive;
-    letter-spacing: .3rem;
+  font-size: 250%;
+  color: var(--color-performance);
+  font-family: "Fasthand", cursive;
+  letter-spacing: 0.3rem;
 }
 
 .img-signature {
-    width: 200px;
-    transform: translateY(-30px)
+  width: 200px;
+  transform: translateY(-30px);
 }
 
 .wrapper {
-    font-family: 'Permanent Marker', cursive;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    perspective: 10px;
-
+  font-family: "Permanent Marker", cursive;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  perspective: 10px;
 }
 
 .interactive-section-one {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    transform-style: preserve-3d;
-    z-index: -1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
 }
 
 /* Shadow 1 */
 .interactive-section-one::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 400px;
-    background: linear-gradient(to top, #000, transparent);
-    z-index: 3;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 400px;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 3;
 }
 
 /* Shadow 2*/
 .interactive-section-two::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #000, transparent);
-    z-index: 5;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #000, transparent);
+  z-index: 5;
 }
 
-.bg-programs-img,
-.fg1-programs-img,
-.fg2-programs-img,
-.fg3-programs-img,
-.circle-left-img,
-.circle-right-img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    pointer-events: none;
-    z-index: -1;
-}
-
-.fg-athlet-programs-img,
-.eclipse-left-img {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    pointer-events: none;
-    z-index: 1;
-
-}
-
-.bg-programs-img {
-    transform: translateZ(-10) scale(2);
-}
-
-.fg-athlet-programs-img,
-.fg1-programs-img,
-.fg2-programs-img,
-.fg3-programs-img,
-.circle-left-img,
-.circle-right-img,
-.eclipse-left-img {
-    transform: translateZ(-5) scale(1.5);
+.fg-athlet-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  z-index: 3;
 }
 
 #map {
-    z-index: 99;
+  z-index: 99;
 }
 
 @media only screen and (max-width: 768px) {
-    .header-about {
-      font-size: 10vw;
-    }
+  .header-about {
+    font-size: 10vw;
   }
-  
+}
