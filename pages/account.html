@@ -242,108 +242,194 @@
           id="fg3-img"
         />
 
-        <!-- Section -->
-        <div class="showcase-section m-5">
-          <!-- Java Typed -->
-          <h2 class="header-typed d-none d-md-block">
-            <span id="typed-strings"></span>
-          </h2>
+        <!-- Title -->
+        <h1 class="header-welcome" id="header-showcase"></h1>
 
-          <!-- Title -->
-          <h1 class="header-welcome" id="header-showcase">Welcome</h1>
+        <!-- Desktop Account Form -->
 
-          <!-- Button -->
-          <button
-            class="btn-showcase btn btn-danger btn-lg rounded-pill transform-scale-md grow-and-shrink"
-            type="button"
-          >
-            <a href="/pages/account.html" class="text-white"> START NOW </a>
-          </button>
+        <div class="account-container-desktop" id="account-container">
+          <div class="form-container sign-in-container">
+            <form action="#">
+              <h1 class="header-text">Sign in</h1>
+              <div class="social-container">
+                <a href="#" class="social transform-scale-sml"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social transform-scale-sml"
+                  ><i class="fab fa-google-plus-g"></i
+                ></a>
+                <a href="#" class="social transform-scale-sml"
+                  ><i class="fa-brands fa-apple"></i
+                ></a>
+              </div>
+              <span>or use your account</span>
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <a href="#">Forgot your password?</a>
+              <button
+                class="btn btn-danger btn-lg rounded-pill transform-scale-sml"
+                type="button"
+              >
+                Sign In
+              </button>
+            </form>
+          </div>
+          <div class="form-container sign-up-container">
+            <form action="#" class="account-form">
+              <h1 class="header-text">Sign Up</h1>
+              <div class="social-container">
+                <a href="#" class="social transform-scale-sml"
+                  ><i class="fab fa-facebook-f"></i
+                ></a>
+                <a href="#" class="social transform-scale-sml"
+                  ><i class="fab fa-google-plus-g"></i
+                ></a>
+                <a href="#" class="social transform-scale-sml"
+                  ><i class="fa-brands fa-apple"></i
+                ></a>
+              </div>
+              <span>or use your email for registration</span>
+              <input type="email" placeholder="Email" />
+              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Confirm Password" />
+
+              <button
+                class="btn btn-danger btn-lg rounded-pill transform-scale-sml"
+                type="button"
+              >
+                Sign Up
+              </button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <div class="overlay">
+              <div class="overlay-panel overlay-left">
+                <h1 class="header-text">Welcome Back!</h1>
+                <p>To keep connected with us please login</p>
+                <button
+                  class="btn btn-light btn-lg rounded-pill transform-scale-sml"
+                  type="button"
+                  id="signIn"
+                >
+                  Sign In
+                </button>
+              </div>
+              <div class="overlay-panel overlay-right">
+                <h1 class="header-text">Hello, Friend!</h1>
+                <p>Enter your details and start journey with us</p>
+                <button
+                  class="btn btn-light btn-lg rounded-pill transform-scale-sml"
+                  type="button"
+                  id="signUp"
+                >
+                  Sign Up
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modile Account Form -->
+
+        <div class="account-container-mobile forms account-container-mobile">
+          <!-- Login Form -->
+          <div class="form login">
+            <div class="form-content">
+              <form action="#">
+                <h1 class="header-text">Login</h1>
+                <div class="field input-field">
+                  <input type="email" placeholder="Email" class="input" />
+                </div>
+                <div class="field input-field">
+                  <input
+                    type="password"
+                    placeholder="Password"
+                    class="password"
+                  />
+                  <i class="bx bx-hide eye-icon"></i>
+                </div>
+                <div class="form-link">
+                  <a href="#" class="forgot-pass link">Forgot password?</a>
+                </div>
+                <div class="field button-field">
+                  <button>Login</button>
+                </div>
+              </form>
+              <div class="form-link">
+                <span
+                  >Don't have an account?
+                  <a href="#" class="link signup-link">Signup</a></span
+                >
+                <div class="social-container">
+                  <a href="#" class="social transform-scale-sml"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social transform-scale-sml"
+                    ><i class="fab fa-google-plus-g"></i
+                  ></a>
+                  <a href="#" class="social transform-scale-sml"
+                    ><i class="fa-brands fa-apple"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+ 
+          </div>
+          <!-- Signup Form -->
+          <div class="form signup">
+            <div class="form-content">
+              <form action="#">
+                <h1 class="header-text">Signup</h1>
+                <div class="field input-field">
+                  <input type="email" placeholder="Email" class="input" />
+                </div>
+                <div class="field input-field">
+                  <input
+                    type="password"
+                    placeholder="Create password"
+                    class="password"
+                  />
+                </div>
+                <div class="field input-field">
+                  <input
+                    type="password"
+                    placeholder="Confirm password"
+                    class="password"
+                  />
+                  <i class="bx bx-hide eye-icon"></i>
+                </div>
+                <div class="field button-field">
+                  <button>Signup</button>
+                </div>
+              </form>
+              <div class="form-link">
+                <span
+                  >Already have an account?
+                  <a href="#" class="link login-link">Login</a></span
+                >
+                <div class="social-container">
+                  <a href="#" class="social transform-scale-sml"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social transform-scale-sml"
+                    ><i class="fab fa-google-plus-g"></i
+                  ></a>
+                  <a href="#" class="social transform-scale-sml"
+                    ><i class="fa-brands fa-apple"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
     </div>
 
     <!-- Letter Section -->
     <div class="bg-black p-1 p-sm-2 p-md-4 p-lg-5">
-      <div class="container bg-white p-2 p-sm-2 p-sm-2 p-md-4 p-lg-5">
+      <div class="container bg-black p-2 p-sm-2 p-sm-2 p-md-4 p-lg-5">
         <!-- Container -->
-        <div class="text-justify text-write">
-          <h2>Weekly Coding Challenge #1: Sign in/up Form</h2>
-          <div class="container" id="container">
-            <div class="form-container sign-up-container">
-              <form action="#">
-                <h1>Create Account</h1>
-                <div class="social-container">
-                  <a href="#" class="social"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a href="#" class="social"
-                    ><i class="fab fa-google-plus-g"></i
-                  ></a>
-                  <a href="#" class="social"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                </div>
-                <span>or use your email for registration</span>
-                <input type="text" placeholder="Name" />
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <button>Sign Up</button>
-              </form>
-            </div>
-            <div class="form-container sign-in-container">
-              <form action="#">
-                <h1>Sign in</h1>
-                <div class="social-container">
-                  <a href="#" class="social"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a href="#" class="social"
-                    ><i class="fab fa-google-plus-g"></i
-                  ></a>
-                  <a href="#" class="social"
-                    ><i class="fab fa-linkedin-in"></i
-                  ></a>
-                </div>
-                <span>or use your account</span>
-                <input type="email" placeholder="Email" />
-                <input type="password" placeholder="Password" />
-                <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
-              </form>
-            </div>
-            <div class="overlay-container">
-              <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                  <h1>Welcome Back!</h1>
-                  <p>
-                    To keep connected with us please login with your personal
-                    info
-                  </p>
-                  <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                  <h1>Hello, Friend!</h1>
-                  <p>Enter your personal details and start journey with us</p>
-                  <button class="ghost" id="signUp">Sign Up</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <footer>
-            <p>
-              Created with <i class="fa fa-heart"></i> by
-              <a target="_blank" href="https://florin-pop.com">Florin Pop</a>
-              - Read how I created this and how you can join the challenge
-              <a
-                target="_blank"
-                href="https://www.florin-pop.com/blog/2019/03/double-slider-sign-in-up-form/"
-                >here</a
-              >.
-            </p>
-          </footer>
-        </div>
       </div>
     </div>
 

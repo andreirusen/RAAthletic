@@ -148,12 +148,34 @@ hr.solid {
   flex-direction: column;
 }
 
+.normal-text {
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  color: var(--color-white);
+  text-shadow: 
+  -4px 0px 3px var(--color-black), 
+  -5px 0px 12px var(--color-black), 
+}
+
+.header-text {
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+  color: var(--color-white);
+  text-shadow: 
+  -3px 0px 1px var(--color-black), 
+  -3px 0px 10px var(--color-black);
+}
+
 .header-welcome {
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   font-size: 8rem;
   color: var(--color-white);
-  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
+  text-shadow: 
+  -4px 0px 3px var(--color-black), 
+  -5px 0px 12px var(--color-black), 
   z-index: 3;
 }
 
