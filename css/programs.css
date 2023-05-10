@@ -8,6 +8,7 @@ font-family: 'Poppins', sans-serif;
 */
 
 :root {
+  --color-danger: #dc3545;
   --color-bronze: #ed6d14;
   --color-silver: #848589;
   --color-gold: #ffb435;
@@ -23,7 +24,10 @@ font-family: 'Poppins', sans-serif;
   --color-gray-700: #2f3237;
   --color-gray-800: #1d1e20;
   --color-gray-900: #111213;
-
+  --shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
+    0 1px 4px -1px rgba(0, 0, 0, 0.04);
+  --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
+    0 6px 20px -3px rgba(0, 0, 0, 0.2);
   --font-size-small: 13px;
   --font-size-medium: 20px;
   --font-size-large: 36px;
@@ -35,11 +39,6 @@ font-family: 'Poppins', sans-serif;
   --spacing-60: 2.25rem;
   --spacing-70: 3.38rem;
   --spacing-80: 5.06rem;
-
-  --shadowDefault: 0 2px 6px -1px rgba(0, 0, 0, 0.16),
-    0 1px 4px -1px rgba(0, 0, 0, 0.04);
-  --lt-shadowActive: 0 0 8px -2px rgba(0, 0, 0, 0.1),
-    0 6px 20px -3px rgba(0, 0, 0, 0.2);
 }
 
 /* Shadow 3 */
@@ -64,17 +63,6 @@ font-family: 'Poppins', sans-serif;
   z-index: 5;
 }
 
-.header-programs {
-  font-family: "Permanent Marker", cursive;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  font-size: 8vw;
-  color: var(--color-white);
-  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
-  z-index: 3;
-}
-
-
 .program-img-atlas {
   position: relative;
   height: 100%;
@@ -91,6 +79,161 @@ font-family: 'Poppins', sans-serif;
   justify-content: center;
   align-items: center;
   background-color: var(--color-black);
+}
+
+/* Card Section New */
+.card-section {
+  font-family: 'Poppins', sans-serif; 
+  z-index: 3;
+}
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-auto-flow: row;
+  grid-template-areas: "card-1 card-2 card-3";
+}
+
+.card-2 {
+  grid-area: card-2;
+}
+
+.card-3 {
+  grid-area: card-3;
+}
+
+.card-1 {
+  grid-area: card-1;
+}
+
+
+@media (max-width:992px) {
+  .cards-container {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "card-1"
+      "card-2"
+      "card-3";
+  }
+  
+  .card-1 { grid-area: card-1; }
+  
+  .card-2 { grid-area: card-2; }
+  
+  .card-3 { grid-area: card-3; }
+  
+}
+
+
+.card-bodys {
+  margin: 1.5rem 0;
+  width: 350px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  background-color: var(--color-white);
+  border-radius: 10px;
+  border: 1px solid Irgb(97, 104, 101);
+  box-shadow: 2px 6px 25px #1e2321;
+  color: var(--color-black);
+}
+
+.first {
+  color: var(--color-danger);
+}
+h1,
+h2 {
+  font-size: 2.2em;
+}
+
+.list li {
+  font-size: 20px;
+  list-style: none;
+  border-bottom: 1px solid var(--color-danger);
+  padding-inline-start: 0;
+  border-width: 1px;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+
+/* Card Button */
+.card-button {
+  padding: 10px 30px;
+  font-size: 1.4em;
+  margin: 15px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  box-shadow: 0 0 1px 0 var(--color-danger) inset,
+    0 0 5px 1px var(--color-danger);
+}
+.card-button:hover {
+  background-color: var(--color-danger);
+  color: var(--color-white);
+}
+
+/* Plan Switcher */
+.switcher {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-white);
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-white);
+  transform: translate(0px, 0px);
+  transition: 0.6s ease transform, 0.6s box-shadow;
+}
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--color-black);
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: var(--color-danger);
+}
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round::before {
+  border-radius: 50%;
 }
 
 /* Card Section */
@@ -234,10 +377,6 @@ font-family: 'Poppins', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  .header-programs {
-    font-size: 16vw;
   }
 
   .programs-title {

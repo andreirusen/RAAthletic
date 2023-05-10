@@ -34,6 +34,7 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
+
 // Disapear Btn
 let btnLetBegin = document.querySelector(".btn-let-begin");
 document.addEventListener("scroll", function () {

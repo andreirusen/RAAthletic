@@ -48,15 +48,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.header-about {
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  font-size: 8vw;
-  color: var(--color-white);
-  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
-  z-index: 3;
-}
-
 .first-letter::first-letter {
   font-size: 250%;
   color: var(--color-performance);
@@ -122,10 +113,4 @@ body {
 
 #map {
   z-index: 99;
-}
-
-@media only screen and (max-width: 768px) {
-  .header-about {
-    font-size: 10vw;
-  }
 }
