@@ -51,6 +51,8 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   font-size: var(--font-size-medium);
+  background-color: var(--color-black);
+
 }
 
 .container {
@@ -59,6 +61,7 @@ body {
 nav {
   z-index: 999999;
   font-family: "Poppins", sans-serif;
+  background-color: var(--color-white);
 }
 
 svg {
