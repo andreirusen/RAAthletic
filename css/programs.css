@@ -208,6 +208,7 @@ ul {
   background-color: var(--color-white);
   color: var(--color-black);
   font-family: "Permanent Marker", cursive;
+  scale: 0.5;
 }
 
 /* Plan Switcher */
