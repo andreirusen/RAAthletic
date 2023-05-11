@@ -205,8 +205,8 @@ ul {
     0 0 5px 1px var(--color-danger);
 }
 .card-button:hover {
-  background-color: var(--color-danger);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
   font-family: "Permanent Marker", cursive;
 }
 
