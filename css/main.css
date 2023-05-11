@@ -41,13 +41,19 @@ font-family: 'Poppins', sans-serif;
   --spacing-80: 5.06rem;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Body Section */
 body {
   font-family: "Poppins", sans-serif;
   overflow-y: auto;
   overflow-x: hidden;
-  scroll-behavior: smooth;
   font-size: var(--font-size-medium);
+}
+
+.container {
 }
 
 nav {
@@ -75,6 +81,17 @@ a {
 }
 
 /* Custom Section */
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 .text-right-nav {
   text-align: center;
@@ -149,23 +166,19 @@ hr.solid {
 }
 
 .normal-text {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   letter-spacing: 0.2rem;
   font-size: 1rem;
   color: var(--color-white);
-  text-shadow: 
-  -4px 0px 3px var(--color-black), 
-  -5px 0px 12px var(--color-black), 
+  text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px var(--color-black);
 }
 
 .header-text {
-  font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
   letter-spacing: 0.2rem;
   font-size: 3rem;
   color: var(--color-white);
-  text-shadow: 
-  -3px 0px 1px var(--color-black), 
-  -3px 0px 10px var(--color-black);
+  text-shadow: -3px 0px 1px var(--color-black), -3px 0px 10px var(--color-black);
 }
 
 .header-welcome {
@@ -175,7 +188,6 @@ hr.solid {
   font-size: 8rem;
   color: var(--color-white);
   text-shadow: -4px 0px 3px var(--color-black), -5px 0px 12px rgb(0, 0, 0);
-
 }
 
 .header-typed {
@@ -244,10 +256,18 @@ hr.solid {
   transform: translateZ(-5) scale(1.5);
 }
 
-.fg1-showcase-img {z-index: 0;}
-.fg2-showcase-img {z-index: 1;}
-.fg3-showcase-img {z-index: 2;}
-.fg-athlet-img {z-index: 3;}
+.fg1-showcase-img {
+  z-index: 0;
+}
+.fg2-showcase-img {
+  z-index: 1;
+}
+.fg3-showcase-img {
+  z-index: 2;
+}
+.fg-athlet-img {
+  z-index: 3;
+}
 
 .interactive-section-one {
   position: relative;

@@ -10,9 +10,9 @@
 
     <!-- Bootstrap -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
 
@@ -33,17 +33,11 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css" />
-    <link rel="stylesheet" href="/css/index.css" />
-    <link rel="stylesheet" href="/css/account.css" />
-
-    <!-- Script -->
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="/css/programs.css" />
   </head>
   <!-- Body -->
 
-  <body
-    class="container-fluid px-0 py-0 smooth-scroll-wrapper scrollable-element"
-  >
+  <body class="container-fluid px-0 py-0 smooth-scroll-wrapper">
     <!-- Navbar  -->
     <nav class="container-fluid navbar navbar-expand-lg py-2">
       <div class="container">
@@ -60,14 +54,14 @@
 
         <!-- Search Bar -->
         <div class="col col-lg-5">
-          <div class="d-flex">
+          <form class="d-flex">
             <input
               class="form-control me-2"
               type="search"
               placeholder="Search"
               aria-label="Search"
             />
-          </div>
+          </form>
         </div>
 
         <!-- Phone Hamburger -->
@@ -115,32 +109,32 @@
               <ul class="dropdown-menu text-center-nav container-dropdown">
                 <li>
                   <a
+                    href="/pages/programs.html"
                     class="dropdown-item bg-dropdown-1"
-                    href="/pages/p-bronze.html"
                     >Beginner</a
                   >
                 </li>
                 <hr class="dropdown-divider" />
                 <li>
                   <a
+                    href="/pages/programs.html"
                     class="dropdown-item bg-dropdown-2"
-                    href="/pages/p-silver.html"
                     >Intermediate</a
                   >
                 </li>
                 <hr class="dropdown-divider" />
                 <li>
                   <a
+                    href="/pages/programs.html"
                     class="dropdown-item bg-dropdown-3"
-                    href="/pages/p-gold.html"
                     >Advanced</a
                   >
                 </li>
                 <hr class="dropdown-divider" />
                 <li>
                   <a
+                    href="/pages/programs.html"
                     class="dropdown-item bg-dropdown-4"
-                    href="/pages/p-performance.html"
                     >Performance</a
                   >
                 </li>
@@ -220,7 +214,7 @@
     <!-- Showcase -->
     <div class="wrapper interactive-section-two">
       <!-- Interactive Program Section -->
-      <section class="interactive-section-one mobile-container">
+      <section class="interactive-section-one">
         <img
           src="/Assets/backgrounds/BG.jpg"
           class="bg-showcase-img"
@@ -242,195 +236,256 @@
           id="fg3-img"
         />
 
-        <!-- Title -->
-        <h1 class="header-welcome" id="header-showcase"></h1>
-
-        <!-- Desktop Account Form -->
-
-        <div class="account-container-desktop reveal" id="account-container">
-          <div class="form-container sign-in-container">
-            <form action="#">
-              <h1 class="header-text">Sign in</h1>
-              <div class="social-container">
-                <a href="#" class="social transform-scale-sml"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a href="#" class="social transform-scale-sml"
-                  ><i class="fab fa-google-plus-g"></i
-                ></a>
-                <a href="#" class="social transform-scale-sml"
-                  ><i class="fa-brands fa-apple"></i
-                ></a>
-              </div>
-              <span>or use your account</span>
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <a href="#">Forgot your password?</a>
-              <button
-                class="btn btn-danger btn-lg rounded-pill transform-scale-sml"
-                type="button"
-              >
-                Sign In
-              </button>
-            </form>
-          </div>
-          <div class="form-container sign-up-container">
-            <form action="#" class="account-form">
-              <h1 class="header-text">Sign Up</h1>
-              <div class="social-container">
-                <a href="#" class="social transform-scale-sml"
-                  ><i class="fab fa-facebook-f"></i
-                ></a>
-                <a href="#" class="social transform-scale-sml"
-                  ><i class="fab fa-google-plus-g"></i
-                ></a>
-                <a href="#" class="social transform-scale-sml"
-                  ><i class="fa-brands fa-apple"></i
-                ></a>
-              </div>
-              <span>or use your email for registration</span>
-              <input type="email" placeholder="Email" />
-              <input type="password" placeholder="Password" />
-              <input type="password" placeholder="Confirm Password" />
-
-              <button
-                class="btn btn-danger btn-lg rounded-pill transform-scale-sml"
-                type="button"
-              >
-                Sign Up
-              </button>
-            </form>
-          </div>
-          <div class="overlay-container">
-            <div class="overlay">
-              <div class="overlay-panel overlay-left">
-                <h1 class="header-text">Welcome Back!</h1>
-                <p>To keep connected with us please login</p>
-                <button
-                  class="btn btn-light btn-lg rounded-pill transform-scale-sml"
-                  type="button"
-                  id="signIn"
-                >
-                  Sign In
-                </button>
-              </div>
-              <div class="overlay-panel overlay-right">
-                <h1 class="header-text">Hello, Friend!</h1>
-                <p>Enter your details and start journey with us</p>
-                <button
-                  class="btn btn-light btn-lg rounded-pill transform-scale-sml"
-                  type="button"
-                  id="signUp"
-                >
-                  Sign Up
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modile Account Form -->
-
-        <div class="account-container-mobile forms account-container-mobile">
-          <!-- Login Form -->
-          <div class="form login">
-            <div class="form-content">
-              <form action="#">
-                <h1 class="header-text">Login</h1>
-                <div class="field input-field">
-                  <input type="email" placeholder="Email" class="input" />
-                </div>
-                <div class="field input-field">
-                  <input
-                    type="password"
-                    placeholder="Password"
-                    class="password"
-                  />
-                  <i class="bx bx-hide eye-icon"></i>
-                </div>
-                <div class="form-link">
-                  <a href="#" class="forgot-pass link">Forgot password?</a>
-                </div>
-                <div class="field button-field">
-                  <button>Login</button>
-                </div>
-              </form>
-              <div class="form-link">
-                <span
-                  >Don't have an account?
-                  <a href="#" class="link signup-link">Signup</a></span
-                >
-                <div class="social-container">
-                  <a href="#" class="social transform-scale-sml"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a href="#" class="social transform-scale-sml"
-                    ><i class="fab fa-google-plus-g"></i
-                  ></a>
-                  <a href="#" class="social transform-scale-sml"
-                    ><i class="fa-brands fa-apple"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
- 
-          </div>
-          <!-- Signup Form -->
-          <div class="form signup">
-            <div class="form-content">
-              <form action="#">
-                <h1 class="header-text">Signup</h1>
-                <div class="field input-field">
-                  <input type="email" placeholder="Email" class="input" />
-                </div>
-                <div class="field input-field">
-                  <input
-                    type="password"
-                    placeholder="Create password"
-                    class="password"
-                  />
-                </div>
-                <div class="field input-field">
-                  <input
-                    type="password"
-                    placeholder="Confirm password"
-                    class="password"
-                  />
-                  <i class="bx bx-hide eye-icon"></i>
-                </div>
-                <div class="field button-field">
-                  <button>Signup</button>
-                </div>
-              </form>
-              <div class="form-link">
-                <span
-                  >Already have an account?
-                  <a href="#" class="link login-link">Login</a></span
-                >
-                <div class="social-container">
-                  <a href="#" class="social transform-scale-sml"
-                    ><i class="fab fa-facebook-f"></i
-                  ></a>
-                  <a href="#" class="social transform-scale-sml"
-                    ><i class="fab fa-google-plus-g"></i
-                  ></a>
-                  <a href="#" class="social transform-scale-sml"
-                    ><i class="fa-brands fa-apple"></i
-                  ></a>
-                </div>
+        <!-- Annually/Monthly Cards -->
+        <section class="card-section">
+          <div class="rounded-5">
+            <!-- Plan Switcher -->
+            <div class="switcher">
+              <div class="toggle-btn">
+                <span>Annually</span>
+                <label class="switch">
+                  <input type="checkbox" id="checkbox" onclick="check()" />
+                  <span class="slider round"></span>
+                </label>
+                <span>Monthly</span>
               </div>
             </div>
 
+            <!-- Cards -->
+            <div class="cards-container">
+              <!-- Beginner -->
+              <div class="card-bodys packages card-1">
+                <h1 class="first">Beginner</h1>
+                <h2 class="text1">&dollar;9.99</h2>
+                <h2 class="text2">&dollar;119.99</h2>
+                <ul class="list">
+                  <li>2000 Subscribers</li>
+                  <li>12, 000 Emails/month</li>
+                  <li>Multi-User Accounts</li>
+                  <li>Email Support</li>
+                </ul>
+                <a href="#" class="card-button">Start Now</a>
+              </div>
+              <!-- Advanced -->
+              <div class="card-bodys packages card-2">
+                <h1 class="first">Advanced</h1>
+                <h2 class="text1">&dollar;9.99</h2>
+                <h2 class="text2">&dollar;119.99</h2>
+                <ul class="list">
+                  <li>2000 Subscribers</li>
+                  <li>12, 000 Emails/month</li>
+                  <li>Multi-User Accounts</li>
+                  <li>Email Support</li>
+                </ul>
+                <a href="#" class="card-button">Start Now</a>
+              </div>
+              <!-- Performance -->
+              <div class="card-bodys packages card-3">
+                <h1 class="first">Performance</h1>
+                <h2 class="text1">&dollar;9.99</h2>
+                <h2 class="text2">&dollar;119.99</h2>
+                <ul class="list">
+                  <li>2000 Subscribers</li>
+                  <li>12, 000 Emails/month</li>
+                  <li>Multi-User Accounts</li>
+                  <li>Email Support</li>
+                </ul>
+                <a href="#" class="card-button">Start Now</a>
+              </div>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Text + Button -->
+        <h1
+          class="d-none d-block header-welcome text-center"
+          id="header-showcase"
+        >
+          YOU ARE READY!
+        </h1>
+
+        <button
+          onclick="scrollToPrograms()"
+          class="d-none d-block btn-showcase btn btn-danger btn-lg rounded-pill transform-scale-md grow-and-shrink"
+          type="button"
+        >
+          BEGIN
+        </button>
       </section>
     </div>
 
+    <!-- Program Content -->
+    <main class="programs-card-section">
+      <div>
+        <h1 class="programs-title scrollToPrograms">CHOSE A PLAN TO BEGIN</h1>
+      </div>
+
+      <div class="programs-card-container">
+        <div
+          class="gap-3 container-fluid row row-cols-1 row-cols-md-2 row-cols-lg-2 row-cols-xlg-4 d-flex justify-content-center align-content-center"
+        >
+          <!-- Beginner -->
+          <div class="box col">
+            <a href="/pages/account.html">
+              <div class="imgBx">
+                <img
+                  src="/Assets/Programs/Programs Cards/beginner-img.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <div>
+                  <h2>Beginner</h2>
+                  <p>
+                    Begin your journey as a new born in this type of training.
+                    You will make small steps but very important for your
+                    progress
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Intermediate -->
+          <div class="box col">
+            <a href="/pages/account.html">
+              <div class="imgBx">
+                <img
+                  src="/Assets/Programs/Programs Cards/intermediate-img.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <div>
+                  <h2>Intermediate</h2>
+                  <p>
+                    Begin your journey as a new born in this type of training.
+                    You will make small steps but very important for your
+                    progress
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Advanced -->
+          <div class="box col">
+            <a href="/pages/account.html">
+              <div class="imgBx">
+                <img
+                  src="/Assets/Programs/Programs Cards/advanced-img.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <div>
+                  <h2>Advanced</h2>
+                  <p>
+                    Begin your journey as a new born in this type of training.
+                    You will make small steps but very important for your
+                    progress
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Performance -->
+          <div class="box col">
+            <a href="/pages/account.html">
+              <div class="imgBx">
+                <img
+                  src="/Assets/Programs/Programs Cards/performance-img.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <div>
+                  <h2>Performance</h2>
+                  <p>
+                    Begin your journey as a new born in this type of training.
+                    You will make small steps but very important for your
+                    progress
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Annually/Monthly Cards -->
+        <section class="card-section">
+          <div class="rounded-5">
+            <!-- Plan Switcher -->
+            <div class="switcher">
+              <div class="toggle-btn">
+                <span>Annually</span>
+                <label class="switch">
+                  <input type="checkbox" id="checkbox" onclick="check()" />
+                  <span class="slider round"></span>
+                </label>
+                <span>Monthly</span>
+              </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="cards-container">
+              <!-- Beginner -->
+              <div class="card-bodys packages card-1">
+                <h1 class="first">Beginner</h1>
+                <h2 class="text1">&dollar;9.99</h2>
+                <h2 class="text2">&dollar;119.99</h2>
+                <ul class="list">
+                  <li>2000 Subscribers</li>
+                  <li>12, 000 Emails/month</li>
+                  <li>Multi-User Accounts</li>
+                  <li>Email Support</li>
+                </ul>
+                <a href="#" class="card-button">Start Now</a>
+              </div>
+              <!-- Advanced -->
+              <div class="card-bodys packages card-2">
+                <h1 class="first">Advanced</h1>
+                <h2 class="text1">&dollar;9.99</h2>
+                <h2 class="text2">&dollar;119.99</h2>
+                <ul class="list">
+                  <li>2000 Subscribers</li>
+                  <li>12, 000 Emails/month</li>
+                  <li>Multi-User Accounts</li>
+                  <li>Email Support</li>
+                </ul>
+                <a href="#" class="card-button">Start Now</a>
+              </div>
+              <!-- Performance -->
+              <div class="card-bodys packages card-3">
+                <h1 class="first">Performance</h1>
+                <h2 class="text1">&dollar;9.99</h2>
+                <h2 class="text2">&dollar;119.99</h2>
+                <ul class="list">
+                  <li>2000 Subscribers</li>
+                  <li>12, 000 Emails/month</li>
+                  <li>Multi-User Accounts</li>
+                  <li>Email Support</li>
+                </ul>
+                <a href="#" class="card-button">Start Now</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="interactive-section-tree">
+          <img
+            src="/Assets/Programs/atlas-bg.png"
+            class="program-img-atlas d-none d-md-block"
+            alt=""
+          />
+        </div>
+      </div>
+    </main>
 
     <!-- Newsletter -->
     <section class="bg-black text-light p-md-5">
       <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-item-center reveal"
+        class="container d-flex flex-column flex-md-row justify-content-between align-item-center"
       >
         <div class="col">
           <h3 class="my-3">
@@ -514,10 +569,23 @@
       </button>
     </div>
 
+    <!-- Button Let's Begin -->
+    <div class="btn-let-begin d-none d-md-block grow-and-shrink">
+      <button
+        class="btn btn-danger btn-lg rounded-pill transform-scale-md"
+        type="button"
+      >
+        <a href="/pages/account.html">
+          <span class="text-uppercase text-white"> Let's Begin </span>
+        </a>
+      </button>
+    </div>
+
     <!-- Script -->
+
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
     <script
@@ -525,6 +593,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/js/background-img.js"></script>
-    <script src="/js/account.js"></script>
+    <script src="/js/programs.js"></script>
   </body>
 </html>

@@ -41,19 +41,7 @@ font-family: 'Poppins', sans-serif;
   --spacing-80: 5.06rem;
 }
 
-
-
 /* Shadow 3 */
-.interactive-section {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  transform-style: preserve-3d;
-  z-index: -1;
-}
-
 .interactive-section-tree {
   position: relative;
   display: flex;

@@ -36,8 +36,10 @@
     <link rel="stylesheet" href="/css/index.css" />
     <link rel="stylesheet" href="/css/about.css" />
 
-    <!-- Script -->
+    <!-- Map Script -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+      ({key: "AIzaSyC_s-dLS1bgs-qXCqLDdGoBJne4ox4sxbw", v: "weekly"});</script>
   </head>
   <!-- Body -->
 
@@ -265,12 +267,12 @@
 
     <!-- Letter Section -->
     <div class="bg-black p-1 p-sm-2 p-md-4 p-lg-5">
-      <div class="container bg-white p-2 p-sm-2 p-sm-2 p-md-4 p-lg-5">
+      <div class="container bg-white p-2 p-sm-2 p-sm-2 p-md-4 p-lg-5 reveal">
         <!-- Container -->
         <div class="text-justify text-write">
           <!-- Letter -->
           <div class="row my-5">
-            <p class="first-letter scrollToAbout">
+            <p class="first-letter scrollToAbout reveal">
               My name is <span class="fw-bold">Andrei Rusen</span>, and I am a
               former professional athlete who spent 18 years of my life as a
               competitive swimmer. During my career, I had the honour of
@@ -278,7 +280,7 @@
               championships, and I am proud to have achieved many notable
               accomplishments in the field of swimming.
             </p>
-            <p>
+            <p class="reveal">
               After my athletic career, I decided to channel my passion for
               fitness and sports into helping others achieve their dreams in
               this domain. I am a licensed sports and motor performance
@@ -288,14 +290,14 @@
               degree in sport performance, which I earned after two years of
               intense analysis and study.
             </p>
-            <p>
+            <p class="reveal">
               Throughout my academic and professional journey, I have also
               studied physical therapy for two years, and I have been practising
               it alongside my other areas of expertise. I am committed to
               staying up-to-date on the latest developments in this field and
               integrating them into my work with clients.
             </p>
-            <p>
+            <p class="reveal">
               Currently, I am proud to be a member of the Romanian Swimming and
               Modern Pentathlon Federation, where I have been working for the
               past two years. In this role, I have had the opportunity to
@@ -305,7 +307,7 @@
               Sports Committee to support the development of the next generation
               of athletes.
             </p>
-            <p>
+            <p class="reveal">
               My dedication to my profession and my commitment to helping others
               achieve their goals have been a driving force throughout my life.
               I believe that everyone has the potential to achieve their perfect
@@ -316,7 +318,7 @@
             </p>
           </div>
           <!-- Signature -->
-          <div class="d-flex flex-column align-items-end my-5">
+          <div class="d-flex flex-column align-items-end my-5 reveal">
             <p class="">With best regards,</p>
             <p class="fw-bold">Andrei Rusen</p>
             <img class="img-signature" src="/Assets/Signature/A.R.png" alt="" />
@@ -326,18 +328,18 @@
     </div>
 
     <!-- Location Map -->
-    <div class="container-fluid bg-black">
+    <div class="container-fluid bg-black p-1 p-sm-2 p-md-4 p-lg-5 ">
       <div
         id="map"
         style="width: 100%; height: 400px"
-        class="container bg-white"
+        class="container bg-white reveal"
       ></div>
     </div>
 
     <!-- Newsletter -->
     <section class="bg-black text-light p-md-5">
       <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-item-center"
+        class="container d-flex flex-column flex-md-row justify-content-between align-item-center reveal"
       >
         <div class="col">
           <h3 class="my-3">

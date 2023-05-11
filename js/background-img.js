@@ -9,10 +9,9 @@ window.addEventListener("scroll", function () {
   let value = window.scrollY;
   headerShowcase.style.marginTop = value * 1 + "px";
   fgImg1.style.marginTop = value * 0.4 + "px";
-  fgImg2.style.marginTop= value * 0.8 + "px";
+  fgImg2.style.marginTop = value * 0.8 + "px";
   fgImg3.style.marginLeft = value * 0.8 + "px";
 });
-
 
 // Button To Top - Right
 let btnToTop = document.querySelector(".btn-to-top");
@@ -34,7 +33,6 @@ function topFunction() {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
 
-
 // Disapear Btn
 let btnLetBegin = document.querySelector(".btn-let-begin");
 document.addEventListener("scroll", function () {
@@ -44,3 +42,20 @@ document.addEventListener("scroll", function () {
     btnLetBegin.style.visibility = "hidden";
   }
 });
+
+// Reveal Section
+window.addEventListener("scroll", reveal);
+function reveal() {
+  let reveals = document.querySelectorAll(".reveal");
+  for (let i = 0; i < reveals.length; i++) {
+    let windowheight = window.innerHeight;
+    let revealtop = reveals[i].getBoundingClientRect().top;
+    let revealpoint = 150;
+
+    if (revealtop < windowheight - revealpoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
