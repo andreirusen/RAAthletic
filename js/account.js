@@ -11,9 +11,10 @@ signInButton.addEventListener('click', () => {
 });
 
 
-const forms = document.querySelector(".forms"),
+const accountContainerMobile = document.querySelector(".account-container-mobile"),
 pwShowHide = document.querySelectorAll(".eye-icon"),
 links = document.querySelectorAll(".link");
+
 pwShowHide.forEach(eyeIcon => {
 eyeIcon.addEventListener("click", () => {
   let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
@@ -29,10 +30,11 @@ eyeIcon.addEventListener("click", () => {
   })
   
 })
-})      
+})     
+ 
 links.forEach(link => {
 link.addEventListener("click", e => {
  e.preventDefault(); //preventing form submit
- forms.classList.toggle("show-signup");
+ accountContainerMobile.classList.toggle("show-signup");
 })
 })

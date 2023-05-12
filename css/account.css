@@ -58,7 +58,7 @@ form {
   text-align: center;
 }
 
-input {
+.input-account-mobile {
   background-color: #eee;
   border: none;
   border-radius: 25px;
@@ -76,6 +76,7 @@ input {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: absolute;
   overflow: hidden;
+  height: 50vh;
   min-height: 600px;
   width: 800px;
   max-width: 100%;
@@ -214,20 +215,8 @@ input {
 }
 
 /* Account Container Mobile */
-
-.account-container-mobile {
-  font-family: "Poppins", sans-serif;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 30px;
-  z-index: 3;
-  
-}
 .form {
-  top: 10%;
+  top: 2%;
   position: absolute;
   max-width: 430px;
   width: 100%;
@@ -237,15 +226,29 @@ input {
   box-shadow: 0 0 1px 0 var(--color-black) inset,
   0 0 5px 1px var(--color-black);
 }
+
 .form.signup {
   opacity: 0;
   pointer-events: none;
 }
-.forms.show-signup .form.signup {
+.account-container-mobile {
+  
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  z-index: 4;
+  
+}
+
+.account-container-mobile.show-signup .form.signup {
   opacity: 1;
   pointer-events: auto;
 }
-.forms.show-signup .form.login {
+.account-container-mobile.show-signup .form.login {
   opacity: 0;
   pointer-events: none;
 }
@@ -266,7 +269,7 @@ form {
   border-radius: 25px;
 }
 .field input,
-.field button {
+.field .button-field {
   height: 100%;
   width: 100%;
   border: none;
@@ -292,13 +295,13 @@ form {
   cursor: pointer;
   padding: 5px;
 }
-.field button {
+.field .button-field {
   color: var(--color-white);
   background-color: var(--color-danger);
   transition: all 0.3s ease;
   cursor: pointer;
 }
-.field button:hover {
+.field .button-field:hover {
   background-color: var(--color-white);
   color: var(--color-danger);
   border: solid 2px var(--color-danger);
@@ -330,7 +333,7 @@ form {
 
 @media screen and (max-width: 400px) {
   .form {
-    padding: 0 10px;
+    padding: 0 0;
   }
 }
 

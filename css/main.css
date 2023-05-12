@@ -492,3 +492,30 @@ hr.solid {
     height: 500px;
   }
 }
+
+
+@media (max-width: 600px) {
+  .wrapper {
+    height:100vh ;
+  }
+}
+@media (max-width: 500px) {
+  .wrapper {
+    height:100vh ;
+  }
+}
+@media (max-width: 400px) {
+  .wrapper {
+    height:100vh ;
+  }
+}
+@media (max-width: 300px) {
+  .wrapper {
+    height:300vh ;
+  }
+}
+@media (max-width: 200px) {
+  .wrapper {
+    height:500vh ;
+  }
+}
