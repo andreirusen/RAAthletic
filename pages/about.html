@@ -38,8 +38,43 @@
 
     <!-- Map Script -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
-      ({key: "AIzaSyC_s-dLS1bgs-qXCqLDdGoBJne4ox4sxbw", v: "weekly"});</script>
+    <script>
+      ((g) => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                  g[k]
+                );
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({ key: "AIzaSyC_s-dLS1bgs-qXCqLDdGoBJne4ox4sxbw", v: "weekly" });
+    </script>
   </head>
   <!-- Body -->
 
@@ -323,7 +358,7 @@
     </div>
 
     <!-- Location Map -->
-    <div class="container-fluid bg-black p-1 p-sm-2 p-md-4 p-lg-5 ">
+    <div class="container-fluid bg-black p-1 p-sm-2 p-md-4 p-lg-5">
       <div
         id="map"
         style="width: 100%; height: 400px"
@@ -359,10 +394,11 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-black footer px-3 ">
+    <footer class="bg-black footer px-3">
       <div class="container d-flex flex-column flex-md-row">
         <!-- left Div -->
-        <div class="footer-left col d-flex flex-column py-5 p-md-2 p-lg-5 order-last order-md-first"
+        <div
+          class="footer-left col d-flex flex-column py-5 p-md-2 p-lg-5 order-last order-md-first"
         >
           <p class="text-uppercase fwb">
             <a href="#" class="color-hover fw-bold"
@@ -380,7 +416,7 @@
         </div>
 
         <!-- Middle Div -->
-        <div class="footer-middle col d-flex flex-column py-5 p-md-2 p-lg-5 ">
+        <div class="footer-middle col d-flex flex-column py-5 p-md-2 p-lg-5">
           <p>
             <a href="#" class="color-hover text-uppercase fw-bold"
               >Our Programs</a
@@ -394,7 +430,7 @@
         </div>
 
         <!-- Right Div -->
-        <div class="footer-right col d-flex flex-column py-5 p-md-2 p-lg-5 ">
+        <div class="footer-right col d-flex flex-column py-5 p-md-2 p-lg-5">
           <p href="#" class="text-uppercase fw-bold">Working Hours</p>
           <hr class="solid" />
           <p>Mondy - Friday:</p>
@@ -427,6 +463,45 @@
           <span class="text-uppercase text-white"> Let's Begin </span>
         </a>
       </button>
+    </div>
+
+    <!-- Cookie -->
+    <div
+      class="offcanvas offcanvas-bottom bg-black text-white"
+      style="height: auto !important; --bs-bg-opacity: 0.85"
+      tabindex="-1"
+      id="offcanvas"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      aria-labelledby="offcanvasLabel"
+    >
+      <div
+        class="offcanvas-body d-flex flex-column flex-sm-row align-items-center justify-content-around gap-3"
+      >
+        <div class="small">
+          We use cookies to ensure that we give you the best experience on our
+          website. If you continue to use this site, we will assume that you are
+          happy with it.
+        </div>
+        <div class="text-nowrap">
+          <button
+            type="button"
+            class="btn btn-sm btn-danger me-1"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            OK
+          </button>
+          <a
+            type="button"
+            href="https://blog.codepen.io/documentation/privacy-policy/"
+            target="_blank"
+            class="btn btn-sm btn-light text-nowrap"
+            aria-label="Close"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
     </div>
 
     <!-- Script -->
