@@ -193,7 +193,7 @@ input:checked + .slider::before {
 
   padding: 30px 0;
   margin: 0rem 1rem;
-  width: 350px;
+  width: 330px;
   height: 100%;
 
   background-color: var(--color-black);
@@ -214,6 +214,9 @@ input:checked + .slider::before {
   grid-auto-flow: row;
   grid-template-areas: "card-1 card-2 card-3";
 }
+.card-1 {
+  grid-area: card-1;
+}
 
 .card-2 {
   grid-area: card-2;
@@ -221,10 +224,6 @@ input:checked + .slider::before {
 
 .card-3 {
   grid-area: card-3;
-}
-
-.card-1 {
-  grid-area: card-1;
 }
 
 .programs-title {
@@ -271,7 +270,7 @@ input:checked + .slider::before {
 }
 
 .box:hover {
-  transform: rotateY(0deg) scale(1.05);
+  transform: scale(1.05);
   z-index: 1;
   box-shadow: 2px 6px 25px var(--color-danger);
   filter: brightness(100%);
@@ -351,6 +350,10 @@ input:checked + .slider::before {
   .box {
     filter: brightness(100%);
   }
+  .box:hover {
+    z-index: 1;
+    box-shadow: 2px 6px 25px var(--color-danger);
+  }
 
   .content {
     display: flex;
@@ -401,5 +404,42 @@ input:checked + .slider::before {
 
   .card-3 {
     grid-area: card-3;
+  }
+
+  .box {
+    filter: brightness(100%);
+  }
+  .box:hover {
+    z-index: 1;
+    box-shadow: 2px 6px 25px var(--color-danger);
+  }
+
+  .content .content-title {
+    transition: 0.5s;
+    transform: translateY(150px);
+  }
+  
+  .box:hover .content .content-title {
+    transform: translateY(0px);
+    transition-delay: 0.3s;
+  }
+  
+  .content .content-text {
+    transition: 0.3s;
+    transform: translateY(300px);
+  }
+  
+  .box:hover .content .content-text {
+    transform: translateY(0px);
+    transition-delay: 0.4s;
+  }
+  
+  .content .content-button {
+    transition: 0.3s;
+    transform: translateY(300px);
+  }
+  .box:hover .content .content-button {
+    transform: translateY(0px);
+    transition-delay: 0.4s;
   }
 }
