@@ -512,19 +512,22 @@
             Sign up for our <span class="text-danger">newsletter</span>
           </h3>
         </div>
-
+        <form action="">
         <div class="col input-group my-3">
           <input
+          class="form-control"
             type="text"
-            class="form-control"
+            name="email"
             placeholder="Enter your email"
             aria-label="Enter your email"
             aria-describedby="button-addon2"
+            required value="<?php echo ?>"
           />
 
           <button class="btn btn-danger button-addon2" type="button">
             SUBSCRIBE
           </button>
+        </form>
         </div>
       </div>
     </section>
