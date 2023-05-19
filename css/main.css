@@ -62,7 +62,9 @@ nav {
   font-family: "Poppins", sans-serif;
   background-color: var(--color-white);
 }
-
+.navbar {
+  position: fixed;
+}
 svg {
   width: 25px;
   height: 25px;
