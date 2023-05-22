@@ -272,7 +272,9 @@ input:checked + .slider::before {
 .box:hover {
   transform: scale(1.05);
   z-index: 1;
-  box-shadow: 2px 6px 25px var(--color-danger);
+
+  box-shadow: var(--color-danger) 0px 10px 36px 0px,
+    var(--color-danger) 0px 0px 0px 1px;
   filter: brightness(100%);
 }
 
@@ -380,7 +382,6 @@ input:checked + .slider::before {
   .box:hover .content .content-button {
     transform: translateY(0px);
   }
-  
 
   .box {
     filter: brightness(100%);
@@ -389,8 +390,6 @@ input:checked + .slider::before {
     transform: scale(1);
     box-shadow: 2px 6px 25px var(--color-danger);
   }
-
-
 }
 @media (max-width: 1100px) {
   .card-bodys {
