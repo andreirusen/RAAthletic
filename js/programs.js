@@ -1,10 +1,4 @@
-
-// Scroll To Section
-let contentAbout = document.querySelector(".scrollToPrograms");
-function scrollToPrograms() {
-  contentAbout.scrollIntoView({ behavior: "smooth" });
-}
-
+// Swipe Btn
 function check() {
   var checkBox = document.getElementById("checkbox");
   var text1 = document.getElementsByClassName("text1");
@@ -24,21 +18,19 @@ check();
 
 
 
-// Scrolling Page on time
-$(document).ready(function() {
-  function scrolltodiv(){
-          $('html, body').animate({
-              scrollTop: $("#scrollToPrograms").offset().top
-          }, 2000);
-
-  }
 
 
-  window.setTimeout( scrolltodiv, 2000 );
-});
+// Scroll To Section
+const goToPrograms = setTimeout(scrollTo, 2000);
 
-let autoScroll = () =>{
-  window.scrollBy(0,5);
-  let scrolldelay=setTimeout (autoScroll,10)
+function scrollTo(goToPrograms) {
+  document.documentElement.scrollBy(0, 900);
 }
-autoScroll();
+scrollTo()
+
+
+function scrollToPrograms() {
+  document.getElementById("scrollToPrograms").scrollTo({ behavior: "smooth", top: 0 });
+  
+}
+

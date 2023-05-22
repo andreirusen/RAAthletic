@@ -232,23 +232,15 @@
         />
 
         <!-- Text + Button -->
-        <h1 class="header-welcome text-center" id="header-showcase">
+        <h1 class="header-text text-center" id="header-showcase">
           YOU ARE READY!
         </h1>
-
-        <button
-          onclick="scrollToPrograms()"
-          class="d-none d-block btn-showcase btn btn-danger btn-lg rounded-pill transform-scale-md grow-and-shrink"
-          type="button"
-        >
-          BEGIN
-        </button>
       </section>
     </div>
 
     <!-- Programs Content -->
-    <main class="programs-card-section">
-      <h1 class="programs-title scrollToPrograms reveal" id="scrollToPrograms">
+    <main class="programs-card-section " id="scrollToPrograms">
+      <h1 class="h-text scrollToPrograms reveal" id="scrollToPrograms">
         CHOSE A PLAN TO BEGIN
       </h1>
 
@@ -352,38 +344,13 @@
       </div>
     </main>
 
-    <!-- Newsletter Section -->
-    <section class="text-light p-md-5 py-5">
-      <div
-        class="container d-flex flex-column flex-md-row justify-content-between align-item-center reveal"
-      >
-        <div class="col">
-          <h3 class="my-3">
-            Sign up for our <span class="text-danger">newsletter</span>
-          </h3>
-        </div>
-
-        <div class="col input-group my-3">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Enter your email"
-            aria-label="Enter your email"
-            aria-describedby="button-addon2"
-          />
-
-          <button class="btn btn-danger button-addon2" type="button">
-            SUBSCRIBE
-          </button>
-        </div>
-      </div>
-    </section>
 
     <!-- Footer Section -->
-    <footer class="footer px-3 my-5">
+    <footer class="footer px-3">
       <div class="container d-flex flex-column flex-md-row text-md-start">
         <!-- left Div -->
-        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-3"
+        <div
+          class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-last order-md-first"
         >
           <p class="text-uppercase">
             <a href="#" class="color-hover fw-bold"
@@ -401,20 +368,21 @@
         </div>
 
         <!-- Middle Div -->
-        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-2">
+        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5">
           <p>
-            <a href="/pages/programs.html" class="color-hover text-uppercase fw-bold"
+            <a href="#" class="color-hover text-uppercase fw-bold"
               >Our Programs</a
             >
           </p>
           <hr class="solid" />
-          <p><a href="/pages/programs.html" class="color-hover">Beginner</a></p>
-          <p><a href="/pages/programs.html" class="color-hover">Advanced</a></p>
-          <p><a href="/pages/programs.html" class="color-hover">Performance</a></p>
+          <p><a href="#" class="color-hover">Beginner</a></p>
+          <p><a href="#" class="color-hover">Intermediate</a></p>
+          <p><a href="#" class="color-hover">Advanced</a></p>
+          <p><a href="#" class="color-hover">Performance</a></p>
         </div>
 
         <!-- Right Div -->
-        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-1">
+        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5">
           <p href="#" class="text-uppercase fw-bold">Working Hours</p>
           <hr class="solid" />
           <p>Mondy - Friday:</p>
