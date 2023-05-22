@@ -1,3 +1,7 @@
+// Navbar
+const navEL = document.querySelector(".navbar");
+let lastScrollY = window.scrollY;
+
 // Parallax Effect
 let headerShowcase = document.querySelector("#header-showcase");
 let fgImg1 = document.querySelector("#fg1-img");
@@ -5,6 +9,15 @@ let fgImg2 = document.querySelector("#fg2-img");
 let fgImg3 = document.querySelector("#fg3-img");
 
 window.addEventListener("scroll", function () {
+  // Navbar
+  if (lastScrollY < window.scrollY) {
+    navEL.classList.add("navbar--hidden");
+  } else {
+    navEL.classList.remove("navbar--hidden");
+  }
+  lastScrollY = window.scrollY;
+
+  // Parallax Effect
   let value = window.scrollY;
   headerShowcase.style.marginTop = value * 1.2 + "px";
   fgImg1.style.marginTop = value * 0.4 + "px";
@@ -61,11 +74,11 @@ function reveal() {
 
 // Cookie
 console.clear();
-"use strict";
+("use strict");
 
-(function() {
-   var offcanvas = document.getElementById("offcanvas"),
-       bs_offcanvas = new bootstrap.Offcanvas(offcanvas);
-   
-   bs_offcanvas.show();
+(function () {
+  var offcanvas = document.getElementById("offcanvas"),
+    bs_offcanvas = new bootstrap.Offcanvas(offcanvas);
+
+  bs_offcanvas.show();
 })();
