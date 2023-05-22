@@ -16,21 +16,13 @@ function check() {
 }
 check();
 
+// Scroll To Timer
+const scrollDelay = 1000;
+const scrollStepDelay = 1000;
+const targetElement = document.getElementById("your-element-id");
 
-
-
-
-// Scroll To Section
-const goToPrograms = setTimeout(scrollTo, 2000);
-
-function scrollTo(goToPrograms) {
-  document.documentElement.scrollBy(0, 900);
-}
-scrollTo()
-
-
-function scrollToPrograms() {
-  document.getElementById("scrollToPrograms").scrollTo({ behavior: "smooth", top: 0 });
-  
+function scrollTo() {
+  targetElement.scrollIntoView({ behavior: "smooth" });
 }
 
+setTimeout(scrollTo, scrollDelay);
