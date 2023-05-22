@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>RAATHLETIC</title>
+    <meta name="description" content="RAATHLETIC" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://kit.fontawesome.com/af8da007ac.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/home.css" />
+  </head>
+
+  <!-- Body -->
+  <body class="container-fluid px-0 py-0">
+    <!-- Navbar  -->
+    <nav class="container-fluid navbar navbar-expand-lg py-2">
+      <div class="container">
+        <!-- Brand/logo -->
+        <div class="col-lg-1d">
+          <a href="/index.html" class="navbar-brand">
+            <img
+              class="icon-logo transform-scale-sml"
+              src="/Assets/Logo/RAA/RAA-Logo.png"
+              alt="brand"
+            />
+          </a>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="col col-lg-5">
+          <div class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </div>
+        </div>
+
+        <!-- Phone Hamburger -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main_nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Nav Bar -->
+        <div class="col collapse navbar-collapse" id="main_nav">
+          <ul
+            class="text-center navbar-nav fw-bold container justify-content-between"
+          >
+            <!-- Home -->
+            <li class="nav-item hover-underline-animation">
+              <a
+                href="/index.html"
+                class="nav-link text-dark"
+                aria-current="page"
+                >HOME</a
+              >
+            </li>
+            <!-- About -->
+            <li class="nav-item hover-underline-animation">
+              <a
+                href="/pages/about.html"
+                class="nav-link text-dark"
+                aria-current="page"
+                >ABOUT</a
+              >
+            </li>
+            <!-- Programs -->
+            <li class="nav-item dropdown hover-underline-animation">
+              <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
+              <a
+                href="/pages/programs.html"
+                class="nav-link text-dark dropdown"
+                aria-expanded="false"
+                >PROGRAMS</a
+              >
+              <ul class="dropdown-menu text-center-nav container-dropdown">
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-2"
+                    href="/pages/programs.html"
+                    >Beginner</a
+                  >
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-3"
+                    href="/pages/programs.html"
+                    >Advanced</a
+                  >
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-4"
+                    href="/pages/programs.html"
+                    >Performance</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- Account -->
+            <li class="nav-item dropdown hover-underline-animation">
+              <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
+
+              <a
+                href="/pages/account.html"
+                id="login"
+                class="nav-link dropdown"
+              >
+                <span class="myaccount-icon">
+                  <svg
+                    class="header-right-icons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                  >
+                    <path
+                      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <div class="wrapper interactive-section-two">
+      <!-- Interactive Program Section -->
+      <section class="interactive-section-one">
+        <img
+          src="/Assets/backgrounds/FG-1.png"
+          class="fg1-showcase-img"
+          id="fg1-img"
+        />
+        <img
+          src="/Assets/backgrounds/FG-2.png"
+          class="fg2-showcase-img"
+          id="fg2-img"
+        />
+        <img
+          src="/Assets/backgrounds/FG-3.png"
+          class="fg3-showcase-img"
+          id="fg3-img"
+        />
+
+
+        <!-- Section -->
+        <div class="showcase-section m-5">
+
+          <!-- Title -->
+          <h1 class="header-text text-center" id="header-showcase">Welcome <span id="welcomeHeading"></span> </h1>
+
+          <!-- Button -->
+          <button
+            class="d-none btn-showcase btn btn-danger btn-lg rounded-pill transform-scale-md grow-and-shrink"
+            type="button"
+          >
+            <a href="/pages/account.html" class="text-white"> START NOW </a>
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer px-3 my-5">
+      <div class="container d-flex flex-column flex-md-row text-md-start">
+        <!-- left Div -->
+        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-3">
+          <p class="text-uppercase">
+            <a href="#" class="color-hover fw-bold"
+              >RAATHLETIC
+              <span>
+                &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+              </span>
+            </a>
+          </p>
+          <hr class="solid" />
+          <p class="">All rights reserved.</p>
+        </div>
+
+        <!-- Middle Div -->
+        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-2">
+          <p>
+            <a
+              href="/pages/programs.html"
+              class="color-hover text-uppercase fw-bold"
+              >Our Programs</a
+            >
+          </p>
+          <hr class="solid" />
+          <p><a href="/pages/programs.html" class="color-hover">Beginner</a></p>
+          <p><a href="/pages/programs.html" class="color-hover">Advanced</a></p>
+          <p>
+            <a href="/pages/programs.html" class="color-hover">Performance</a>
+          </p>
+        </div>
+
+        <!-- Right Div -->
+        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-1">
+          <p href="#" class="text-uppercase fw-bold">Working Hours</p>
+          <hr class="solid" />
+          <p>Mondy - Friday:</p>
+          <p>9:00AM - 20:00PM</p>
+          <p>Saturday - Sunday:</p>
+          <p>9:00AM - 18:00PM</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Button Go to TOP -->
+    <div class="btn-to-top grow-and-shrink">
+      <button
+        onclick="topFunction()"
+        class="btn btn-danger btn-lg rounded-pill transform-scale-md"
+        type="button"
+        title="Go to top"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </div>
+
+    <!-- Cookie -->
+    <div
+      class="offcanvas offcanvas-bottom bg-black text-white"
+      style="height: auto !important; --bs-bg-opacity: 0.85"
+      tabindex="-1"
+      id="offcanvas"
+      data-bs-scroll="true"
+      data-bs-backdrop="false"
+      aria-labelledby="offcanvasLabel"
+    >
+      <div
+        class="offcanvas-body d-flex flex-column flex-sm-row align-items-center justify-content-around gap-3"
+      >
+        <div class="small">
+          We use cookies to ensure that we give you the best experience on our
+          website. If you continue to use this site, we will assume that you are
+          happy with it.
+        </div>
+        <div class="text-nowrap">
+          <button
+            type="button"
+            class="btn btn-sm btn-danger me-1"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            OK
+          </button>
+          <a
+            type="button"
+            href="https://blog.codepen.io/documentation/privacy-policy/"
+            target="_blank"
+            class="btn btn-sm btn-light text-nowrap"
+            aria-label="Close"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/af8da007ac.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/js/background-img.js"></script>
+    <script src="/js/account.js"></script>
+  </body>
+</html>

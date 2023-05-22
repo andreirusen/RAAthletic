@@ -74,11 +74,16 @@ function reveal() {
 
 // Cookie
 console.clear();
-("use strict");
+"use strict";
 
 (function () {
-  var offcanvas = document.getElementById("offcanvas"),
-    bs_offcanvas = new bootstrap.Offcanvas(offcanvas);
-
-  bs_offcanvas.show();
+  var offcanvas = document.getElementById("offcanvas");
+  
+  if (!sessionStorage.getItem("offcanvasShown")) {
+    var bs_offcanvas = new bootstrap.Offcanvas(offcanvas);
+    bs_offcanvas.show();
+    
+    sessionStorage.setItem("offcanvasShown", true);
+  }
 })();
+

@@ -314,6 +314,9 @@
                 <div class="field input-field">
                   <input
                     type="email"
+                    id="email"
+                    name="email"
+                    required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                     placeholder="Email"
                     class="input-account-mobile"
                   />
@@ -321,6 +324,9 @@
                 <div class="field input-field">
                   <input
                     type="password"
+                    id="password"
+                    name="password"
+                    required
                     placeholder="Password"
                     class="password input-account-mobile"
                   />
@@ -330,7 +336,7 @@
                   <a href="#" class="forgot-pass link">Forgot password?</a>
                 </div>
                 <div class="field">
-                  <button class="button-field">Login</button>
+                  <button class="button-field" type="button" value="Login" onclick="login()">Login</button>
                 </div>
               </form>
               <div class="form-link">
@@ -358,29 +364,49 @@
               <form class="form-mobile" action="#">
                 <h1 class="h-text">Signup</h1>
                 <div class="field input-field">
+                  <!-- Email -->
                   <input
                     type="email"
+                    id="email"
+                    name="email"
+                    required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                     placeholder="Email"
                     class="input input-account-mobile"
                   />
+                  <p id="emailError" style="display: none; color: red;">Invalid email format. Please enter a valid email address.</p>
                 </div>
+                <!-- Password -->
                 <div class="field input-field">
                   <input
                     type="password"
+                    id="password"
+                    name="password"
+                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()]).{6,}"
                     placeholder="Create password"
                     class="password input-account-mobile"
                   />
+                  <p id="passwordError" style="display: none; color: red;">Invalid password format. Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special symbol.</p>
                 </div>
+                <!-- Confirm Password -->
                 <div class="field input-field">
                   <input
-                    type="password"
-                    placeholder="Confirm password"
-                    class="password input-account-mobile"
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()]).{6,}"
+                  placeholder="Confirm password"
+                  class="password input-account-mobile"
                   />
                   <i class="bx bx-hide eye-icon"></i>
                 </div>
                 <div class="field">
-                  <button class="button-field">Signup</button>
+                  <button
+                    class="button-field"
+                    type="button"
+                    onclick="createAccount()"
+                  >
+                    Signup
+                  </button>
                 </div>
               </form>
               <div class="form-link">
@@ -406,13 +432,11 @@
       </section>
     </div>
 
-
     <!-- Footer Section -->
     <footer class="footer px-3 my-5">
       <div class="container d-flex flex-column flex-md-row text-md-start">
         <!-- left Div -->
-        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-3"
-        >
+        <div class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-3">
           <p class="text-uppercase">
             <a href="#" class="color-hover fw-bold"
               >RAATHLETIC
@@ -431,14 +455,18 @@
         <!-- Middle Div -->
         <div class="col d-flex flex-column py-5 p-md-2 p-lg-5 order-2">
           <p>
-            <a href="/pages/programs.html" class="color-hover text-uppercase fw-bold"
+            <a
+              href="/pages/programs.html"
+              class="color-hover text-uppercase fw-bold"
               >Our Programs</a
             >
           </p>
           <hr class="solid" />
           <p><a href="/pages/programs.html" class="color-hover">Beginner</a></p>
           <p><a href="/pages/programs.html" class="color-hover">Advanced</a></p>
-          <p><a href="/pages/programs.html" class="color-hover">Performance</a></p>
+          <p>
+            <a href="/pages/programs.html" class="color-hover">Performance</a>
+          </p>
         </div>
 
         <!-- Right Div -->
