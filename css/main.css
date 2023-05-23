@@ -124,6 +124,14 @@ font-family: 'Poppins', sans-serif;
 html {
   scroll-behavior: smooth;
 }
+#preloader {
+  background: var(--color-black) url(https://giphy.com/gifs/waiting-loading-load-ycfHiJV6WZnQDFjSWH);
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+
+}
 
 /* Body Section */
 body {
@@ -152,7 +160,7 @@ footer {
 
 /* Navigation */
 nav {
-  z-index: 999999;
+  z-index: 99;
   font-family: "Poppins", sans-serif;
   background-color: var(--color-white);
 }
