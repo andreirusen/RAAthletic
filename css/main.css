@@ -125,16 +125,18 @@ html {
   scroll-behavior: smooth;
 }
 #preloader {
-  background: var(--color-black) url(https://giphy.com/gifs/waiting-loading-load-ycfHiJV6WZnQDFjSWH);
+  background: var(--color-black) url(/Assets/giphy.gif) no-repeat center;
+  background-size: 40%;
   height: 100vh;
   width: 100%;
   position: fixed;
   z-index: 100;
-
 }
+
 
 /* Body Section */
 body {
+  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
   overflow-y: auto;
   overflow-x: hidden;

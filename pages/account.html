@@ -42,8 +42,11 @@
   <!-- Body -->
 
   <body
-    class="container-fluid px-0 py-0 smooth-scroll-wrapper scrollable-element"
+    class="container-fluid px-0 py-0"
   >
+    <!-- Loading -->
+    <div id="preloader" class=""></div>
+    
     <!-- Navbar  -->
     <nav class="container-fluid navbar navbar-expand-lg py-2">
       <div class="container">
@@ -316,7 +319,8 @@
                     type="email"
                     id="email"
                     name="email"
-                    required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                     placeholder="Email"
                     class="input-account-mobile"
                   />
@@ -336,7 +340,14 @@
                   <a href="#" class="forgot-pass link">Forgot password?</a>
                 </div>
                 <div class="field">
-                  <button class="button-field" type="button" value="Login" onclick="login()">Login</button>
+                  <button
+                    class="button-field"
+                    type="button"
+                    value="Login"
+                    onclick="login()"
+                  >
+                    Login
+                  </button>
                 </div>
               </form>
               <div class="form-link">
@@ -369,11 +380,14 @@
                     type="email"
                     id="email"
                     name="email"
-                    required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                    required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                     placeholder="Email"
                     class="input input-account-mobile"
                   />
-                  <p id="emailError" style="display: none; color: red;">Invalid email format. Please enter a valid email address.</p>
+                  <p id="emailError" style="display: none; color: red">
+                    Invalid email format. Please enter a valid email address.
+                  </p>
                 </div>
                 <!-- Password -->
                 <div class="field input-field">
@@ -381,21 +395,27 @@
                     type="password"
                     id="password"
                     name="password"
-                    required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()]).{6,}"
+                    required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()]).{6,}"
                     placeholder="Create password"
                     class="password input-account-mobile"
                   />
-                  <p id="passwordError" style="display: none; color: red;">Invalid password format. Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, one number, and one special symbol.</p>
+                  <p id="passwordError" style="display: none; color: red">
+                    Invalid password format. Password must be at least 8
+                    characters long and contain at least one uppercase letter,
+                    one lowercase letter, one number, and one special symbol.
+                  </p>
                 </div>
                 <!-- Confirm Password -->
                 <div class="field input-field">
                   <input
-                  type="password"
-                  id="confirmPassword"
-                  name="confirmPassword"
-                  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()]).{6,}"
-                  placeholder="Confirm password"
-                  class="password input-account-mobile"
+                    type="password"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    required
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()]).{6,}"
+                    placeholder="Confirm password"
+                    class="password input-account-mobile"
                   />
                   <i class="bx bx-hide eye-icon"></i>
                 </div>
