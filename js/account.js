@@ -12,7 +12,7 @@ signInButton.addEventListener("click", () => {
 
 const accountContainerMobile = document.querySelector(
     ".account-container-mobile"
- ),
+  ),
   pwShowHide = document.querySelectorAll(".eye-icon"),
   links = document.querySelectorAll(".link");
 
@@ -40,76 +40,223 @@ links.forEach((link) => {
   });
 });
 
-// Account Local Storage
+// Desktop
+// Account local storage - Add event listeners to the login and sign up buttons
+document.getElementById("login-btn").addEventListener("click", handleLogin);
+document.getElementById("signup-btn").addEventListener("click", handleSignUp);
 
-function createAccount() {
-  var email = document.getElementById("email").value;
-  var password = document.getElementById("password").value;
+// Check if the email is valid
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+// Check if the password meets the requirements
+function isValidPassword(password) {
+  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(
+    password
+  );
+}
+// Function to display error messages
+function showErrorMessage(element, message) {
+  element.innerText = message;
+}
+// Function to clear error messages
+function clearErrorMessage(element) {
+  element.innerText = "";
+}
 
-  // Check if email or password is empty
+// Function to handle login
+function handleLogin() {
+  const email = document.getElementById("login-email").value;
+  const password = document.getElementById("login-password").value;
+  const loginError = document.getElementById("login-error");
 
+  clearErrorMessage(loginError);
 
-  // Check if an account with the same email already exists
-  if (sessionStorage.getItem(email)) {
-    alert("An account with the email '" + email + "' already exists.");
+  if (!isValidEmail(email)) {
+    showErrorMessage(loginError, "Invalid email format.");
     return;
   }
 
-  // Create a new account object
-  var account = {
+  if (password.length < 6) {
+    showErrorMessage(loginError, "Password must be at least 6 characters.");
+    return;
+  }
+
+  // Check if the account exists in local storage
+  const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+  const account = accounts.find((acc) => acc.email === email);
+
+  if (account) {
+    if (account.password === password) {
+      // Redirect to the dashboard page
+      window.location.href = "dashboard.html";
+    } else {
+      showErrorMessage(loginError, "Incorrect password.");
+    }
+  } else {
+    showErrorMessage(loginError, "Account does not exist.");
+  }
+}
+// Function to handle sign up
+function handleSignUp() {
+  const email = document.getElementById("signup-email").value;
+  const password = document.getElementById("signup-password").value;
+  const repeatPassword = document.getElementById(
+    "signup-repeat-password"
+  ).value;
+  const signupError = document.getElementById("signup-error");
+
+  clearErrorMessage(signupError);
+
+  if (!isValidEmail(email)) {
+    showErrorMessage(signupError, "Invalid email format.");
+    return;
+  }
+
+  if (password.length < 6) {
+    showErrorMessage(signupError, "Password must be at least 6 characters.");
+    return;
+  }
+
+  if (password !== repeatPassword) {
+    showErrorMessage(signupError, "Passwords do not match.");
+    return;
+  }
+
+  // Check if the account already exists in local storage
+  const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+  const existingAccount = accounts.find((acc) => acc.email === email);
+
+  if (existingAccount) {
+    showErrorMessage(signupError, "Account already exists.");
+    return;
+  }
+
+  // Create a new account and save it to local storage
+  const newAccount = {
     email: email,
     password: password,
   };
 
-  // Store the account object in the local storage
-  sessionStorage.setItem(email, JSON.stringify(account));
+  accounts.push(newAccount);
+  localStorage.setItem("accounts", JSON.stringify(accounts));
 
-  alert("Account created successfully!");
+  // Redirect to the dashboard page
+  window.location.href = "dashboard.html";
 }
 
-//  Login
-function login() {
-	var email = document.getElementById("email").value;
-	var password = document.getElementById("password").value;
-	var password = document.getElementById("confirmPassword").value;
+// Mobile
+// Account local storage - Add event listeners to the login and sign up buttons
+document
+  .getElementById("mobile-login-btn").addEventListener("click", handleMobileLogin);
+document
+  .getElementById("mobile-signup-btn").addEventListener("click", handleMobileSignUp);
 
+// Check if the email is valid
+function isValidEmailMobile(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
 
-	// Check if email or password is empty
-	if (!email || !password || !confirmPassword) {
-	  alert("Please enter a valid email and password.");
-	  return;
-	}
+// Check if the password meets the requirements
+function isValidPasswordMobile(password) {
+  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(
+    password
+  );
+}
 
-	// Retrieve the account from local storage
-	var account = sessionStorage.getItem(email);
+// Function to display error messages
+function showErrorMessageMobile(element, message) {
+  element.innerText = message;
+}
 
-	// Check if the account exists and the password matches
-	if (account) {
-	  account = JSON.parse(account);
+// Function to clear error messages
+function clearErrorMessageMobile(element) {
+  element.innerText = "";
+}
 
-	  if (password === account.password) {
-		window.location.href = "dashboard.html";
-		return;
-	  }
-	}
+// Function to handle login
+function handleMobileLoginMobile() {
+  const email = document.getElementById("mobile-login-email").value;
+  const password = document.getElementById("mobile-login-password").value;
+  const loginError = document.getElementById("mobile-login-error");
 
-	// If the account doesn't exist or password doesn't match
-	alert("Invalid email or password.");
+  clearErrorMessage(loginError);
 
-	// Set the email as the content of the h1 element
-	var welcomeHeading = document.getElementById("welcomeHeading");
-	welcomeHeading.textContent = "Welcome, " + email + "!";
+  if (!isValidEmail(email)) {
+    showErrorMessage(loginError, "Invalid email format.");
+    return;
+  }
+
+  if (password.length < 6) {
+    showErrorMessage(loginError, "Password must be at least 6 characters.");
+    return;
+  }
+
+  // Check if the account exists in local storage
+  const accounts = JSON.parse(localStorage.getItem("mobile-accounts")) || [];
+  const account = accounts.find((acc) => acc.email === email);
+
+  if (account) {
+    if (account.password === password) {
+      // Redirect to the dashboard page
+      window.location.href = "mobile-dashboard.html";
+    } else {
+      showErrorMessage(loginError, "Incorrect password.");
+    }
+  } else {
+    showErrorMessage(loginError, "Account does not exist.");
+  }
+}
+
+// Function to handle sign up
+function handleMobileSignUpMobile() {
+  const email = document.getElementById("mobile-signup-email").value;
+  const password = document.getElementById("mobile-signup-password").value;
+  const repeatPassword = document.getElementById(
+    "mobile-signup-repeat-password"
+  ).value;
+  const signupError = document.getElementById("mobile-signup-error");
+
+  clearErrorMessage(signupError);
+
+  if (!isValidEmail(email)) {
+    showErrorMessage(signupError, "Invalid email format.");
+    return;
+  }
+
+  if (password.length < 6) {
+    showErrorMessage(signupError, "Password must be at least 6 characters.");
+    return;
+  }
+
+  if (password !== repeatPassword) {
+    showErrorMessage(signupError, "Passwords do not match.");
+    return;
+  }
+
+  // Check if the account already exists in local storage
+  const accounts = JSON.parse(localStorage.getItem("mobile-accounts")) || [];
+  const existingAccount = accounts.find((acc) => acc.email === email);
+
+  if (existingAccount) {
+    showErrorMessage(signupError, "Account already exists.");
+    return;
+  }
+
+  // Create a new account and save it to local storage
+  const newAccount = {
+    email: email,
+    password: password,
+  };
+
+  accounts.push(newAccount);
+  localStorage.setItem("mobile-accounts", JSON.stringify(accounts));
+
+  // Redirect to the dashboard page
+  window.location.href = "mobile-dashboard.html";
 }
 
 
-// Show error messages for invalid email and password
-var emailError = document.getElementById("emailError");
-var passwordError = document.getElementById("passwordError");
 
-emailInput.addEventListener("input", function() {
-  emailError.style.display = emailInput.validity.valid ? "none" : "block";
-});
 
-passwordInput.addEventListener("input", function() {
-  passwordError.style.display = passwordInput.validity.valid ? "none" : "block";
-});
+
