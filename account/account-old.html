@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/account/account.css" />
+  </head>
+  <body>
+    <!-- Desktop -->
+    <!-- Login Section -->
+    <div id="login-section">
+      <h2>Login</h2>
+      <input type="email" id="login-email" placeholder="Email" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button id="login-btn">Login</button>
+      <p id="login-error"></p>
+    </div>
+
+    <!-- Sign Up Section -->
+    <div id="signup-section">
+      <h2>Sign Up</h2>
+      <input type="email" id="signup-email" placeholder="Email" />
+      <input type="password" id="signup-password" placeholder="Password" />
+      <input
+        type="password"
+        id="signup-repeat-password"
+        placeholder="Repeat Password"
+      />
+      <button id="signup-btn">Sign Up</button>
+      <p id="signup-error"></p>
+    </div>
+
+    <!-- Login/Sign Up -->
+
+    <div class="wrapper-account">
+      <!-- Sign in -->
+      <div class="form-wrapper sign-in">
+        <form action="" id="login-section">
+          <h2>Login</h2>
+          <!-- Email -->
+          <div class="input-group">
+            <input type="email" id="login-email" placeholder="Email" />
+          </div>
+          <!-- Password -->
+          <div class="input-group">
+            <input type="password" id="login-password" placeholder="Password" />
+          </div>
+          <!-- Remember -->
+          <div class="remember">
+            <label><input type="checkbox" /> Remember me</label>
+          </div>
+          <p id="login-error"></p>
+          <!-- Button -->
+          <button id="login-btn">Login</button>
+          <!-- Switch form -->
+          <div class="signUp-link">
+            <p>
+              Don't have an account?
+              <a href="#" class="signUpBtn-link">Sign Up</a>
+            </p>
+          </div>
+        </form>
+      </div>
+      <!-- Sign up -->
+      <div class="form-wrapper sign-up">
+        <form action="">
+          <h2>Sign Up</h2>
+          <div class="input-group">
+            <input type="email" id="signup-email" placeholder="Email"  />
+          </div>
+          <div class="input-group">
+            <input type="password" id="signup-password" placeholder="Password" />
+          </div>
+          <div class="input-group">
+            <input type="password"
+            id="signup-repeat-password"
+            placeholder="Repeat Password"  />
+          </div>
+          <div class="remember">
+            <label
+              ><input type="checkbox" /> I agree to the terms &
+              conditions</label
+            >
+          </div>
+          <p id="signup-error"></p>
+          <!-- Button -->
+          <button id="signup-btn">Sign Up</button>
+          <!-- Switch form -->
+          <div class="signUp-link">
+            <p>
+              Already have an account?
+              <a href="#" class="signInBtn-link">Sign In</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="/account/account.js"></script>
+  </body>
+</html>
