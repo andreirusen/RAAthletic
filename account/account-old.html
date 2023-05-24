@@ -17,7 +17,6 @@
       <button id="login-btn">Login</button>
       <p id="login-error"></p>
     </div>
-
     <!-- Sign Up Section -->
     <div id="signup-section">
       <h2>Sign Up</h2>
@@ -31,9 +30,7 @@
       <button id="signup-btn">Sign Up</button>
       <p id="signup-error"></p>
     </div>
-
     <!-- Login/Sign Up -->
-
     <div class="wrapper-account">
       <!-- Sign in -->
       <div class="form-wrapper sign-in">
@@ -68,15 +65,21 @@
         <form action="">
           <h2>Sign Up</h2>
           <div class="input-group">
-            <input type="email" id="signup-email" placeholder="Email"  />
+            <input type="email" id="signup-email" placeholder="Email" />
           </div>
           <div class="input-group">
-            <input type="password" id="signup-password" placeholder="Password" />
+            <input
+              type="password"
+              id="signup-password"
+              placeholder="Password"
+            />
           </div>
           <div class="input-group">
-            <input type="password"
-            id="signup-repeat-password"
-            placeholder="Repeat Password"  />
+            <input
+              type="password"
+              id="signup-repeat-password"
+              placeholder="Repeat Password"
+            />
           </div>
           <div class="remember">
             <label
@@ -95,6 +98,263 @@
             </p>
           </div>
         </form>
+      </div>
+    </div>
+
+    <!-- Original Old Account -->
+    <!-- Desktop Account Form -->
+    <div class="account-container-desktop" id="account-container">
+      <!-- Login Section -->
+      <div class="form-container sign-in-container">
+        <form action="#" class="justify-content-around">
+          <h1 class="h-text">Sign in</h1>
+          <div class="social-container">
+            <a href="#" class="social transform-scale-sml"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social transform-scale-sml"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="social transform-scale-sml"
+              ><i class="fa-brands fa-apple"></i
+            ></a>
+          </div>
+          <span>or use your account</span>
+          <!-- Email -->
+          <input
+            id="login-email"
+            class="input-account-mobile"
+            placeholder="Email"
+            type="email"
+          />
+          <!-- Password -->
+          <input
+            class="input-account-mobile"
+            type="password"
+            placeholder="Password"
+            id="login-password"
+          />
+          <!-- Error message -->
+          <p id="login-error"></p>
+          <!-- Login Button -->
+          <button
+            id="login-btn"
+            class="btn btn-danger btn-lg rounded-pill transform-scale-sml"
+            type="button"
+          >
+            Sign In
+          </button>
+          <!-- Forgot Password -->
+          <div class="form-link">
+            <a href="#" class="forgot-pass link fs-6">Forgot password?</a>
+          </div>
+        </form>
+      </div>
+      <!-- Sign Up Section -->
+      <div class="form-container sign-up-container">
+        <form action="#" class="account-form justify-content-around">
+          <h1 class="h-text">Sign Up</h1>
+          <div class="social-container">
+            <a href="#" class="social transform-scale-sml"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a href="#" class="social transform-scale-sml"
+              ><i class="fab fa-google-plus-g"></i
+            ></a>
+            <a href="#" class="social transform-scale-sml"
+              ><i class="fa-brands fa-apple"></i
+            ></a>
+          </div>
+          <span>or use your email for registration</span>
+          <!-- Email -->
+          <input
+            id="signup-email"
+            class="input-account-mobile"
+            type="email"
+            placeholder="Email"
+          />
+          <!-- Password -->
+          <input
+            id="signup-password"
+            class="input-account-mobile"
+            type="password"
+            placeholder="Password"
+          />
+          <!-- Confirm Password -->
+          <input
+            id="signup-repeat-password"
+            class="input-account-mobile"
+            type="password"
+            placeholder="Confirm Password"
+          />
+          <!-- Error message -->
+          <p id="signup-error"></p>
+          <!-- Sign Up Button -->
+          <button
+            id="signup-btn"
+            class="btn btn-danger btn-lg rounded-pill transform-scale-sml"
+            type="button"
+          >
+            Sign Up
+          </button>
+        </form>
+      </div>
+      <!-- Overlay Desktop -->
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left justify-content-around">
+            <h1 class="h-text">Welcome Back!</h1>
+            <p>To keep connected with us please login</p>
+            <button
+              class="btn btn-danger btn-lg rounded-pill transform-scale-sml"
+              type="button"
+              id="signIn"
+            >
+              Sign In
+            </button>
+          </div>
+          <div class="overlay-panel overlay-right justify-content-around">
+            <h1 class="h-text">Hello, Friend!</h1>
+            <p>Enter your details and start journey with us</p>
+            <button
+              class="btn btn-danger btn-lg rounded-pill transform-scale-sml"
+              type="button"
+              id="signUp"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modile Account Form -->
+    <div class="account-container-mobile">
+      <!-- Login Form -->
+      <div class="form login">
+        <div class="form-content">
+          <form class="form-mobile" action="#">
+            <h1 class="h-text">Login</h1>
+            <!-- Email -->
+            <div class="field input-field">
+              <input
+                id="mobile-login-email"
+                class="input-account-mobile"
+                type="email"
+                name="email"
+                placeholder="Email"
+              />
+            </div>
+            <!-- Password -->
+            <div class="field input-field">
+              <input
+                id="mobile-login-password"
+                type="password"
+                name="password"
+                placeholder="Password"
+                class="password input-account-mobile"
+              />
+              <i class="bx bx-hide eye-icon"></i>
+            </div>
+            <!-- Forgot Password -->
+            <div class="form-link">
+              <a href="#" class="forgot-pass link">Forgot password?</a>
+            </div>
+            <!-- Button -->
+            <div class="field">
+              <button id="mobile-login-btn" class="button-field" type="button">
+                Login
+              </button>
+            </div>
+            <!-- Error Message -->
+            <div>
+              <p id="mobile-login-error"></p>
+            </div>
+          </form>
+          <div class="form-link">
+            <span
+              >Don't have an account?
+              <a href="#" class="link signup-link">Signup</a></span
+            >
+            <div class="social-container">
+              <a href="#" class="social transform-scale-sml"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social transform-scale-sml"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="#" class="social transform-scale-sml"
+                ><i class="fa-brands fa-apple"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Signup Form -->
+      <div class="form signup">
+        <div class="form-content">
+          <form class="form-mobile" action="#">
+            <h1 class="h-text">Signup</h1>
+            <!-- Email -->
+            <div class="field input-field">
+              <input
+                id="mobile-signup-email"
+                type="email"
+                name="email"
+                placeholder="Email"
+                class="input input-account-mobile"
+              />
+            </div>
+            <!-- Password -->
+            <div class="field input-field">
+              <input
+                id="mobile-signup-password"
+                type="password"
+                name="password"
+                placeholder="Create password"
+                class="password input-account-mobile"
+              />
+            </div>
+            <!-- Confirm Password -->
+            <div class="field input-field">
+              <input
+                id="mobile-signup-repeat-password"
+                type="password"
+                name="confirmPassword"
+                placeholder="Confirm password"
+                class="password input-account-mobile"
+              />
+              <i class="bx bx-hide eye-icon"></i>
+            </div>
+            <!-- Error Message -->
+            <div>
+              <p id="mobile-signup-error"></p>
+            </div>
+            <!-- Button -->
+            <div class="field">
+              <button id="mobile-signup-btn" class="button-field" type="button">
+                Signup
+              </button>
+            </div>
+          </form>
+          <div class="form-link">
+            <span
+              >Already have an account?
+              <a href="#" class="link login-link">Login</a></span
+            >
+            <div class="social-container">
+              <a href="#" class="social transform-scale-sml"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social transform-scale-sml"
+                ><i class="fab fa-google-plus-g"></i
+              ></a>
+              <a href="#" class="social transform-scale-sml"
+                ><i class="fa-brands fa-apple"></i
+              ></a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

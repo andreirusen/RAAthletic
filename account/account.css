@@ -36,7 +36,7 @@
 }
 
 /* Swich between Login|Signup */
-.wrapper-account.active .form-wrapper.sign-in {
+.wrapper-account.active .form-wrapper.log-in {
   transform: translateY(-450px);
 }
 .wrapper-account .form-wrapper.sign-up {
@@ -85,7 +85,7 @@
 
 button {
   position: relative;
-  width: 100%;
+  width: 90%;
   height: 40px;
   background: #0ef;
   box-shadow: 0 0 10px #0ef;

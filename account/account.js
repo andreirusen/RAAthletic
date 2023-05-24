@@ -33,7 +33,7 @@ function showErrorMessage(element, message) {
 }
 
 // Function to clear error messages
-function clearErrorMessage(element) {  
+function clearErrorMessage(element) {
   element.innerText = "";
 }
 
