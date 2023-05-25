@@ -126,6 +126,7 @@ function handleSignUp() {
   const newAccount = {
     email: email,
     password: password,
+    repeatPassword: repeatPassword,
   };
 
   accounts.push(newAccount);
