@@ -473,6 +473,17 @@ hr.solid {
   width: 100%;
 }
 
+/* Cookies */
+.offcanvas {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: medium;
+}
+@media (max-width: 992px) {
+  .offcanvas {
+    font-size: small;
+  }
+}
 /* Hover Underline Animation */
 .hover-underline-animation {
   display: inline-block;

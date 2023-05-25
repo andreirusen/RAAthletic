@@ -12,6 +12,8 @@ signInBtnLink.addEventListener("click", () => {
   wrapperLogin.classList.toggle("active");
 });
 
+
+// Login Form Function
 // Add event listeners to the login and sign up buttons
 document.getElementById("login-btn").addEventListener("click", handleLogin);
 document.getElementById("signup-btn").addEventListener("click", handleSignUp);
@@ -134,3 +136,24 @@ function handleSignUp() {
   // Redirect to the dashboard page
   window.location.href = "dashboard.html";
 }
+
+// Eye Password
+pwShowHide = document.querySelectorAll(".eye-icon"),
+links = document.querySelectorAll(".link");
+
+pwShowHide.forEach((eyeIcon) => {
+  eyeIcon.addEventListener("click", () => {
+    let pwFields =
+      eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+
+    pwFields.forEach((password) => {
+      if (password.type === "password") {
+        password.type = "text";
+        eyeIcon.classList.replace("bx-hide", "bx-show");
+        return;
+      }
+      password.type = "password";
+      eyeIcon.classList.replace("bx-show", "bx-hide");
+    });
+  });
+});

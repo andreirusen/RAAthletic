@@ -19,7 +19,7 @@ check();
 // Scroll To Timer
 const scrollDelay = 1000;
 const scrollStepDelay = 1000;
-const targetElement = document.getElementById("your-element-id");
+const targetElement = document.getElementById("programs-section");
 
 function scrollTo() {
   targetElement.scrollIntoView({ behavior: "smooth" });

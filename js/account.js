@@ -1,4 +1,4 @@
-// Login Form
+// Login Form Switch
 // Swith between signUp and Login
 const signInBtnLink = document.querySelector(".logInBtn-link");
 const signUpBtnLink = document.querySelector(".signUpBtn-link");
@@ -12,6 +12,7 @@ signInBtnLink.addEventListener("click", () => {
   wrapperLogin.classList.toggle("active");
 });
 
+// Login Form
 // Login Form function
 // Add event listeners to the login and sign up buttons
 document.getElementById("login-btn").addEventListener("click", handleLogin);
@@ -25,7 +26,6 @@ function handleLogin() {
   const rememberCheckbox = document.getElementById("remember-checkbox");
 
   clearErrorMessage(loginError);
-
 
   if (!isValidEmail(email)) {
     showErrorMessage(loginError, "Invalid email format.");
@@ -55,7 +55,6 @@ function handleLogin() {
     showErrorMessage(loginError, "Account does not exist.");
   }
 
-  
   // Check if the account exists in local storage
   const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
   const account = accounts.find((acc) => acc.email === email);
@@ -81,13 +80,13 @@ function handleSignUp() {
     return;
   }
 
-  if (password.length < 6) {
-    showErrorMessage(signupError, "Password must be at least 6 characters.");
+  if (password !== repeatPassword) {
+    showErrorMessage(signupError, "Passwords do not match.");
     return;
   }
 
-  if (password !== repeatPassword) {
-    showErrorMessage(signupError, "Passwords do not match.");
+  if (password.length < 6) {
+    showErrorMessage(signupError, "Password must be at least 6 characters.");
     return;
   }
 
@@ -104,6 +103,7 @@ function handleSignUp() {
   const newAccount = {
     email: email,
     password: password,
+    repeatPassword: repeatPassword,
   };
 
   accounts.push(newAccount);
@@ -111,18 +111,6 @@ function handleSignUp() {
 
   // Redirect to the dashboard page
   window.location.href = "dashboard.html";
-}
-
-// Check if the password meets the requirements
-function isValidPassword(password, errorElement) {
-  if (password.length < 6) {
-    showErrorMessage(errorElement, "Password must be at least 6 characters.");
-    return false;
-  }
-
-  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(
-    password
-  );
 }
 
 // Function to display error messages
@@ -139,6 +127,17 @@ function clearErrorMessage(element) {
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
+// Check if the password meets the requirements
+function isValidPassword(password, errorElement) {
+  if (password.length < 6) {
+    showErrorMessage(errorElement, "Password must be at least 6 characters.");
+    return false;
+  }
+
+  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(
+    password
+  );
+}
 
 // Pre-fill the email field with remembered email, if available
 window.addEventListener("DOMContentLoaded", () => {
@@ -146,4 +145,25 @@ window.addEventListener("DOMContentLoaded", () => {
   if (rememberedEmail) {
     document.getElementById("login-email").value = rememberedEmail;
   }
+});
+
+// Eye Password
+pwShowHide = document.querySelectorAll(".eye-icon"),
+links = document.querySelectorAll(".link");
+
+pwShowHide.forEach((eyeIcon) => {
+  eyeIcon.addEventListener("click", () => {
+    let pwFields =
+      eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+
+    pwFields.forEach((password) => {
+      if (password.type === "password") {
+        password.type = "text";
+        eyeIcon.classList.replace("bx-hide", "bx-show");
+        return;
+      }
+      password.type = "password";
+      eyeIcon.classList.replace("bx-show", "bx-hide");
+    });
+  });
 });

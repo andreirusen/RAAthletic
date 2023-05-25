@@ -13,6 +13,7 @@ signInButton.addEventListener("click", () => {
 const accountContainerMobile = document.querySelector(
     ".account-container-mobile"
   ),
+  
   pwShowHide = document.querySelectorAll(".eye-icon"),
   links = document.querySelectorAll(".link");
 
@@ -148,9 +149,11 @@ function handleSignUp() {
 // Mobile
 // Account local storage - Add event listeners to the login and sign up buttons
 document
-  .getElementById("mobile-login-btn").addEventListener("click", handleMobileLogin);
+  .getElementById("mobile-login-btn")
+  .addEventListener("click", handleMobileLogin);
 document
-  .getElementById("mobile-signup-btn").addEventListener("click", handleMobileSignUp);
+  .getElementById("mobile-signup-btn")
+  .addEventListener("click", handleMobileSignUp);
 
 // Check if the email is valid
 function isValidEmailMobile(email) {
@@ -255,8 +258,3 @@ function handleMobileSignUpMobile() {
   // Redirect to the dashboard page
   window.location.href = "mobile-dashboard.html";
 }
-
-
-
-
-

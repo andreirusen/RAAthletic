@@ -83,15 +83,15 @@ body {
 
 /* Swich between Login|Signup */
 .wrapper-account.active .form-wrapper.log-in {
-  transform: translateY(-460px);
+  transform: translateY(-500px);
 }
 .wrapper-account .form-wrapper.sign-up {
   position: absolute;
-  top: 460px;
+  top: 500px;
   left: 0;
 }
 .wrapper-account.active .form-wrapper.sign-up {
-  transform: translateY(-450px);
+  transform: translateY(-500px);
 }
 
 /* Account Text */
@@ -154,7 +154,7 @@ body {
   font-size: medium;
   margin: 20px 0;
   text-align: center;
-  color: var(--color-danger);
+  color: var(--color-white);
 }
 
 /* Button Account */
@@ -177,14 +177,27 @@ body {
   background-color: var(--color-white);
   transform: scale(1.05);
 }
+.eye-icon {
+  background-color: white;
+}
 
 @media (max-width: 992px) {
   .wrapper-account {
-    height: 450px;
+    height: 500px;
     width: 350px;
   }
   .form-wrapper {
-    height: 450px;
+    height: 500px;
+  }
+
+  .wrapper-account.active .form-wrapper.log-in {
+    transform: translateY(-460px);
+  }
+  .wrapper-account .form-wrapper.sign-up {
+    top: 460px;
+  }
+  .wrapper-account.active .form-wrapper.sign-up {
+    transform: translateY(-460px);
   }
   .input-group input {
     width: 280px;
@@ -195,9 +208,6 @@ body {
   }
   .account-error {
     font-size: small;
-    margin: 20px 0;
-    text-align: center;
-    color: var(--color-danger);
   }
   .signUp-link {
     font-size: small;
