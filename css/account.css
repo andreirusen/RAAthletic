@@ -63,32 +63,31 @@ body {
 }
 .wrapper-account {
   position: relative;
-  width: 400px;
   height: 500px;
+  width: 400px;
   background: var(--color-gray-900);
   box-shadow: 0 0 50px var(--color-danger);
   border-radius: 20px;
-  padding: 40px;
+  padding-bottom: 40px;
   overflow: hidden;
 }
 
-
 .form-wrapper {
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100%;
   transition: 0.5s ease-in-out;
 }
 
 /* Swich between Login|Signup */
 .wrapper-account.active .form-wrapper.log-in {
-  transform: translateY(-450px);
+  transform: translateY(-460px);
 }
 .wrapper-account .form-wrapper.sign-up {
   position: absolute;
-  top: 450px;
+  top: 460px;
   left: 0;
 }
 .wrapper-account.active .form-wrapper.sign-up {
@@ -125,7 +124,7 @@ body {
 }
 .remember label {
   color: var(--color-white);
-  font-size: 14px;
+  font-size: medium;
 }
 .remember label input {
   accent-color: var(--color-danger);
@@ -133,7 +132,7 @@ body {
 
 /* Sing Up */
 .signUp-link {
-  font-size: 14px;
+  font-size: medium;
   text-align: center;
   margin: 15px 0;
 }
@@ -152,6 +151,7 @@ body {
 
 /* Error Message */
 .account-error {
+  font-size: medium;
   margin: 20px 0;
   text-align: center;
   color: var(--color-danger);
@@ -180,12 +180,28 @@ body {
 
 @media (max-width: 992px) {
   .wrapper-account {
+    height: 450px;
     width: 350px;
-    height: 480px;
+  }
+  .form-wrapper {
+    height: 450px;
   }
   .input-group input {
     width: 280px;
     height: 40px;
   }
+  .remember label {
+    font-size: small;
+  }
+  .account-error {
+    font-size: small;
+    margin: 20px 0;
+    text-align: center;
+    color: var(--color-danger);
+  }
+  .signUp-link {
+    font-size: small;
+    text-align: center;
+    margin: 15px 0;
+  }
 }
-
