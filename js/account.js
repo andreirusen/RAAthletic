@@ -3,17 +3,23 @@
 const signInBtnLink = document.querySelector(".logInBtn-link");
 const signUpBtnLink = document.querySelector(".signUpBtn-link");
 const wrapperLogin = document.querySelector(".wrapper-account");
+
+// Function to toggle between signup and login sections
+function toggleSections() {
+  wrapperLogin.classList.toggle("active");
+  setupEventListeners(); // Re-attach event listeners after section switch
+}
+
 // SignUp Link
-signUpBtnLink.addEventListener("click", () => {
-  wrapperLogin.classList.toggle("active");
-});
+signUpBtnLink.addEventListener("click", toggleSections);
+
 // Login Link
-signInBtnLink.addEventListener("click", () => {
-  wrapperLogin.classList.toggle("active");
-});
+signInBtnLink.addEventListener("click", toggleSections);
 
 // Function to handle login
-function handleLogin() {
+function handleLogin(event) {
+  event.preventDefault(); // Prevent form submission and page reload
+
   const email = document.getElementById("login-email").value;
   const password = document.getElementById("login-password").value;
   const loginError = document.getElementById("login-error");
@@ -35,30 +41,36 @@ function handleLogin() {
   const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
   const account = accounts.find((acc) => acc.email === email);
 
-  if (account) {
-    if (account.password === password) {
-      // Redirect to the dashboard page
-      window.location.href = "dashboard.html";
-
-      // Remember the email if the checkbox is checked
-      if (rememberCheckbox.checked) {
-        localStorage.setItem("rememberedEmail", email);
-      } else {
-        localStorage.removeItem("rememberedEmail");
-      }
-    } else {
-      showErrorMessage(loginError, "Incorrect password.");
-    }
-  } else {
+  if (!account) {
     showErrorMessage(loginError, "Account does not exist.");
+    return;
   }
+
+  if (account.password !== password) {
+    showErrorMessage(loginError, "Incorrect password.");
+    return;
+  }
+
+  // Remember the email if the checkbox is checked
+  if (rememberCheckbox.checked) {
+    localStorage.setItem("rememberedEmail", email);
+  } else {
+    localStorage.removeItem("rememberedEmail");
+  }
+
+  // Redirect to the dashboard page
+  window.location.href = "dashboard.html";
 }
 
 // Function to handle sign up
-function handleSignUp() {
+function handleSignUp(event) {
+  event.preventDefault(); // Prevent form submission and page reload
+
   const email = document.getElementById("signup-email").value;
   const password = document.getElementById("signup-password").value;
-  const repeatPassword = document.getElementById("signup-repeat-password").value;
+  const repeatPassword = document.getElementById(
+    "signup-repeat-password"
+  ).value;
   const signupError = document.getElementById("signup-error");
 
   clearErrorMessage(signupError);
@@ -68,17 +80,13 @@ function handleSignUp() {
     return;
   }
 
-  if (password !== repeatPassword) {
-    showErrorMessage(signupError, "Passwords do not match.");
-    return;
-  }
-
   if (password.length < 6) {
     showErrorMessage(signupError, "Password must be at least 6 characters.");
     return;
   }
 
-  if (!isValidPassword(password, signupError)) {
+  if (password !== repeatPassword) {
+    showErrorMessage(signupError, "Passwords do not match.");
     return;
   }
 
@@ -101,12 +109,21 @@ function handleSignUp() {
   accounts.push(newAccount);
   localStorage.setItem("accounts", JSON.stringify(accounts));
 
-  // Redirect to the dashboard page
+  // Redirect to the dashboard page (or any other desired page)
   window.location.href = "dashboard.html";
 }
 
 // Function to display error messages
 function showErrorMessage(element, message) {
+  element.classList.remove("success");
+  element.classList.add("error");
+  element.innerText = message;
+}
+
+// Function to display success messages
+function showSuccessMessage(element, message) {
+  element.classList.remove("error");
+  element.classList.add("success");
   element.innerText = message;
 }
 
@@ -120,14 +137,10 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
-// Check if the password meets the requirements
-function isValidPassword(password, errorElement) {
-  if (password.length < 6) {
-    showErrorMessage(errorElement, "Password must be at least 6 characters.");
-    return false;
-  }
-
-  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(password);
+// Function to set up event listeners for login and signup buttons
+function setupEventListeners() {
+  document.getElementById("login-btn").addEventListener("click", handleLogin);
+  document.getElementById("signup-btn").addEventListener("click", handleSignUp);
 }
 
 // Pre-fill the email field with remembered email, if available
@@ -138,26 +151,5 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Eye Password
-pwShowHide = document.querySelectorAll(".eye-icon");
-links = document.querySelectorAll(".link");
-
-pwShowHide.forEach((eyeIcon) => {
-  eyeIcon.addEventListener("click", () => {
-    let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
-
-    pwFields.forEach((password) => {
-      if (password.type === "password") {
-        password.type = "text";
-        eyeIcon.classList.replace("bx-hide", "bx-show");
-        return;
-      }
-      password.type = "password";
-      eyeIcon.classList.replace("bx-show", "bx-hide");
-    });
-  });
-});
-
-// Add event listeners to the login and sign up buttons
-document.getElementById("login-btn").addEventListener("click", handleLogin);
-document.getElementById("signup-btn").addEventListener("click", handleSignUp);
+// Initial setup of event listeners
+setupEventListeners();
