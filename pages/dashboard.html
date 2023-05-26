@@ -40,7 +40,7 @@
   <body class="container-fluid px-0 py-0">
     <!-- Loading -->
     <div id="preloader" class=""></div>
-    
+
     <!-- Navbar  -->
     <nav class="container-fluid navbar navbar-expand-lg py-2">
       <div class="container">
@@ -55,11 +55,11 @@
           </a>
         </div>
 
-        <!-- Search Bar -->
+        <!-- Search Bar + Account Username-->
         <div class="col col-lg-5">
           <div class="d-flex">
             <input
-              class="form-control me-2"
+              class="form-control me-2 d-none"
               type="search"
               placeholder="Search"
               aria-label="Search"
@@ -83,7 +83,7 @@
             class="text-center navbar-nav fw-bold container justify-content-between"
           >
             <!-- Home -->
-            <li class="nav-item hover-underline-animation">
+            <li class="nav-item hover-underline-animation order-md">
               <a
                 href="/index.html"
                 class="nav-link text-dark"
@@ -135,27 +135,48 @@
                 </li>
               </ul>
             </li>
+
             <!-- Account -->
             <li class="nav-item dropdown hover-underline-animation">
               <!-- data-bs-toggle="dropdown"  FOR the next A Link-->
 
-              <a
-                href="/pages/account.html"
-                id="login"
-                class="nav-link dropdown"
-              >
-                <span class="myaccount-icon">
-                  <svg
-                    class="header-right-icons"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"
-                    />
-                  </svg>
-                </span>
+              <a href="#" id="login" class="nav-link dropdown text-dark d-none d-md-block">
+                <span class=""> TIBIZAURUS </span>
               </a>
+              <ul class="dropdown-menu text-center-nav container-dropdown">
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-2"
+                    href="/pages/programs.html"
+                    >Beginner</a
+                  >
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-3"
+                    href="/pages/programs.html"
+                    >Advanced</a
+                  >
+                </li>
+                <hr class="dropdown-divider" />
+                <li>
+                  <a
+                    class="dropdown-item bg-dropdown-4"
+                    href="/pages/programs.html"
+                    >Performance</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <!-- Log out -->
+            <li class="nav-item hover-underline-animation">
+              <a
+                href="/index.html"
+                class="nav-link text-danger"
+                aria-current="page"
+                >LOG OUT</a
+              >
             </li>
           </ul>
         </div>
@@ -186,7 +207,7 @@
         <div class="showcase-section m-5">
           <!-- Title -->
           <h1 class="header-text text-center" id="header-showcase">
-            Welcome <span id="welcomeHeading"></span>
+            Account <span id="welcomeHeading"></span>
           </h1>
 
           <!-- Button -->
@@ -201,10 +222,7 @@
     </div>
 
     <!-- Account Dashboard -->
-    <main id="dashboard" class="container">
-
-      
-    </main>
+    <main id="dashboard" class="container"></main>
 
     <!-- Footer Section -->
     <footer class="footer px-3 my-5">

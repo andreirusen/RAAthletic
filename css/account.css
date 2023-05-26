@@ -163,7 +163,7 @@ body {
 .error-text {
   font-family: "Permanent Marker", cursive;
   letter-spacing: 0.2rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--color-white);
   text-shadow: -4px 0px 3px var(--color-danger), -5px 0px 12px var(--color-danger);
 }
