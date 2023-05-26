@@ -117,7 +117,9 @@ body {
   border: none;
   outline: none;
 }
-
+.input-group-error {
+  box-shadow: var(--color-danger) 0px 10px 20px, var(--color-danger) 0px 6px 6px;
+}
 /* Remember */
 .remember {
   margin: -5px 0 15px 5px;
@@ -155,6 +157,15 @@ body {
   margin: 20px 0;
   text-align: center;
   color: var(--color-white);
+}
+
+/* Error message */
+.error-text {
+  font-family: "Permanent Marker", cursive;
+  letter-spacing: 0.2rem;
+  font-size: 1rem;
+  color: var(--color-white);
+  text-shadow: -4px 0px 3px var(--color-danger), -5px 0px 12px var(--color-danger);
 }
 
 /* Button Account */
