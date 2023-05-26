@@ -1,5 +1,5 @@
 // Login Form Switch
-// Swith between signUp and Login
+// Switch between signUp and Login
 const signInBtnLink = document.querySelector(".logInBtn-link");
 const signUpBtnLink = document.querySelector(".signUpBtn-link");
 const wrapperLogin = document.querySelector(".wrapper-account");
@@ -11,12 +11,6 @@ signUpBtnLink.addEventListener("click", () => {
 signInBtnLink.addEventListener("click", () => {
   wrapperLogin.classList.toggle("active");
 });
-
-// Login Form
-// Login Form function
-// Add event listeners to the login and sign up buttons
-document.getElementById("login-btn").addEventListener("click", handleLogin);
-document.getElementById("signup-btn").addEventListener("click", handleSignUp);
 
 // Function to handle login
 function handleLogin() {
@@ -37,6 +31,10 @@ function handleLogin() {
     return;
   }
 
+  // Check if the account exists in local storage
+  const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
+  const account = accounts.find((acc) => acc.email === email);
+
   if (account) {
     if (account.password === password) {
       // Redirect to the dashboard page
@@ -54,29 +52,19 @@ function handleLogin() {
   } else {
     showErrorMessage(loginError, "Account does not exist.");
   }
-
-  // Check if the account exists in local storage
-  const accounts = JSON.parse(localStorage.getItem("accounts")) || [];
-  const account = accounts.find((acc) => acc.email === email);
 }
 
 // Function to handle sign up
 function handleSignUp() {
   const email = document.getElementById("signup-email").value;
   const password = document.getElementById("signup-password").value;
-  const repeatPassword = document.getElementById(
-    "signup-repeat-password"
-  ).value;
+  const repeatPassword = document.getElementById("signup-repeat-password").value;
   const signupError = document.getElementById("signup-error");
 
   clearErrorMessage(signupError);
 
   if (!isValidEmail(email)) {
     showErrorMessage(signupError, "Invalid email format.");
-    return;
-  }
-
-  if (!isValidPassword(password, signupError)) {
     return;
   }
 
@@ -87,6 +75,10 @@ function handleSignUp() {
 
   if (password.length < 6) {
     showErrorMessage(signupError, "Password must be at least 6 characters.");
+    return;
+  }
+
+  if (!isValidPassword(password, signupError)) {
     return;
   }
 
@@ -127,6 +119,7 @@ function clearErrorMessage(element) {
 function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
+
 // Check if the password meets the requirements
 function isValidPassword(password, errorElement) {
   if (password.length < 6) {
@@ -134,9 +127,7 @@ function isValidPassword(password, errorElement) {
     return false;
   }
 
-  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(
-    password
-  );
+  return /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{6,}$/.test(password);
 }
 
 // Pre-fill the email field with remembered email, if available
@@ -148,13 +139,12 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Eye Password
-pwShowHide = document.querySelectorAll(".eye-icon"),
+pwShowHide = document.querySelectorAll(".eye-icon");
 links = document.querySelectorAll(".link");
 
 pwShowHide.forEach((eyeIcon) => {
   eyeIcon.addEventListener("click", () => {
-    let pwFields =
-      eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+    let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
 
     pwFields.forEach((password) => {
       if (password.type === "password") {
@@ -167,3 +157,7 @@ pwShowHide.forEach((eyeIcon) => {
     });
   });
 });
+
+// Add event listeners to the login and sign up buttons
+document.getElementById("login-btn").addEventListener("click", handleLogin);
+document.getElementById("signup-btn").addEventListener("click", handleSignUp);
