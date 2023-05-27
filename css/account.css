@@ -164,8 +164,7 @@ body {
   font-family: "Permanent Marker", cursive;
   letter-spacing: 0.2rem;
   font-size: 1.5rem;
-  color: var(--color-white);
-  text-shadow: -4px 0px 3px var(--color-danger), -5px 0px 12px var(--color-danger);
+  color: var(--color-danger);
 }
 
 /* Button Account */
@@ -188,8 +187,11 @@ body {
   background-color: var(--color-white);
   transform: scale(1.05);
 }
-.eye-icon {
-  background-color: white;
+
+form i {
+  margin-left: -30px;
+  cursor: pointer;
+  color: var(--color-danger);
 }
 
 @media (max-width: 992px) {
@@ -202,13 +204,13 @@ body {
   }
 
   .wrapper-account.active .form-wrapper.log-in {
-    transform: translateY(-460px);
+    transform: translateY(-500px);
   }
   .wrapper-account .form-wrapper.sign-up {
-    top: 460px;
+    top: 500px;
   }
   .wrapper-account.active .form-wrapper.sign-up {
-    transform: translateY(-460px);
+    transform: translateY(-500px);
   }
   .input-group input {
     width: 280px;

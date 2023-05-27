@@ -1,3 +1,23 @@
+// Eye Password
+const pwShowHide = document.querySelectorAll(".eye-icon");
+
+pwShowHide.forEach((eyeIcon) => {
+  const passwordField = eyeIcon.previousElementSibling;
+
+  eyeIcon.addEventListener("click", () => {
+    if (passwordField.type === "password") {
+      passwordField.type = "text";
+      eyeIcon.innerHTML = '<i class="bi bi-eye"></i>';
+    } else {
+      passwordField.type = "password";
+      eyeIcon.innerHTML = '<i class="bi bi-eye-slash"></i>';
+    }
+  });
+});
+
+
+
+
 // Login Form Switch
 // Switch between signUp and Login
 const signInBtnLink = document.querySelector(".logInBtn-link");
