@@ -7,16 +7,13 @@ pwShowHide.forEach((eyeIcon) => {
   eyeIcon.addEventListener("click", () => {
     if (passwordField.type === "password") {
       passwordField.type = "text";
-      eyeIcon.innerHTML = '<i class="bi bi-eye"></i>';
+      eyeIcon.innerHTML = '<i class="fa-solid fa-eye"></i>';
     } else {
       passwordField.type = "password";
-      eyeIcon.innerHTML = '<i class="bi bi-eye-slash"></i>';
+      eyeIcon.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
     }
   });
 });
-
-
-
 
 // Login Form Switch
 // Switch between signUp and Login
@@ -49,11 +46,6 @@ function handleLogin(event) {
 
   if (!isValidEmail(email)) {
     showErrorMessage(loginError, "Invalid email format.");
-    return;
-  }
-
-  if (password.length < 6) {
-    showErrorMessage(loginError, "Password must be at least 6 characters.");
     return;
   }
 
@@ -92,6 +84,8 @@ function handleSignUp(event) {
     "signup-repeat-password"
   ).value;
   const signupError = document.getElementById("signup-error");
+  const termsCheckbox = document.getElementById("terms-checkbox");
+  const signupErrorInput = document.getElementById("input-group-error");
 
   clearErrorMessage(signupError);
 
@@ -101,12 +95,20 @@ function handleSignUp(event) {
   }
 
   if (password.length < 6) {
-    showErrorMessage(signupError, "Password must be at least 6 characters.");
+    showErrorMessage(signupError, "Password must be \n at least 6 characters.");
     return;
   }
 
   if (password !== repeatPassword) {
     showErrorMessage(signupError, "Passwords do not match.");
+    return;
+  }
+
+  if (!termsCheckbox.checked) {
+    showErrorMessage(
+      signupError,
+      "You need to agree to the\n terms & conditions."
+    );
     return;
   }
 

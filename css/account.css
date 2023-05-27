@@ -156,15 +156,11 @@ body {
   font-size: medium;
   margin: 20px 0;
   text-align: center;
-  color: var(--color-white);
 }
-
-/* Error message */
 .error-text {
-  font-family: "Permanent Marker", cursive;
   letter-spacing: 0.2rem;
   font-size: 1.5rem;
-  color: var(--color-danger);
+  color: var(--color-white);
 }
 
 /* Button Account */
@@ -193,6 +189,7 @@ form i {
   cursor: pointer;
   color: var(--color-danger);
 }
+
 
 @media (max-width: 992px) {
   .wrapper-account {
