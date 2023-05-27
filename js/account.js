@@ -1,9 +1,22 @@
 // Eye Password
-const pwShowHide = document.querySelectorAll(".eye-icon");
+const eyeShowHide = document.querySelectorAll(".eye-icon");
 
-pwShowHide.forEach((eyeIcon) => {
+eyeShowHide.forEach((eyeIcon) => {
   const passwordField = eyeIcon.previousElementSibling;
 
+  function passwordLength() {
+    const passwordValue = passwordField.value;
+    if (passwordValue.length === 0) {
+      eyeIcon.style.display = "none";
+    } else {
+      eyeIcon.style.display = "block";
+    }
+  }
+
+  // Trigger passwordLength function on input event
+  passwordField.addEventListener("input", passwordLength);
+
+  // Eye Switcher
   eyeIcon.addEventListener("click", () => {
     if (passwordField.type === "password") {
       passwordField.type = "text";
@@ -13,10 +26,12 @@ pwShowHide.forEach((eyeIcon) => {
       eyeIcon.innerHTML = '<i class="fa-solid fa-eye-slash"></i>';
     }
   });
+
+  // Initial check for password visibility on page load
+  passwordLength();
 });
 
-// Login Form Switch
-// Switch between signUp and Login
+// Login Form Switch Switch between signUp and Login
 const signInBtnLink = document.querySelector(".logInBtn-link");
 const signUpBtnLink = document.querySelector(".signUpBtn-link");
 const wrapperLogin = document.querySelector(".wrapper-account");
