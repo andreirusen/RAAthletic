@@ -188,5 +188,8 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+
 // Initial setup of event listeners
 setupEventListeners();
+
+

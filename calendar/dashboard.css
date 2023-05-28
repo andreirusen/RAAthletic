@@ -1,0 +1,65 @@
+/* Calendar container */
+#calendar {
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    z-index: 4;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Calendar title */
+  h2 {
+    text-align: center;
+  }
+  
+  /* Select inputs */
+  select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-right: 10px;
+  }
+  
+  /* Calendar table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  /* Table headers */
+  th {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  /* Table cells */
+  td {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Table cells with events */
+  td.event-cell {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Delete event button */
+  span.delete-event {
+    color: red;
+    margin-left: 5px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect on cells */
+  td:hover {
+    background-color: white;
+    color: black;
+  }
+  
