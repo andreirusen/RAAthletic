@@ -140,15 +140,15 @@
             <li class="nav-item dropdown hover-underline-animation">
               <a
                 href="/pages/dashboard.html"
-                id="login"
                 class="nav-link dropdown text-danger"
+                id="loggedUsername"
               >
-                <span class="" id="user-email"></span>
+
               </a>
               <ul class="dropdown-menu text-center-nav container-dropdown">
                 <li>
                   <a class="dropdown-item fw-bold" href="/pages/dashboard.html"
-                    >Account</a
+                    >ACCOUNT</a
                   >
                 </li>
                 <hr class="dropdown-divider" />
@@ -161,9 +161,10 @@
                 </li>
               </ul>
             </li>
-            <!-- Log out -->
+            <!-- Log out Mobile -->
             <li class="nav-item hover-underline-animation d-md-none">
               <a
+              id="logout-btn"
                 href="/index.html"
                 class="nav-link text-danger"
                 aria-current="page"
@@ -176,7 +177,6 @@
     </nav>
 
     <!-- Account Dashboard -->
-
     <div class="wrapper interactive-section-two">
       <!-- Interactive Program Section -->
       <section class="interactive-section-one">
@@ -199,8 +199,11 @@
         <!-- Section -->
         <div class="showcase-section m-5">
           <!-- Title -->
-          <h1 class="header-text text-center" id="header-showcase">Account</h1>
-
+     
+            <h1 class="header-text text-center" id="header-showcase">Welcome, <span id="loggedInEmail"></span>!</h1>
+            <button id="logout-btn ">Logout</button>
+      
+          
           <div class="calendar-container">
             <button id="today-button" onclick="goToToday()">Today</button>
 
@@ -324,5 +327,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/js/dashboard.js"></script>
+    <script src="/js/user.js"></script>
+    <script src="/js/user-info.js"></script>
+
   </body>
 </html>

@@ -145,9 +145,9 @@
 
               <a
                 href="/pages/account.html"
-                id="login"
                 class="nav-link dropdown text-danger"
-              > ACCOUNT
+              >
+                ACCOUNT
                 <span class="myaccount-icon d-none">
                   <svg
                     class="header-right-icons"
@@ -160,7 +160,6 @@
                   </svg>
                 </span>
               </a>
-            
             </li>
           </ul>
         </div>
@@ -209,7 +208,7 @@
                 <!-- Password -->
                 <div class="input-group">
                   <input
-                  class="input-value"
+                    class="input-value"
                     type="password"
                     id="login-password"
                     placeholder="Password"
@@ -235,6 +234,18 @@
                     <a href="#" class="signUpBtn-link">Sign Up</a>
                   </p>
                 </div>
+                <!-- Social -->
+                <div class="social-container">
+                  <a href="#" class="social transform-scale-sml"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a href="#" class="social transform-scale-sml"
+                    ><i class="fab fa-google-plus-g"></i
+                  ></a>
+                  <a href="#" class="social transform-scale-sml"
+                    ><i class="fa-brands fa-apple"></i
+                  ></a>
+                </div>
               </form>
             </div>
             <!-- Sign up -->
@@ -244,6 +255,10 @@
                 <!-- Error Message -->
                 <div class="">
                   <p id="signup-error" class="account-error error-text"></p>
+                </div>
+                <!-- Username -->
+                <div class="input-group">
+                  <input type="text" id="signup-username" placeholder="Username" />
                 </div>
                 <!-- Email -->
                 <div class="input-group">
@@ -289,6 +304,7 @@
                     <a href="#" class="logInBtn-link">Sign In</a>
                   </p>
                 </div>
+                
               </form>
             </div>
           </div>
@@ -396,5 +412,6 @@
     ></script>
     <script src="/js/background-img.js"></script>
     <script src="/js/account.js"></script>
-  </body>
+    <script src="/js/user.js"></script>
+    <script src="/js/user-info.js"></script>  </body>
 </html>

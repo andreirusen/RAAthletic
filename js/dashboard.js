@@ -421,20 +421,3 @@ function goToToday() {
   }
 }
 
-
-// Email
-
-// Retrieve email from local storage
-const storedEmail = localStorage.getItem("email");
-const emailElement = document.getElementById("user-email");
-
-// Check if email exists in local storage
-if (storedEmail) {
-  // Email exists, do something with it
-  emailElement.textContent = storedEmail;
-  console.log("Stored email:", storedEmail);
-} else {
-  // Email does not exist in local storage
-  emailElement.textContent = "ACCOUNT EMAIL";
-  console.log("Email not found in local storage");
-}

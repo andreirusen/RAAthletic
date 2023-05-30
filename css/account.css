@@ -54,7 +54,7 @@ body {
 }
 /* Account Body */
 .body-account {
-  top: 15%;
+  top: 10%;
   position: absolute;
   display: flex;
   justify-content: center;
@@ -63,7 +63,7 @@ body {
 }
 .wrapper-account {
   position: relative;
-  height: 500px;
+  height: 600px;
   width: 400px;
   background: var(--color-gray-900);
   box-shadow: 0 0 50px var(--color-danger);
@@ -71,9 +71,8 @@ body {
   padding-bottom: 40px;
   overflow: hidden;
 }
-
 .form-wrapper {
-  height: 500px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,15 +82,15 @@ body {
 
 /* Swich between Login|Signup */
 .wrapper-account.active .form-wrapper.log-in {
-  transform: translateY(-500px);
+  transform: translateY(-600px);
 }
 .wrapper-account .form-wrapper.sign-up {
   position: absolute;
-  top: 500px;
+  top: 600px;
   left: 0;
 }
 .wrapper-account.active .form-wrapper.sign-up {
-  transform: translateY(-500px);
+  transform: translateY(-600px);
 }
 
 /* Account Text */
@@ -99,6 +98,7 @@ body {
   font-size: 30px;
   color: var(--color-white);
   text-align: center;
+  margin: 10px 0 20px 0;
 }
 
 /* Input Account */
@@ -122,7 +122,9 @@ body {
 }
 /* Remember */
 .remember {
-  margin: -5px 0 15px 5px;
+  text-align: center;
+  margin: 0 0 10px 0px;
+
 }
 .remember label {
   color: var(--color-white);
@@ -154,12 +156,12 @@ body {
 /* Error Message */
 .account-error {
   font-size: medium;
-  margin: 20px 0;
+  margin: 0 0 00px 0;
   text-align: center;
 }
 .error-text {
   letter-spacing: 0.2rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: var(--color-white);
 }
 
@@ -185,29 +187,59 @@ body {
 }
 
 form i {
-  margin-left: -30px;
   cursor: pointer;
   color: var(--color-danger);
 }
 
+.social {
+  color: black;
+
+}
+
+.social-container {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-container a {
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  height: 40px;
+  width: 40px;
+}
+.social a {
+  border: var(--color-danger);
+  color: var(--color-danger);
+}
+.social i {
+  color: var(--color-white);
+}
+.social i:hover {
+
+}
 
 @media (max-width: 992px) {
   .wrapper-account {
-    height: 500px;
+    height: 600px;
     width: 350px;
   }
   .form-wrapper {
-    height: 500px;
+    height: 600px;
   }
 
   .wrapper-account.active .form-wrapper.log-in {
-    transform: translateY(-500px);
+    transform: translateY(-600px);
   }
   .wrapper-account .form-wrapper.sign-up {
-    top: 500px;
+    top: 600px;
   }
   .wrapper-account.active .form-wrapper.sign-up {
-    transform: translateY(-500px);
+    transform: translateY(-600px);
   }
   .input-group input {
     width: 280px;
