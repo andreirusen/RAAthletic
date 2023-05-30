@@ -140,10 +140,9 @@
             <li class="nav-item dropdown hover-underline-animation">
               <a
                 href="/pages/dashboard.html"
-                class="nav-link dropdown text-danger"
+                class="nav-link dropdown text-danger text-uppercase"
                 id="loggedUsername"
               >
-
               </a>
               <ul class="dropdown-menu text-center-nav container-dropdown">
                 <li>
@@ -162,9 +161,9 @@
               </ul>
             </li>
             <!-- Log out Mobile -->
-            <li class="nav-item hover-underline-animation d-md-none">
+            <li class="nav-item hover-underline-animation d-lg-none">
               <a
-              id="logout-btn"
+                id="logout-btn"
                 href="/index.html"
                 class="nav-link text-danger"
                 aria-current="page"
@@ -177,40 +176,190 @@
     </nav>
 
     <!-- Account Dashboard -->
-    <div class="wrapper interactive-section-two">
+    <div class="wrapper-dashboard">
       <!-- Interactive Program Section -->
-      <section class="interactive-section-one">
-        <img
-          src="/Assets/backgrounds/FG-1.png"
-          class="fg1-showcase-img"
-          id="fg1-img"
-        />
-        <img
-          src="/Assets/backgrounds/FG-2.png"
-          class="fg2-showcase-img"
-          id="fg2-img"
-        />
-        <img
-          src="/Assets/backgrounds/FG-3.png"
-          class="fg3-showcase-img"
-          id="fg3-img"
-        />
+      <img
+        src="/Assets/backgrounds/FG-1.png"
+        class="fg1-showcase-img"
+        id="fg1-img"
+      />
+      <img
+        src="/Assets/backgrounds/FG-2.png"
+        class="fg2-showcase-img"
+        id="fg2-img"
+      />
+      <img
+        src="/Assets/backgrounds/FG-3.png"
+        class="fg3-showcase-img"
+        id="fg3-img"
+      />
 
-        <!-- Section -->
-        <div class="showcase-section m-5">
-          <!-- Title -->
-     
-            <h1 class="header-text text-center" id="header-showcase">Welcome, <span id="loggedInEmail"></span>!</h1>
-            <button id="logout-btn ">Logout</button>
-      
-          
-          <div class="calendar-container">
-            <button id="today-button" onclick="goToToday()">Today</button>
+      <!-- Title -->
 
-            <div id="calendar"></div>
-          </div>
+      <h1 class="header-text text-center my-5" id="header-showcase">
+        Welcome, <span id="loggedUsernameHead"></span>!
+      </h1>
+
+      <!-- Main -->
+      <main class="container main-dashboard mb-5">
+        <div
+          class="dashboard display-animation"
+          style="margin: 0 auto; width: 1130px"
+        >
+          <a class="tile tile-lg tile-pink ripple-effect" href="#">
+            <span class="content-wrapper">
+              <span class="tile-content">
+                <span
+                  class="tile-img"
+                  style="
+                    background-image: url(https://www.google.com/design/images/google_spec.png);
+                  "
+                ></span>
+                <span class="tile-holder tile-holder-sm">
+                  <span class="title">ACCOUNT SETTINGS</span>
+                </span>
+              </span>
+            </span>
+          </a>
+          <a class="tile tile-lg tile-sqr tile-purple ripple-effect" href="#">
+            <span class="content-wrapper">
+              <span class="tile-content">
+                <span
+                  class="tile-img"
+                  style="
+                    background-image: url(https://www.google.com/design/images/materialreel.png);
+                  "
+                ></span>
+                <span class="tile-holder tile-holder-sm">
+                  <span class="title">SUBSCRIPTION</span>
+                </span>
+              </span>
+            </span>
+          </a>
+          <a class="tile tile-lg tile-sqr tile-cyan ripple-effect" href="#">
+            <span class="content-wrapper">
+              <span class="tile-content">
+                <span
+                  class="tile-img"
+                  style="
+                    background-image: url(https://www.google.com/design/images/principles.png);
+                  "
+                ></span>
+                <span class="tile-holder tile-holder-sm">
+                  <span class="title"
+                    >LOG OUT</span>
+                </span>
+              </span>
+            </span>
+          </a>
+          <a class="tile tile-lg tile-sqr tile-amber ripple-effect" href="#">
+            <span class="content-wrapper">
+              <span class="tile-content">
+                <span
+                  class="tile-img tile-img-bg"
+                  style="
+                    background-image: url(https://www.google.com/design/images/doodlearchive.png);
+                  "
+                ></span>
+                <span class="tile-holder tile-holder-sm">
+                  <span class="title">COMUNITY</span>
+                </span>
+              </span>
+            </span>
+          </a>
+
+          <a class="tile tile-lg tile-light-blue ripple-effect" href="#">
+            <span class="content-wrapper">
+              <span class="tile-content">
+                <span
+                  class="tile-img tile-img-bg"
+                  style="
+                    background-image: url(https://www.google.com/design/images/googleplus.png);
+                  "
+                ></span>
+                <span class="tile-holder tile-holder-sm">
+                  <span class="title">FITNESS TRACKER</span>
+                </span>
+              </span>
+            </span>
+          </a>
+
+          <a class="tile tile-lg tile-sqr tile-red ripple-effect" href="#">
+            <span class="content-wrapper">
+              <span class="tile-content">
+                <span
+                  class="tile-img"
+                  style="
+                    background-image: url(https://www.google.com/design/images/design-minutes.png);
+                  "
+                ></span>
+                <span class="tile-holder tile-holder-sm">
+                  <span class="title">CLASSES</span>
+                </span>
+              </span>
+            </span>
+          </a>
+
+          <a class="tile tile-lg tile-sqr tile-indigo ripple-effect" href="#">
+            <span class="content-wrapper">
+              <span class="tile-content">
+                <span
+                  class="tile-img"
+                  style="
+                    background-image: url(https://www.google.com/design/images/cast.png);
+                  "
+                ></span>
+                <span class="tile-holder tile-holder-sm">
+                  <span class="title">Google Cast UX</span>
+                </span>
+              </span>
+            </span>
+          </a>
+
+          <a
+            class="tile tile-lg tile-sqr tile-deep-orange ripple-effect"
+            href="#"
+          >
+            <span class="content-wrapper">
+              <span class="tile-content">
+                <span
+                  class="tile-img"
+                  style="
+                    background-image: url(https://www.google.com/design/images/glass.png);
+                  "
+                ></span>
+                <span class="tile-holder tile-holder-sm">
+                  <span class="title">Glass Design</span>
+                </span>
+              </span>
+            </span>
+          </a>
+
+          <a class="tile tile-lg tile-light-green ripple-effect" href="#">
+            <span class="content-wrapper">
+              <span class="tile-content">
+                <span
+                  class="tile-img tile-img-bg"
+                  style="
+                    background-image: url(https://www.google.com/design/images/webdesigner.png);
+                  "
+                ></span>
+                <span class="tile-holder tile-holder-sm">
+                  <span class="title">Google Web Designer</span>
+                </span>
+              </span>
+            </span>
+          </a>
         </div>
-      </section>
+      </main>
+    </div>
+    
+    <!-- Calendar -->
+    <div class="container my-5">
+      <div class="calendar-container">
+        <button id="today-button" onclick="goToToday()">Today</button>
+        <div id="calendar"></div>
+      </div>
     </div>
 
     <!-- Footer Section -->
@@ -326,9 +475,9 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="/js/dashboard.js"></script>
     <script src="/js/user.js"></script>
     <script src="/js/user-info.js"></script>
-
   </body>
 </html>

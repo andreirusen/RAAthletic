@@ -1,5 +1,6 @@
 // Local Email Storage
 // Retrieve the stored accounts from local storage
+const loggedUsernameHead = document.getElementById("loggedUsernameHead");
 const loggedUsername = document.getElementById("loggedUsername");
 const loggedAccount = localStorage.getItem("accounts");
 const parsedAccount = JSON.parse(loggedAccount);
@@ -11,17 +12,21 @@ if (parsedAccount && parsedAccount.length > 0) {
   const username = userAccount.username;
 
   loggedUsername.textContent = username;
+  loggedUsernameHead.textContent = username;
 } else {
   loggedUsername.textContent = "ACCOUNT";
+  loggedUsernameHead.textContent = "";
+
 }
 
+if (loggedAccount) {
+  loggedUsername.textContent = username;
+  loggedUsernameHead.textContent = username;
+} else {
+  loggedUsername.textContent = "LOGIN";
+  loggedUsernameHead.textContent = "";
+}
 
-
-// if (loggedAccount) {
-//   loggedUsername.textContent = username;
-// } else {
-//   loggedUsername.textContent = "LOGIN";
-// }
 
 
 
