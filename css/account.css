@@ -104,7 +104,7 @@ body {
 /* Input Account */
 .input-group {
   position: relative;
-  margin: 30px 0;
+  margin: 20px 0;
   border-bottom: 2px solid var(--color-white);
 }
 .input-group input {
@@ -189,6 +189,7 @@ body {
 form i {
   cursor: pointer;
   color: var(--color-danger);
+  margin: 0 -30px;
 }
 
 .social {
