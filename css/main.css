@@ -180,6 +180,9 @@ nav {
 .icon-logo {
   width: 65px;
 }
+.dropdown-item {
+  text-align: center;
+}
 
 
 /* Navigation - Drop Colors */

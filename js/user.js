@@ -6,6 +6,8 @@ function handleLogin(event) {
   const password = document.getElementById("login-password").value;
   const loginError = document.getElementById("login-error");
   const rememberCheckbox = document.getElementById("remember-checkbox");
+  // Reminder
+  // var isLogedIn = false;
 
   clearErrorMessage(loginError);
 
@@ -34,6 +36,7 @@ function handleLogin(event) {
   } else {
     localStorage.removeItem("rememberedEmail");
   }
+
 
   // Redirect to the dashboard page
   window.location.href = "dashboard.html";
