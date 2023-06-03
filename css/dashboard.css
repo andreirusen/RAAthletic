@@ -42,9 +42,16 @@ font-family: 'Poppins', sans-serif;
   --spacing-80: 5.06rem;
 }
 
+.profile-img {
+  height: 50px;
+  width: 50px;
+  object-fit: cover;
+  background: #dfdfdf;
+}
+
 /* Calendar container */
 .calendar-container {
-    z-index: 4;
+  z-index: 4;
 }
 #calendar {
   margin: 0 auto;
@@ -84,7 +91,6 @@ td {
   padding: 10px;
   cursor: pointer;
   width: 100px;
-
 }
 /* Table cells with events */
 td.event-cell {
@@ -135,10 +141,10 @@ td:hover {
 }
 
 #today-button {
-    width: 100%;
-    border: none;
-    background-color: red;
-    color: white;
+  width: 100%;
+  border: none;
+  background-color: red;
+  color: white;
 }
 .current-day {
   background-color: #ffdd57;
@@ -157,10 +163,9 @@ td:hover {
   flex-direction: column;
 }
 
-
 /* -- Google typography ------------------------------- */
 .title {
-  font-family: 'Poppins', sans-serif; 
+  font-family: "Poppins", sans-serif;
   font-size: 20px;
   font-weight: 800;
   line-height: 1.1;
@@ -279,7 +284,8 @@ td:hover {
 .tile:focus,
 .tile:active:focus,
 .tile.active:focus {
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),
+    0 3px 6px rgba(0, 0, 0, 0.23);
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
@@ -1410,5 +1416,3 @@ td:hover {
     -webkit-transform: scale(1);
   }
 }
-
-
