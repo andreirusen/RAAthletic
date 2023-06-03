@@ -181,148 +181,62 @@
     </nav>
 
     <!-- Account Dashboard -->
-    <div class="wrapper-dashboard">
-      <!-- Interactive Program Section -->
-      <img
-        src="/Assets/backgrounds/FG-1.png"
-        class="fg1-showcase-img"
-        id="fg1-img"
-      />
-      <img
-        src="/Assets/backgrounds/FG-2.png"
-        class="fg2-showcase-img"
-        id="fg2-img"
-      />
-      <img
-        src="/Assets/backgrounds/FG-3.png"
-        class="fg3-showcase-img"
-        id="fg3-img"
-      />
+    <section class="wrapper-dashboard">
+      <div class="interactive-section-one">
+        <img
+          src="/Assets/backgrounds/FG-1.png"
+          class="fg1-showcase-img"
+          id="fg1-img"
+        />
+        <img
+          src="/Assets/backgrounds/FG-2.png"
+          class="fg2-showcase-img"
+          id="fg2-img"
+        />
+        <img
+          src="/Assets/backgrounds/FG-3.png"
+          class="fg3-showcase-img"
+          id="fg3-img"
+        />
 
-      <!-- Title -->
-
-      <h1 class="header-text text-center my-5" id="header-showcase">
-        Welcome, <span id="loggedUsernameHead"></span>!
-      </h1>
-
-      <!-- Profil Pic -->
-      <div>
-        <img class="profile-img" src="profile.img" alt="profile.img">
-        <input type="file">
-      </div>
-
-      <!-- Main -->
-      <main class="container main-dashboard mb-5">
-        <div
-          class="dashboard display-animation"
-          style="margin: 0 auto; width: 1130px"
-        >
-          <a class="tile tile-lg tile-pink ripple-effect" href="#">
-            <span class="content-wrapper">
-              <span class="tile-content">
-                <span
-                  class="tile-img"
-                  style="
-                    background-image: url(https://www.google.com/design/images/google_spec.png);
-                  "
-                ></span>
-                <span class="tile-holder tile-holder-sm">
-                  <span class="title">ACCOUNT SETTINGS</span>
-                </span>
-              </span>
-            </span>
-          </a>
-          <a class="tile tile-lg tile-sqr tile-purple ripple-effect" href="#">
-            <span class="content-wrapper">
-              <span class="tile-content">
-                <span
-                  class="tile-img"
-                  style="
-                    background-image: url(https://www.google.com/design/images/materialreel.png);
-                  "
-                ></span>
-                <span class="tile-holder tile-holder-sm">
-                  <span class="title">FITNESS TRACKER</span>
-                </span>
-              </span>
-            </span>
-          </a>
-          <a class="tile tile-lg tile-sqr tile-cyan ripple-effect" href="#">
-            <span class="content-wrapper">
-              <span class="tile-content">
-                <span
-                  class="tile-img"
-                  style="
-                    background-image: url(https://www.google.com/design/images/principles.png);
-                  "
-                ></span>
-                <span class="tile-holder tile-holder-sm">
-                  <span class="title"
-                    >LOG OUT</span>
-                </span>
-              </span>
-            </span>
-          </a>
-          <a class="tile tile-lg tile-sqr tile-amber ripple-effect" href="#">
-            <span class="content-wrapper">
-              <span class="tile-content">
-                <span
-                  class="tile-img tile-img-bg"
-                  style="
-                    background-image: url(https://www.google.com/design/images/doodlearchive.png);
-                  "
-                ></span>
-                <span class="tile-holder tile-holder-sm">
-                  <span class="title">COMUNITY</span>
-                </span>
-              </span>
-            </span>
-          </a>
-
-          <a class="tile tile-lg tile-light-blue ripple-effect" href="#">
-            <span class="content-wrapper">
-              <span class="tile-content">
-                <span
-                  class="tile-img tile-img-bg"
-                  style="
-                    background-image: url(https://www.google.com/design/images/googleplus.png);
-                  "
-                ></span>
-                <span class="tile-holder tile-holder-sm">
-                  <span class="title">CLASSES</span>
-                </span>
-              </span>
-            </span>
-          </a>
-
-          <a class="tile tile-lg tile-sqr tile-red ripple-effect" href="#">
-            <span class="content-wrapper">
-              <span class="tile-content">
-                <span
-                  class="tile-img"
-                  style="
-                    background-image: url(https://www.google.com/design/images/design-minutes.png);
-                  "
-                ></span>
-                <span class="tile-holder tile-holder-sm">
-                  <span class="title">SUBSCRIPTION</span>
-                </span>
-              </span>
-            </span>
-          </a>
-
-
+        <!-- Section -->
+        <div class="showcase-section m-5">
+          <!-- Title -->
+          <h1 class="header-text text-center my-5" id="header-showcase">
+            Welcome, <span id="loggedUsernameHead"></span>!
+          </h1>
         </div>
-      </main>
-    </div>
-    
-    <!-- Calendar -->
-    <div class="container my-5">
-      <div class="calendar-container">
-        <button id="today-button" onclick="goToToday()">Today</button>
-        <div id="calendar"></div>
       </div>
-    </div>
+    </section>
+
+    <main class="main-dashboard" id="dashboard-section">
+      <!-- Main Dashboard -->
+      <div class="container my-5">
+        <div class="dashboard-container">
+          <!-- Progress Traching -->
+          <div class="card-body card-1 fw-bold">PROGRESS TRACHING</div>
+          <!-- Classes -->
+          <div class="card-body card-2 fw-bold">CLASSES</div>
+          <!-- Account Profile -->
+          <div class="card-body card-3 fw-bold">
+            PROFILE
+            <img class="profile-img" src="profile.img" alt="profile.img" />
+            <input class="profile-input" type="file" name="file" id="file" />
+            <label for="file">Chose a profile!</label>
+          </div>
+          <!-- Contact -->
+          <div class="card-body card-4 fw-bold">CONTACT</div>
+          <!--  Calendar -->
+          <div class="card-body card-5">
+            <div id="calendar"></div>
+            <button id="today-button" onclick="goToToday()">Today</button>
+          </div>
+          <!-- Log Out -->
+          <div class="card-body card-6 fw-bold">LOG OUT</div>
+        </div>
+        <!-- Calendar -->
+      </div>
+    </main>
 
     <!-- Footer Section -->
     <footer class="footer px-3 my-5">

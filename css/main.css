@@ -171,7 +171,7 @@ nav {
   background-color: var(--color-white);
 }
 .navbar {
-  position: fixed;
+  /* position: fixed; */
   transition: transform 0.5s;
 }
 .navbar--hidden {

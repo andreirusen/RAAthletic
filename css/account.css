@@ -54,7 +54,7 @@ body {
 }
 /* Account Body */
 .body-account {
-  top: 10%;
+  top: 5%;
   position: absolute;
   display: flex;
   justify-content: center;
