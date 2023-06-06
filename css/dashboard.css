@@ -147,6 +147,12 @@ font-family: 'Poppins', sans-serif;
   border: 0;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 }
+.card-hover:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 0.5rem var(--color-white);
+  font-weight: bold;
+
+}
 .card-1 {
   grid-area: card-1;
 }

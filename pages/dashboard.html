@@ -149,27 +149,12 @@
                 id="loggedUsername"
               >
               </a>
-              <ul class="dropdown-menu text-center-nav container-dropdown">
-                <li>
-                  <a class="dropdown-item fw-bold" href="/pages/dashboard.html"
-                    >ACCOUNT</a
-                  >
-                </li>
-                <hr class="dropdown-divider" />
-                <li>
-                  <a
-                    class="dropdown-item fw-bold text-danger"
-                    href="/index.html"
-                    >LOG OUT</a
-                  >
-                </li>
-              </ul>
             </li>
             <!-- Log out Mobile -->
-            <li class="nav-item hover-underline-animation d-lg-none">
+            <li class="nav-item hover-underline-animation">
               <a
                 id="logout-btn"
-                href="/index.html"
+                href="/pages/account.html"
                 class="nav-link text-danger"
                 aria-current="page"
                 >LOG OUT</a
@@ -180,8 +165,8 @@
       </div>
     </nav>
 
-    <!-- Account Dashboard -->
-    <section class="wrapper-dashboard">
+    <!-- Title Welcome Dashboard -->
+    <div class="wrapper-dashboard">
       <div class="interactive-section-one">
         <img
           src="/Assets/backgrounds/FG-1.png"
@@ -199,42 +184,40 @@
           id="fg3-img"
         />
 
-        <!-- Section -->
+        <!-- Title -->
         <div class="showcase-section m-5">
-          <!-- Title -->
           <h1 class="header-text text-center my-5" id="header-showcase">
             Welcome, <span id="loggedUsernameHead"></span>!
           </h1>
         </div>
       </div>
-    </section>
+    </div>
 
-    <main class="main-dashboard" id="dashboard-section">
-      <!-- Main Dashboard -->
-      <div class="container my-5">
+    <!-- Account Dashboard -->
+    <main class="main-dashboard" >
+      <div class="container my-5 " id="dashboard-section">
         <div class="dashboard-container">
           <!-- Progress Traching -->
-          <div class="card-body card-1 fw-bold">PROGRESS TRACHING</div>
+          <div class="card-body card-1 card-hover">PROGRESS TRACHING</div>
           <!-- Classes -->
-          <div class="card-body card-2 fw-bold">CLASSES</div>
+          <div class="card-body card-2 card-hover">CLASSES</div>
           <!-- Account Profile -->
-          <div class="card-body card-3 fw-bold">
+          <div class="card-body card-3 card-hover">
             PROFILE
             <img class="profile-img" src="profile.img" alt="profile.img" />
             <input class="profile-input" type="file" name="file" id="file" />
             <label for="file">Chose a profile!</label>
           </div>
           <!-- Contact -->
-          <div class="card-body card-4 fw-bold">CONTACT</div>
+          <div class="card-body card-4 card-hover">CONTACT</div>
           <!--  Calendar -->
           <div class="card-body card-5">
             <div id="calendar"></div>
             <button id="today-button" onclick="goToToday()">Today</button>
           </div>
           <!-- Log Out -->
-          <div class="card-body card-6 fw-bold">LOG OUT</div>
+          <div class="card-body card-6 card-hover">LOG OUT</div>
         </div>
-        <!-- Calendar -->
       </div>
     </main>
 

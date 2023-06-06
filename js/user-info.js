@@ -53,7 +53,7 @@ function toggleLoginStatus() {
 // Function to handle logout
 function handleLogout() {
   localStorage.removeItem("loggedInEmail");
-  window.location.href = "index.html"; // Redirect to the homepage or any desired page
+  window.location.href = "account.html"; // Redirect to the homepage or any desired page
 }
 
 // Function to set up event listeners for login and signup buttons
