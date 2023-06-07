@@ -429,6 +429,7 @@ function goToToday() {
 
 // Profile IMG
 const image = document.querySelector(".profile-img");
+const imageNav = document.querySelector(".profile-img-nav");
 const input = document.querySelector(".profile-input");
 
 input.addEventListener("change", () => {
@@ -447,5 +448,6 @@ window.addEventListener("DOMContentLoaded", () => {
   const savedImage = localStorage.getItem("profilePicture");
   if (savedImage) {
     image.src = savedImage;
+    imageNav.src = savedImage;
   }
 });

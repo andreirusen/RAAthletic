@@ -50,7 +50,7 @@
     <nav class="container-fluid navbar navbar-expand-lg py-2">
       <div class="container">
         <!-- Brand/logo -->
-        <div class="col-lg-1d">
+        <div class="col">
           <a href="/index.html" class="navbar-brand">
             <img
               class="icon-logo transform-scale-sml"
@@ -61,7 +61,7 @@
         </div>
 
         <!-- Search Bar + Account Username-->
-        <div class="col col-lg-5 ">
+        <div class="col col-lg-4">
           <div class="d-flex d-none">
             <input
               class="form-control me-2 d-none"
@@ -83,7 +83,7 @@
         </button>
 
         <!-- Nav Bar -->
-        <div class="col collapse navbar-collapse" id="main_nav">
+        <div class="col-lg-6 collapse navbar-collapse" id="main_nav">
           <ul
             class="text-center navbar-nav fw-bold container justify-content-between"
           >
@@ -140,16 +140,6 @@
                 </li>
               </ul>
             </li>
-
-            <!-- Account -->
-            <li class="nav-item dropdown hover-underline-animation">
-              <a
-                href="/pages/dashboard.html"
-                class="nav-link dropdown text-danger text-uppercase"
-                id="loggedUsername"
-              >
-              </a>
-            </li>
             <!-- Log out Mobile -->
             <li class="nav-item hover-underline-animation">
               <a
@@ -159,6 +149,18 @@
                 aria-current="page"
                 >LOG OUT</a
               >
+            </li>
+            <!-- Account -->
+            <li
+              class="nav-item dropdown hover-underline-animation account-navbar"
+            >
+              <a
+                href="/pages/dashboard.html"
+                class="nav-link dropdown text-danger text-uppercase"
+                id="loggedUsername"
+              >
+              </a>
+              <img class="profile-img-nav" src="profile.img" alt="" />
             </li>
           </ul>
         </div>
@@ -197,7 +199,6 @@
     <main class="main-dashboard">
       <div class="m-5" id="dashboard-section">
         <div class="dashboard-container">
-
           <!-- Progress Traching -->
           <a class="card-body card-1 card-hover">PROGRESS TRACHING</a>
           <!-- Classes -->

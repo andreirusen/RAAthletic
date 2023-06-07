@@ -42,6 +42,14 @@ font-family: 'Poppins', sans-serif;
   --spacing-80: 5.06rem;
 }
 
+.account-navbar {
+  display: flex;
+}
+.profile-img-nav {
+  width: 40px;
+  height: 40px;
+}
+
 .profile-img {
   height: 150px;
   width: 150px;
