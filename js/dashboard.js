@@ -434,6 +434,8 @@ const input = document.querySelector(".profile-input");
 
 input.addEventListener("change", () => {
   image.src = URL.createObjectURL(input.files[0]);
+  imageNav.src = URL.createObjectURL(input.files[0]);
+
 
   // Save the image to local storage
   const reader = new FileReader();
