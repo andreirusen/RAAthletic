@@ -44,6 +44,8 @@ font-family: 'Poppins', sans-serif;
 
 .account-navbar {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .profile-img-nav {
   width: 40px;
