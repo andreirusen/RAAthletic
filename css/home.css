@@ -144,7 +144,6 @@ font-family: 'Poppins', sans-serif;
   align-content: center;
 }
 .user-review {
-
   background-color: var(--color-black);
   color: var(--color-white);
   border-radius: 25px;
@@ -153,10 +152,6 @@ font-family: 'Poppins', sans-serif;
 
   padding: 1.5rem 1.5rem;
   display: grid;
-  grid-template-rows: auto 1fr;
-  row-gap: 10px;
-  color: var(--color-white);
-  position: relative;
 }
 .user-details {
   display: flex;
@@ -223,10 +218,6 @@ font-family: 'Poppins', sans-serif;
     flex-direction: column;
     align-content: center;
   }
-  .user-review {
-    height: auto;
-    width: auto;
-  }
 }
 
 
@@ -235,12 +226,11 @@ font-family: 'Poppins', sans-serif;
 /*  Cards */
 
 .card-wrapper {
-  max-width: 1100px;
   width: 100%;
   position: relative;
 }
 .card-wrapper i {
-  top: 50%;
+  bottom: -20%;
   height: 50px;
   width: 50px;
   cursor: pointer;
@@ -259,11 +249,11 @@ font-family: 'Poppins', sans-serif;
   transform: translateY(-50%) scale(0.85);
 }
 .card-wrapper i:first-child{
-  left: -22px;
+  left: 35%;
   color: var(--color-white);
 }
 .card-wrapper i:last-child{
-  right: -22px;
+  right: 35%;
   color: var(--color-white);
 }
 .card-wrapper .carousel{
@@ -290,18 +280,12 @@ font-family: 'Poppins', sans-serif;
   cursor: grab;
   user-select: none;
 }
-.carousel :where(.card-review, .img) {
-  display: flex;
+.carousel :where(.card-review) {
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
-.carousel .card-review {
-  scroll-snap-align: start;
-  list-style: none;
-  cursor: pointer;
-  flex-direction: column;
-  border-radius: 25px;
-}
+
 
 
 @media screen and (max-width: 992px) {
@@ -312,6 +296,13 @@ font-family: 'Poppins', sans-serif;
 
 @media screen and (max-width: 768px) {
   .card-wrapper .carousel {
-    grid-auto-columns: 100%;
+    grid-auto-columns: 60%;
+  }
+}
+@media screen and (max-width: 572px) {
+
+  .card-wrapper .carousel {
+    width: 15%;
+    transform: scale(0.8);
   }
 }
