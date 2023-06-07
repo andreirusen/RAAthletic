@@ -157,7 +157,7 @@ font-family: 'Poppins', sans-serif;
 }
 .card-hover:hover {
   transform: scale(1.01);
-  box-shadow: 0 0 0.5rem var(--color-white);
+  box-shadow: 0 0 1rem var(--color-white);
 }
 .card-1 {
   grid-area: card-1;
