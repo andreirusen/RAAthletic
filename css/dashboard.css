@@ -50,11 +50,11 @@ font-family: 'Poppins', sans-serif;
 }
 .profile-input[type="file"] {
   width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	position: absolute;
-	z-index: -1;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 .profile-input + label {
   color: white;
@@ -98,15 +98,23 @@ font-family: 'Poppins', sans-serif;
 }
 @media (max-width: 992px) {
   .dashboard-container {
+    align-content: center;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas:
+      "card-3"
+      "card-5"
       "card-1"
       "card-2"
-      "card-3"
       "card-4"
-      "card-5"
       "card-6";
+  }
+
+  #calendar {
+    transform: scale(0.85);
+  }
+  .card-body {
+    width: 350px;
   }
 
   .card-1 {
@@ -150,8 +158,6 @@ font-family: 'Poppins', sans-serif;
 .card-hover:hover {
   transform: scale(1.01);
   box-shadow: 0 0 0.5rem var(--color-white);
-  font-weight: bold;
-
 }
 .card-1 {
   grid-area: card-1;
@@ -187,7 +193,7 @@ span.ripple {
 
 /* Calendar container */
 #calendar {
-  margin: 0 auto;
+  margin: 0 0;
   background-color: var(--color-gray-900);
   color: var(--color-white);
   border: 1px solid var(--color-danger);
@@ -204,7 +210,6 @@ h2 {
   display: flex;
   justify-content: space-around;
   background-color: var(--color-gray-900);
-
 }
 select {
   padding: 5px;
@@ -226,7 +231,6 @@ th {
 }
 /* Table cells */
 td {
-  
   text-align: center;
   padding: 5px;
   cursor: pointer;
@@ -245,7 +249,7 @@ td:hover {
 .modal {
   display: block;
   position: fixed;
-  z-index: 1;
+  z-index: 4;
   left: 0;
   top: 0;
   width: 100%;
@@ -254,31 +258,45 @@ td:hover {
   background-color: rgba(0, 0, 0, 0.4);
 }
 .modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
+  background-color: var(--color-black);
+  margin: 20% auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 60%;
+  border: 1px solid var(--color-danger);
+  width: 90%;
   max-width: 600px;
 }
 .close {
-  color: #aaa;
+  color: var(--color-white);
   float: right;
-  font-size: 28px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
 }
 .close:hover,
 .close:focus {
-  color: black;
+  color: var(--color-danger);
   text-decoration: none;
   cursor: pointer;
+}
+.modal-option {
+  font-weight: bold;
 }
 .event-cell {
   background-color: lightblue;
   cursor: pointer;
 }
-
+.modal-input {
+  border: 1px solid var(--color-black);
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.modal-btn {
+  color: var(--color-white);
+  border-radius: 5px;
+  background-color: var(--color-danger);
+  border: 1px solid var(--color-black);
+  margin-bottom: 2px;
+}
 #today-button {
   width: 100%;
   border: none;

@@ -103,10 +103,10 @@ function displayCalendar(date) {
   var title = "<h2>" + getMonthName(month) + " " + year + "</h2>";
   var selectInputs =
     "<div class='calendars-select'>" +
-    "<select id='month' onchange='changeCalendar()'>" +
+    "<select class='modal-option' id='month' onchange='changeCalendar()'>" +
     generateMonthOptions(month) +
     "</select>" +
-    "<select id='year' onchange='changeCalendar()'>" +
+    "<select class='modal-option' id='year' onchange='changeCalendar()'>" +
     generateYearOptions(year) +
     "</select>" +
     "</div>";
@@ -136,6 +136,10 @@ function displayCalendar(date) {
 
   // Generate the calendar rows
   var row = "<tr>";
+
+  // Calculate the starting position of the first day
+  var startDay = (firstDay.getDay() - 1 + 7) % 7;
+
   for (var i = 0; i < startDay; i++) {
     row += "<td></td>";
   }
@@ -148,6 +152,13 @@ function displayCalendar(date) {
 
     // Add event class to the cell if it has an event
     var cellClass = event ? "day event-cell" : "day";
+    if (
+      day === date.getDate() &&
+      month === date.getMonth() &&
+      year === date.getFullYear()
+    ) {
+      cellClass += " current-day";
+    }
 
     // Generate the cell with appropriate event class and onclick handler
     row +=
@@ -281,11 +292,13 @@ function addEvent(eventKey) {
   modalContent.classList.add("modal-content");
 
   var eventInput = document.createElement("input");
+  eventInput.classList = "modal-input";
   eventInput.type = "text";
   eventInput.placeholder = "Enter the event description";
 
   var addButton = document.createElement("button");
-  addButton.textContent = "Add";
+  addButton.classList = "modal-btn";
+  addButton.textContent = "Add Event";
   addButton.addEventListener("click", function () {
     if (eventInput.value) {
       saveEvent(eventKey, eventInput.value);
@@ -336,10 +349,12 @@ function showPopup(eventKey, event) {
   modalContent.classList.add("modal-content");
 
   var editInput = document.createElement("input");
+  editInput.classList = "modal-input"
   editInput.type = "text";
   editInput.value = event;
 
   var saveButton = document.createElement("button");
+  saveButton.classList = "modal-btn"
   saveButton.textContent = "Save";
   saveButton.addEventListener("click", function () {
     editEvent(eventKey, editInput.value);
@@ -347,6 +362,7 @@ function showPopup(eventKey, event) {
   });
 
   var deleteButton = document.createElement("button");
+  deleteButton.classList = "modal-btn"
   deleteButton.textContent = "Delete";
   deleteButton.addEventListener("click", function () {
     deleteEvent(eventKey);
@@ -399,7 +415,7 @@ function goToToday() {
   // Remove the current-day class from all cells
   var cells = document.querySelectorAll(".calendar-cell");
   cells.forEach(function (cell) {
-    cell.classList.remove("current-day");
+    cell.classList.add("current-day");
   });
 
   // Find the cell corresponding to the current day and add the current-day class
