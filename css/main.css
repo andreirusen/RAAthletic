@@ -420,7 +420,7 @@ nav {
   }
 }
 
-/* About Home Section */
+/* Reveal Section */
 .reveal {
   position: relative;
   transform: translateY(150px);
@@ -437,7 +437,7 @@ nav {
   position: fixed;
   bottom: 5%;
   right: 3%;
-  z-index: 100;
+  z-index: 99;
   box-shadow: 0 2px 5px 0 var(--color-black);
 }
 .btn-let-begin {

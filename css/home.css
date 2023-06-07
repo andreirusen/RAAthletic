@@ -57,3 +57,12 @@
     color: white;
     border-radius: 4px;
   }
+
+  /* Maop */
+.map-container {
+  width: 100%; 
+  height: 400px; 
+  border-radius: 25px;
+  border: 2px solid var(--color-danger);
+  box-shadow: 1px 1px 30px var(--color-danger);
+}
