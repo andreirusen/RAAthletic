@@ -133,43 +133,54 @@ font-family: 'Poppins', sans-serif;
   color: var(--color-white);
 }
 
-/* Rating Cards Body */
-.rating-card {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 3rem;
 
-  display: flex;
+
+
+
+/*  Cards */
+/* Rating Carousel */
+.rating-container {
+  /* height: 340px; */
+  /* border-radius: 25px; */
+  /* border: 2px solid var(--color-primary); */
+  padding: 2rem 2rem;
+}
+/* Rating - Cards Body */
+.carousel-item {
+  height: 340px;
+  border-radius: 25px;
+  border: 2px solid var(--color-primary);
+}
+.carousel-inner {
   justify-content: center;
-  align-content: center;
+  margin: 0;
+  padding: 0;
 }
 .user-review {
+  height: auto;
+  width: auto;
   background-color: var(--color-black);
   color: var(--color-white);
-  border-radius: 25px;
-  border: 2px solid var(--color-danger);
-  /* box-shadow: 1px 1px 30px var(--color-danger); */
-
-  padding: 1.5rem 1.5rem;
-  display: grid;
+  padding: 1rem 4rem;
 }
 .user-details {
   display: flex;
   justify-content: left;
   align-items: center;
 }
-.user-img {
-  height: 80px;
-}
 .user-details img {
   border-radius: 50%;
   margin-right: 6px;
+}
+.user-img {
+  height: 80px;
 }
 .user-info {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   height: 80px;
+  margin: 0 10px;
 }
 .user-info h5 {
   margin: 0;
@@ -177,132 +188,42 @@ font-family: 'Poppins', sans-serif;
 }
 .verified {
   font-size: 0.8rem;
-  color: var(--color-gold);
+  color: var(--color-primary);
 }
 .stars {
   width: auto;
 }
 .rating-data {
   margin: 0;
-  color: var(--color-danger);
-}
-@media (max-width: 1250px) {
-  .header-content {
-    display: grid;
-    margin: 1rem 0;
-  }
-  .rating-card {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    grid-gap: 0.5rem;
-
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  }
+  color: var(--color-primary);
 }
 @media (max-width: 992px) {
-  .rating-section {
-    grid-template-rows: 1fr;
+  .user-review {
+    padding: 0.5rem 0.5rem;
+    height: auto;
+    width: auto;
   }
-  .header-content {
-    grid-template-columns: 1fr;
+  .rating-container {
+    height: auto;
+  }
+  .carousel-item {
+    height: auto;
   }
   .star {
     width: 16px;
   }
-  .rating-card {
-    grid-gap: 1.25rem;
-
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-  }
 }
+/* Rating - Buttons (Left + Right) */
 
-
-
-
-/*  Cards */
-
-.card-wrapper {
-  width: 100%;
-  position: relative;
-}
-.card-wrapper i {
-  bottom: -20%;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  font-size: 1.25rem;
-  position: absolute;
-  text-align: center;
-  line-height: 50px;
-  background: var(--color-danger);
-  border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
-  transform: translateY(-50%);
-  transition: transform 0.1s linear;
-  z-index: 10;
-}
-.card-wrapper i:active{
-  transform: translateY(-50%) scale(0.85);
-}
-.card-wrapper i:first-child{
-  left: 35%;
+.carousel-control-next {
+  right: 1%;
   color: var(--color-white);
 }
-.card-wrapper i:last-child{
-  right: 35%;
+.carousel-control-prev {
+  left: 1%;
   color: var(--color-white);
 }
-.card-wrapper .carousel{
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 12px);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  gap: 10px;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-}
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-.carousel.no-transition {
-  scroll-behavior: auto;
-}
-.carousel.dragging {
-  scroll-snap-type: none;
-  scroll-behavior: auto;
-}
-.carousel.dragging .card-review {
-  cursor: grab;
-  user-select: none;
-}
-.carousel :where(.card-review) {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-}
-
-
-
-@media screen and (max-width: 992px) {
-  .card-wrapper .carousel {
-    grid-auto-columns: calc((100% / 2) - 9px);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .card-wrapper .carousel {
-    grid-auto-columns: 60%;
-  }
-}
-@media screen and (max-width: 572px) {
-
-  .card-wrapper .carousel {
-    width: 15%;
-    transform: scale(0.8);
-  }
+.carousel-control-next,
+.carousel-control-prev {
+  width: 15%;
 }
