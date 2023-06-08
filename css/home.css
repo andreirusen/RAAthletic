@@ -163,12 +163,14 @@ font-family: 'Poppins', sans-serif;
 .carousel-item {
   height: 340px;
   border-radius: 25px;
+  
   /* border: 2px solid var(--color-primary); */
 }
 .carousel-inner {
   justify-content: center;
   margin: 0;
   padding: 0;
+
   border-radius: 25px;
   border: 2px solid var(--color-primary);
   box-shadow: 1px 1px 30px var(--color-primary);
