@@ -129,7 +129,7 @@ font-family: 'Poppins', sans-serif;
   color: var(--color-white);
 }
 .header-content p {
-  text-align: justify;
+  text-align: center;
   color: var(--color-white);
 }
 @media (max-width: 1250px) {
