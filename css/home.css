@@ -132,7 +132,17 @@ font-family: 'Poppins', sans-serif;
   text-align: justify;
   color: var(--color-white);
 }
-
+@media (max-width: 1250px) {
+  .header-content {
+    display: grid;
+    margin: 1rem 0;
+  }
+}
+@media (max-width: 992px) {
+  .header-content {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 
