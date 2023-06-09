@@ -73,7 +73,6 @@ font-family: 'Poppins', sans-serif;
 }
 .profile-input + label {
   color: white;
-  background-color: var(--color-danger);
   display: inline-block;
 }
 
@@ -231,7 +230,7 @@ font-family: 'Poppins', sans-serif;
   box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
 }
 .card-hover:hover {
-  transform: scale(1.01);
+  transform: scale(1.02);
   box-shadow: 0 0 1rem var(--color-white);
 }
 .card-1 {
@@ -252,6 +251,9 @@ font-family: 'Poppins', sans-serif;
 .card-6 {
   grid-area: card-6;
 }
+
+
+/* Ripple Effect */
 span.ripple {
   position: absolute; /* The absolute position we mentioned earlier */
   border-radius: 50%;
@@ -259,9 +261,6 @@ span.ripple {
   animation: ripple 600ms linear;
   background-color: rgba(255, 255, 255, 0.7);
 }
-
-/* Ripple Effect */
-
 .ripple {
   background-position: center;
   transition: background 0.8s;
@@ -324,6 +323,8 @@ td {
 td.event-cell {
   background-color: var(--color-danger);
   color: var(--color-white);
+  border: 3px solid var(--color-gray-900);
+
 }
 /* Hover effect on cells */
 td:hover {
@@ -391,7 +392,9 @@ td:hover {
   border-radius: 15px;
 }
 .current-day {
-  background-color: var(--color-danger);
+  background-color: var(--color-gold);
+  color: var(--color-white);  
+  border: 3px solid var(--color-gray-900);
 }
 
 

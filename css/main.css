@@ -319,6 +319,8 @@ nav {
   bottom: 5%;
   right: 3%;
   z-index: 99;
+  border: none;
+  border-radius: 50%;
   box-shadow: 0 2px 5px 0 var(--color-black);
 }
 .btn-let-begin {
