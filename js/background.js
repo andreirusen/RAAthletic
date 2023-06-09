@@ -4,15 +4,18 @@ window.addEventListener("load", function () {
   preloader.style.display = "none";
 });
 
+
 // Navbar
 const navEL = document.querySelector(".navbar");
 let lastScrollY = window.scrollY;
 
-// Parallax Effect
+// Parallax Effect + Navbar Hidden + Progress Bar
 let headerShowcase = document.querySelector("#header-showcase");
 let fgImg1 = document.querySelector("#fg1-img");
 let fgImg2 = document.querySelector("#fg2-img");
 let fgImg3 = document.querySelector("#fg3-img");
+const progressBarEl = document.getElementById('progress-bar');
+
 
 window.addEventListener("scroll", function () {
   // Navbar
@@ -29,6 +32,12 @@ window.addEventListener("scroll", function () {
   fgImg1.style.marginTop = value * 0.4 + "px";
   fgImg2.style.marginTop = value * 0.8 + "px";
   fgImg3.style.marginLeft = value * 0.8 + "px";
+
+  // Progress Bar
+  let height = document.body.scrollHeight - window.innerHeight;
+  let scrollPosition = document.documentElement.scrollTop;
+  let width = (scrollPosition / height) * 100;
+  progressBarEl.style.width = `${width}%`;
 });
 
 // Button To Top - Right

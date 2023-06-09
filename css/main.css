@@ -164,6 +164,15 @@ footer {
   text-align: center;
 }
 
+/* Progress Bar */
+.progress-bar {
+  height: 0.5rem;
+  bottom: 0;
+  width: 0%;
+  position: fixed;
+  background-color: var(--color-danger);
+}
+
 /* Navigation */
 nav {
   z-index: 99;
@@ -318,7 +327,7 @@ nav {
   position: fixed;
   bottom: 5%;
   right: 3%;
-  z-index: 99;
+  z-index: 90;
   border: none;
   border-radius: 50%;
   box-shadow: 0 2px 5px 0 var(--color-black);
