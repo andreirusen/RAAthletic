@@ -375,6 +375,7 @@ hr.solid {
   background-color: var(--color-black);
   color: var(--color-white);
   font-size: medium;
+  z-index: 20;
 }
 @media (max-width: 992px) {
   .offcanvas {
